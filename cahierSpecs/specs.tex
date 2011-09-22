@@ -39,7 +39,7 @@
     %\vspace*{1\p@}%
     \hrulefill
     \par\nobreak
-    \vskip 100\p@
+    \vskip 20\p@
   }}
 \def\@makeschapterhead#1{%
   \vspace*{10\p@}%
@@ -51,7 +51,7 @@
     %\vspace*{1\p@}%
     \hrulefill
     \par\nobreak
-    \vskip 30\p@
+    \vskip 20\p@
   }}
 
 \renewcommand\thesection{\arabic{section}}
@@ -64,7 +64,7 @@
 \renewcommand\thesection{\arabic{chapter}.\arabic{section}}
 
 % Désactiver les alinéas automatiques
-\parindent=0cm
+%\parindent=0cm
 
 
 % Création du glossaire
@@ -84,7 +84,7 @@
       \hrulefill
       \vspace{7cm}
       \begin{center}
-        \LARGE \textbf{Cahier des spécifications}\\
+        \LARGE \textbf{Dossier de spécifications}\\
         \vspace{3cm}
         \normalsize Génie Logiciel Embarqué
       \end{center}
@@ -106,6 +106,31 @@
   \thispagestyle{empty}
   \setcounter{page}{0}
   \clearpage
+
+\chapter{Introduction}
+
+\section{Matériel}
+\subsection{Description}
+L'iPhone  est une famille de smartphones conçue et commercialisée par Apple Inc. depuis 2007. Les modèles, dont l'interface utilisateur a été conçue avec le multi-touch, disposent d'un appareil photo, d'une fonction baladeur numérique, d'un client Internet (pour naviguer sur le Web ou consulter son courrier électronique), et de fonctions basiques telles que les SMS/MMS (messages texte et multimédia) ; mais disposent aussi de la messagerie vocale visuelle et de l'App Store, qui permet de télécharger des applications, allant des jeux aux réseaux sociaux, en passant par les GPS, la télévision, la presse électronique ou encore les bandes-dessinées. Au mois de mai 2010, on compte plus de 225 000 applications.
+
+\subsection{Spécifications}
+Les spécifications suivantes sont relatives à l'iPhone 4 (génération Juin 2010)
+\begin{description}
+\item[Système d'exploitation] iOS 4.3.5 (build 8L1, sortie le 25 juillet 2011)
+\item[Alimentation] Batterie lithium-polymère
+\item[Processeur] Puce apple A4 1 GHz
+\item[Stockage]	16/32 Go de mémoire flash
+\item[Mémoire] 512 Mio de DRAM
+\item[Écran] Écran multi-touch de 3,5 pouces
+\item[Résolution] 960 x 640 px (326 ppp)
+\item[Carte graphique]	PowerVR SGX 535 GPU
+\item[Caméra] \emph{Arrière} : 5 mégapixels, vidéo 720p avec Flash LED / \emph{Avant} : VGA
+\end{description}
+
+\section{Le système d'exploitation iOS}
+iOS, (anciennement iPhone OS), est le système d'exploitation mobile développé par Apple pour l'iPhone, l'iPod touch, et l'iPad. Il est dérivé de Mac OS X dont il partage les fondations (le kernel hybride XNU basé sur le micro-noyau Mach, les services Unix et Cocoa, etc.). iOS comporte quatre couches d'abstraction, similaires à celles de Mac OS X : une couche « Core OS », une couche « Core Services », une couche « Media » et une couche « Cocoa ». Le système d'exploitation occupe moins d'un demi-gigaoctet (Go) de la capacité mémoire totale de l'appareil.
+
+Le kit de développement en question, disponible pour Mac OS X, propose les outils nécessaires à la création d'une application pouvant tourner sous iOS. Si son téléchargement et son utilisation sont gratuits, la publication de telles applications requiert d'adhérer au programme des développeurs Apple, pour la somme de 99\$ par an. Il n'en demeure pas moins que cette offre peut s'avérer intéressante pour bon nombre de développeurs, étant donnée la taille du marché créé par iOS.
 
 \chapter*{Ce qu'il faut traiter}
 Intro
