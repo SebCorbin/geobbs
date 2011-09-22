@@ -1,0 +1,17 @@
+Intro
+  Les os de l'embarqué
+  ->(liste et ce qu'il font chacun)
+
+  Notion d'entrée/sortie
+
+  Les Env. de dev (avec particularité du remote debugging)
+
+  Résumé des différentes méthodes (agile, xp etc..., tdd etc...)
+  
+Projet
+  -> Equipe
+  -> Cahier des charges
+
+Choix de la méthodo: 
+  -> Méthode Agile
+  -> + TDD

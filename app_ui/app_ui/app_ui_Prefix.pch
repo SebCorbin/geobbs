@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'app_ui' target in the 'app_ui' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
