@@ -115,22 +115,33 @@ L'iPhone  est une famille de smartphones conçue et commercialisée par Apple In
 
 \subsection{Spécifications}
 Les spécifications suivantes sont relatives à l'iPhone 4 (génération Juin 2010)
-\begin{description}
-\item[Système d'exploitation] iOS 4.3.5 (build 8L1, sortie le 25 juillet 2011)
-\item[Alimentation] Batterie lithium-polymère
-\item[Processeur] Puce apple A4 1 GHz
-\item[Stockage]	16/32 Go de mémoire flash
-\item[Mémoire] 512 Mio de DRAM
-\item[Écran] Écran multi-touch de 3,5 pouces
-\item[Résolution] 960 x 640 px (326 ppp)
-\item[Carte graphique]	PowerVR SGX 535 GPU
-\item[Caméra] \emph{Arrière} : 5 mégapixels, vidéo 720p avec Flash LED / \emph{Avant} : VGA
-\end{description}
+	\begin{description}
+	\item[Système d'exploitation] iOS 4.3.5 (build 8L1, sortie le 25 juillet 2011)
+	\item[Alimentation] Batterie lithium-polymère
+	\item[Processeur] Puce apple A4 1 GHz
+	\item[Stockage]	16/32 Go de mémoire flash
+	\item[Mémoire] 512 Mio de DRAM
+	\item[Écran] Écran multi-touch de 3,5 pouces
+	\item[Résolution] 960 x 640 px (326 ppp)
+	\item[Carte graphique]	PowerVR SGX 535 GPU
+	\item[Caméra] \emph{Arrière} : 5 mégapixels, vidéo 720p avec Flash LED / \emph{Avant} : VGA
+	\end{description}
 
 \section{Le système d'exploitation iOS}
 iOS, (anciennement iPhone OS), est le système d'exploitation mobile développé par Apple pour l'iPhone, l'iPod touch, et l'iPad. Il est dérivé de Mac OS X dont il partage les fondations (le kernel hybride XNU basé sur le micro-noyau Mach, les services Unix et Cocoa, etc.). iOS comporte quatre couches d'abstraction, similaires à celles de Mac OS X : une couche « Core OS », une couche « Core Services », une couche « Media » et une couche « Cocoa ». Le système d'exploitation occupe moins d'un demi-gigaoctet (Go) de la capacité mémoire totale de l'appareil.
 
-Le kit de développement en question, disponible pour Mac OS X, propose les outils nécessaires à la création d'une application pouvant tourner sous iOS. Si son téléchargement et son utilisation sont gratuits, la publication de telles applications requiert d'adhérer au programme des développeurs Apple, pour la somme de 99\$ par an. Il n'en demeure pas moins que cette offre peut s'avérer intéressante pour bon nombre de développeurs, étant donnée la taille du marché créé par iOS.
+\section{L'environnement de développement}
+Le kit de développement, disponible uniquement pour Mac OS X, propose les outils nécessaires à la création d'une application pouvant tourner sous iOS. Si son téléchargement et son utilisation sont gratuits, la publication de telles applications requiert d'adhérer au programme des développeurs Apple, pour la somme de 99\$ par an. Il n'en demeure pas moins que cette offre peut s'avérer intéressante pour bon nombre de développeurs, étant donnée la taille du marché créé par iOS.
+En plus d'offrir aux développeurs exactement les mêmes API que celles d'Apple, le SDK contient de nombreux outils facilitant le développement et le test d'applications pour iOS.
+
+\subsection*{Outils de développement}
+La plupart des outils de développement du SDK étaient déjà présents dans Mac OS avant son arrivée. Cependant, ils gèrent désormais l'utilisation de l'iPhone, en tant que plate-forme de développement :
+\begin{description}
+\item[Xcode] Environnement de Développement Intégré par défaut sur Mac OS X. Il permet l'écriture, la gestion et la compilation de projets de développement, écrits notamment en Objective-C. L'iPhone SDK y ajoute les librairies de développement pour iOS. Il est donc possible pour le développeur de créer des projets d'applications pour ce système. Pour tester l'application, deux possibilités existent : le développeur peut brancher un iPhone ou iPod Touch à son ordinateur Mac, puis y lancer l'application comme test, ou lancer l'application en test dans iPhone Simulator.
+\item[Interface Builder] permet de construire une interface pour Cocoa Touch manuellement, à l'aide de glisser-déposer. Il permet également de traduire facilement une application dans plusieurs langues. De plus, il permet de gérer visuellement le schéma Modèle-Vue-Contrôleur, en connectant des éléments d'une interface à un code écrit pour eux au préalable, à l'aide d'un glisser-déposer. Finalement, le fichier d'interface ainsi créé est ajouté au projet Xcode.
+Instruments est un outil de monitoring informatique. Il permet, une fois l'application lancée sur un iPhone ou iPod Touch branché à l'ordinateur, d'observer en temps réel ses performances au niveau du processeur, mais également, par exemple, du moteur graphique ou de l'accéléromètre. Par ailleurs, il est également possible de surveiller les performances système dans iPhone Simulator.
+\item[iPhone Simulator] simule de manière logicielle un iPhone virtuel, qui peut exécuter des applications directement sur l'ordinateur. Les mouvements Multitouch sont alors reproduits manuellement à la souris par l'utilisateur, et il est possible de faire pivoter le simulateur grâce à des raccourcis clavier. Par ailleurs, l'utilisateur est en mesure de choisir quelle version du firmware il désire utiliser.
+
 
 \chapter*{Ce qu'il faut traiter}
 Intro
