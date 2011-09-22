@@ -1,0 +1,4 @@
+cahierSpecs/*.aux
+cahierSpecs/*.log
+cahierSpecs/specs.out
+cahierSpecs/*.gz
