@@ -1,9 +1,9 @@
 (function() {
-  var MongoDb, app, db, express, http, loadUser, mongodb, _ref;
+  var MongoDb, app, dbConfig, express, http, loadUser, mongodb, _ref;
   express = require("express");
-  _ref = require('./config'), db = _ref.db, http = _ref.http;
+  _ref = require('./config'), dbConfig = _ref.db, http = _ref.http;
   MongoDb = require('mongodb');
-  mongodb = new (require('./class/mongodb.class'))(db, MongoDb);
+  mongodb = new (require('./class/mongodb.class'))(dbConfig, MongoDb);
   mongodb.init(function() {
     return console.log("Mongodb connected on " + db.ip + ":" + db.port);
   });

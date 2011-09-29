@@ -1,12 +1,12 @@
 express = require("express")
 
 # Load the configuration
-{db:db, http:http}  = require './config'
+{db:dbConfig, http:http}  = require './config'
 
 # Chargement des modèles de données
 MongoDb = require('mongodb')
 
-mongodb = new (require('./class/mongodb.class'))(db, MongoDb)
+mongodb = new (require('./class/mongodb.class'))(dbConfig, MongoDb)
 
 mongodb.init(() ->
   console.log "Mongodb connected on #{db.ip}:#{db.port}"
