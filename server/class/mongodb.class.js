@@ -22,6 +22,9 @@
         return this;
       }, this));
     };
+    MongoDb.prototype.geoGet = function(params, cb) {
+      return this.Models.CheckModel.geoGet(params, cb);
+    };
     MongoDb.prototype.getUser = function(idUser, cb) {
       return this.Models.UserModel.getById(idUser, cb);
     };

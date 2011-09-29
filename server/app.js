@@ -1,5 +1,5 @@
 (function() {
-  var MongoDb, app, dbConfig, express, http, loadUser, mongodb, _ref;
+  var MongoDb, app, dbConfig, express, http, loadUser, mongodb, renderJSON, _ref;
   express = require("express");
   _ref = require('./config'), dbConfig = _ref.db, http = _ref.http;
   MongoDb = require('mongodb');
@@ -32,25 +32,60 @@
   });
   loadUser = function(req, res, next) {
     return mongodb.getUser(req.params.userId, function(err, user) {
-      if (err) {
-        return next(err);
-      }
-      if (!user) {
-        return next(new Error("User " + req.params.userId + " not found"));
-      }
+      console.log(user);
       req.user = user;
       return next();
     });
   };
+  renderJSON = function(res, json) {
+    return res.send(JSON.stringify(json), {
+      'Content-Type': 'text/javascript'
+    }, json.code);
+  };
   app.all("/:userId/check/:lat,:lon", loadUser, function(req, res) {
-    console.log(req.user);
+    var out;
+    out = {
+      code: 404,
+      type: 'error',
+      msg: 'User not found'
+    };
+    if (!req.user) {
+      return renderJSON(res, out);
+    }
     return mongodb.addCheck(req.user, {
       lat: req.params.lat,
       lon: req.params.lon
-    }, function(r) {
-      return res.send("Ajout du check:" + r);
+    }, function(err, success) {
+      if (err) {
+        out.code = 500;
+        out.type = 'error';
+        out.msg = err || 'Something went wrong';
+      } else {
+        out.code = 200;
+        out.type = 'success';
+        out.msg = success || '';
+      }
+      return renderJSON(res, out);
     });
   });
-  app.listen(http.port);
+  app.get("/check/", function(req, res) {
+    var out, q;
+    q = req.query;
+    out = {
+      code: 500,
+      type: 'error',
+      msg: 'Missing parameters'
+    };
+    if (!q.lat || !q.lon) {
+      return renderJSON(res, out);
+    }
+    return mongodb.geoGet(q, function(err, success) {
+      out.code = 200;
+      out.type = 'success';
+      out.msg = success;
+      return renderJSON(res, out);
+    });
+  });
+  app.listen(http.port, "0.0.0.0");
   console.log("Express server listening on port %d", app.address().port);
 }).call(this);

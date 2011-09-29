@@ -25,7 +25,6 @@
       };
       User.prototype.addCheck = function(Check, cb) {
         User.getCollection(__bind(function(collUsers) {
-          console.log("Push de check:", this._id, Check._id);
           return collUsers.update({
             _id: this._id
           }, {
@@ -38,7 +37,7 @@
             if (err) {
               return cb(err);
             }
-            return cb(true);
+            return cb(null, 'Check inserted');
           });
         }, this));
         return this;
@@ -48,11 +47,17 @@
           */
       User.getById = function(idUser, cb) {
         if (String(idUser).length !== 24) {
-          return cb(new Error("Wrong idUser format"));
+          return cb("Wrong idUser format");
         }
         return User.getCollection(__bind(function(collUsers) {
           return collUsers.findOne({
             _id: new client.bson_serializer.ObjectID(idUser)
+          }, {
+            fields: {
+              checks: {
+                $slice: -5
+              }
+            }
           }, __bind(function(err, UserInNativeFormat) {
             if (err) {
               return cb(err);

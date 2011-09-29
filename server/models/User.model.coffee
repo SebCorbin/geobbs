@@ -26,13 +26,11 @@ module.exports = (MongoDB, client, opt = {}) ->
     # @chainable
     addCheck: (Check, cb)->
       User.getCollection((collUsers) =>
-
-        console.log "Push de check:", @_id, Check._id
         collUsers.update({_id: @_id}, {'$push':{'checks':Check._id}}, {safe:true}, (err) ->
           if err
             return cb(err)
           
-          cb(true)
+          cb(null, 'Check inserted')
         )
       )
 
@@ -46,15 +44,15 @@ module.exports = (MongoDB, client, opt = {}) ->
     # cb(err, user)
     # user peut être null si non trouvé
     User.getById = (idUser, cb) ->
-      return cb(new Error "Wrong idUser format") if String(idUser).length != 24
+      return cb("Wrong idUser format") if String(idUser).length != 24
 
       User.getCollection((collUsers) =>
-
-        collUsers.findOne({_id : new client.bson_serializer.ObjectID(idUser)}, (err, UserInNativeFormat) =>
+        # Récupère l'user (mais avec un extrait au niveau des checks: ses 5 derniers)
+        collUsers.findOne({_id : new client.bson_serializer.ObjectID(idUser)},{fields:{checks:{$slice: -5}}}, (err, UserInNativeFormat) =>
           if err
             cb(err)
           else if !UserInNativeFormat
-            cb(null, UserInNativeFormat)
+            cb(null, UserInNativeFormat) # Envoyer "null"
           else
             cb(null, new User().fromUser(UserInNativeFormat))
         )

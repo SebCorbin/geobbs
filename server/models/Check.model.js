@@ -32,6 +32,37 @@
           return cb(_collChecks);
         });
       };
+      /*
+          # @params params = lat, lon, count, distance
+          # @params cb
+          */
+      Check.geoGet = function(opt, cb) {
+        if (!opt.lat || !opt.lon) {
+          return cb("Wrong geo");
+        }
+        if (opt.d) {
+          opt.d = parseInt(opt.d, 10);
+        }
+        if (!opt.d || opt.d > 100) {
+          opt.d = 10000;
+        }
+        if (opt.c) {
+          opt.c = parseInt(opt.c, 10);
+        }
+        if (!opt.c || opt.c > 100) {
+          opt.c = 10000;
+        }
+        return Check.getCollection(function(collChecks) {
+          return collChecks.find({
+            loc: {
+              $near: [opt.lat, opt.lon],
+              $maxDistance: opt.d
+            }
+          }, {}, {
+            limit: opt.c
+          }).toArray(cb);
+        });
+      };
       return Check;
     })();
   };

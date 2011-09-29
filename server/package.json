@@ -4,7 +4,7 @@
   , "private": true
   , "dependencies": {
     "jade": ">= 0.0.1",
-    "mongoose": "*",
-    "express":"*"
+    "express":"*",
+    "mongodb":"*"
   }
 }

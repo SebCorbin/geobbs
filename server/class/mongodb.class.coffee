@@ -27,6 +27,8 @@ module.exports = class MongoDb
     )
 
   
+  geoGet:(params, cb) ->
+    @Models.CheckModel.geoGet(params, cb)
   
   # Récupérer un utilisateur à partir de son id
   getUser: (idUser, cb) ->
@@ -43,8 +45,6 @@ module.exports = class MongoDb
 
       # Enregistrer le check en BDD
       Check.save(collChecks)
-
-
 
       # Ajouter la référence du check dans l'User
       User.addCheck(Check, cb)

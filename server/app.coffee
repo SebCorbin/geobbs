@@ -37,25 +37,63 @@ app.get "/", (req, res) ->
 loadUser = (req, res, next) ->
   # Est-ce que l'user est présent en BDD ?
   mongodb.getUser(req.params.userId, (err, user) ->
-    if err
-      return next(err)
-    
-    if !user
-      return next(new Error("User #{req.params.userId} not found"))
-    
+    console.log user
     req.user = user
     next()
   )
 
+renderJSON = (res, json) ->
+  res.send JSON.stringify(json), { 'Content-Type': 'text/javascript' }, json.code
+
+
 
 # Check et retourne la liste X des utilisateurs les plus proches à moins de 100ms
 app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
-  console.log(req.user)
+
+  out = {
+      code:404 # User Not found
+      type:'error'
+      msg:'User not found'
+  }
   
-  mongodb.addCheck(req.user, {lat:req.params.lat, lon:req.params.lon}, (r) ->
-    res.send("Ajout du check:" + r)
+  if(!req.user)
+    return renderJSON(res, out)
+  
+  mongodb.addCheck(req.user, {lat:req.params.lat, lon:req.params.lon}, (err, success) ->
+
+    if err
+      out.code = 500 # Internal Server error
+      out.type = 'error'
+      out.msg = err || 'Something went wrong'
+    else
+      out.code = 200
+      out.type = 'success'
+      out.msg = success ||''
+    
+    renderJSON(res, out)
   )
 
-app.listen http.port
+
+app.get "/check/", (req, res) ->
+  q = req.query
+
+  out = {
+      code:500
+      type:'error'
+      msg:'Missing parameters'
+  }
+
+  return renderJSON(res, out) if !q.lat || !q.lon
+
+  mongodb.geoGet(q, (err, success) ->
+    out.code = 200
+    out.type = 'success'
+    out.msg  = success
+    renderJSON(res, out)
+  )
+
+
+
+app.listen http.port, "0.0.0.0"
 
 console.log "Express server listening on port %d", app.address().port
