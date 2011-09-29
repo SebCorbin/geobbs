@@ -1,0 +1,37 @@
+
+29 Sept ----------------------------------------------
+------------------------------------------------------
+
+Démarche suivie
+ - FG: serveur + base de données
+ - Seb: iOS
+
+Problèmes rencontrés
+ - Travail collaboratif, comment faire, quoi utiliser, comment s'organiser ?
+ 
+ - Sécurité
+  -> Il peut y avoir usurpation d'identité sur le check
+ 
+ - iOS
+    -> Découverte ? Futurs problèmes avec le langage ?
+
+Solutions trouvées
+ - SCM (Source Code management)
+  - app/
+  - server/
+  - specs/
+  - charges/
+  - books/ % ressources
+
+ - Sécurité
+  -> Pas important pour le moment, il s'agit d'un PoC
+
+ - iOS
+
+Avancement
+  - Serveur développé à 30%
+    -> Checkin: OK
+    -> Qui sont les X premières personnes/batiments à moins de Y mètre: NOK
+    -> Mode "simulateur de checkin": NOK
+  - iOS
+    NOK
