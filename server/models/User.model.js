@@ -1,9 +1,12 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-  module.exports = function(MongoDB, client) {
+  module.exports = function(MongoDB, client, opt) {
     var BSON, User, _collUsers;
+    if (opt == null) {
+      opt = {};
+    }
     BSON = MongoDB.BSONPure;
-    _collUsers = null;
+    _collUsers = opt._collUsers || null;
     return User = (function() {
       /*
           # Entity level

@@ -5,7 +5,7 @@
   MongoDb = require('mongodb');
   mongodb = new (require('./class/mongodb.class'))(dbConfig, MongoDb);
   mongodb.init(function() {
-    return console.log("Mongodb connected on " + db.ip + ":" + db.port);
+    return console.log("Mongodb connected on " + dbConfig.ip + ":" + dbConfig.port);
   });
   app = module.exports = express.createServer();
   app.configure(function() {

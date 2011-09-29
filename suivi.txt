@@ -10,7 +10,7 @@ Problèmes rencontrés
  - Travail collaboratif, comment faire, quoi utiliser, comment s'organiser ?
  
  - Sécurité
-  -> Il peut y avoir usurpation d'identité sur le check
+  -> Il peut y avoir usurpation d'identité sur le check (à mettre dans la doc)
  
  - iOS
     -> Découverte ? Futurs problèmes avec le langage ?

@@ -7,7 +7,7 @@
       function Check(loc, User, _id, date) {
         this.loc = loc != null ? loc : {};
         this._id = _id != null ? _id : new BSON.ObjectID();
-        this.date = date != null ? date : Date.now;
+        this.date = date != null ? date : Date.now();
         this._userId = User && User._id ? User._id : new BSON.ObjectID();
         this.loc.lat = parseInt(this.loc.lat, 10) || -1;
         this.loc.lon = parseInt(this.loc.lon, 10) || -1;

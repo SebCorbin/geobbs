@@ -4,7 +4,7 @@ module.exports = (MongoDB, client) ->
   _collChecks = null
 
   return class Check
-    constructor: (@loc = {}, User, @_id = new BSON.ObjectID(), @date = Date.now) ->
+    constructor: (@loc = {}, User, @_id = new BSON.ObjectID(), @date = Date.now()) ->
       @_userId = if User && User._id then User._id else new BSON.ObjectID()
 
       @loc.lat = parseInt(@loc.lat, 10) || -1

@@ -13,6 +13,8 @@ test:
 		$(TESTFLAGS) \
 		$(TESTS)
 
+#clear && find . -name "*.test.js" -exec expresso -c '{}' \;
+
 test-cov:
 	@TESTFLAGS=--cov $(MAKE) test
 

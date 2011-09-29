@@ -1,7 +1,7 @@
-module.exports = (MongoDB, client) ->
+module.exports = (MongoDB, client, opt = {}) ->
   BSON = MongoDB.BSONPure
 
-  _collUsers = null
+  _collUsers = opt._collUsers or null
 
   return class User
     ###
