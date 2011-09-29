@@ -2,3 +2,4 @@ cahierSpecs/*.aux
 cahierSpecs/*.log
 cahierSpecs/specs.out
 cahierSpecs/*.gz
+cahierSpecs/*.fdb_latexmk

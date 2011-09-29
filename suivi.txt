@@ -2,9 +2,9 @@
 29 Sept ----------------------------------------------
 ------------------------------------------------------
 
-Démarche suivie
- - FG: serveur + base de données
- - Seb: iOS
+Partage des tâches
+ - FG: serveur sous NodeJS + base de données sous MongoDB
+ - Seb: app mobile sous iOS
 
 Problèmes rencontrés
  - Travail collaboratif, comment faire, quoi utiliser, comment s'organiser ?
@@ -14,6 +14,7 @@ Problèmes rencontrés
  
  - iOS
     -> Découverte ? Futurs problèmes avec le langage ?
+    -> Réalité augmenté ?
 
 Solutions trouvées
  - SCM (Source Code management)
@@ -27,6 +28,7 @@ Solutions trouvées
   -> Pas important pour le moment, il s'agit d'un PoC
 
  - iOS
+  -> Framework de réalité augmenté \url{http://www.dopanic.com/ar/}
 
 Avancement
   - Serveur développé à 30%
