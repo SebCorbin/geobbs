@@ -7,7 +7,8 @@
 //
 
 #import "CLController.h"
-
+#import "Service.h"
+#import "User.h"
 
 @implementation CLController
 
@@ -26,7 +27,8 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"Location: %@", [newLocation description]);
+	// Get the notifiaction list
+	[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager

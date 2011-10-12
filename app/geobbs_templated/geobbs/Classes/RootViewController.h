@@ -10,6 +10,7 @@
 #import "SBJson/SBJson.h"
 #import "User.h"
 #import "CLController.h"
+#import "Service.h"
 
 @interface RootViewController : UITableViewController {
 	NSArray *notifications;

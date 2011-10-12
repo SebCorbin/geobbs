@@ -11,21 +11,56 @@
 @implementation Service
 
 @synthesize serverUrl;
-@synthesize serverPort;
 
+static Service *serviceManager = nil;
+
+-(id)init {
+	if (self = [super init]) {
+		[self setServerUrl:@"http://localhost:3000"];
+	}
+	return self;
+}
+
+-(void)dealloc {
+	[ super dealloc ];
+}
+
+/////////////////////
+// Singleton methods
 + (Service*)getService {
     if (serviceManager == nil) {
         serviceManager = [[super allocWithZone:NULL] init];
     }
     return serviceManager;
 }
-+ (NSString*)getServerUrl {
-    return [NSString stringWithFormat:@"%@", [Service getService]];
++ (id)allocWithZone:(NSZone *)zone {
+    return [[self getService] retain];
 }
 
-+(NSArray*)getNotificationsList:(User*) user {
-	NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%a", 
-																			 [[Service getService] serverUrl], @""]]
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (id)retain {
+    return self;
+}
+
+- (NSUInteger)retainCount {
+    return NSUIntegerMax;  //denotes an object that cannot be released
+}
+
+- (void)release {
+    //do nothing
+}
+
+- (id)autorelease {
+    return self;
+}
+
+-(NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location {
+	NSString *stringUrl = [NSString stringWithFormat:@"%@/check/?lat=%+.6f&lon=%+.6f", [[Service getService] serverUrl], location.coordinate.latitude, location.coordinate.longitude];
+	
+	NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:stringUrl]
 										   cachePolicy:NSURLRequestUseProtocolCachePolicy
 									   timeoutInterval:60.0];
 	NSURLResponse *response = nil;
@@ -42,7 +77,8 @@
 			NSLog(@"404 Not Found: %@", query);
 		}
 		else if(statusCode == 200) {
-			
+			NSLog(@"hello");
+			NSLog(@"%@", data);
 		}
 	}
 	return nil;

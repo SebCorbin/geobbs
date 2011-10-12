@@ -20,15 +20,12 @@
 
 }
 
-
 - (void)viewDidLoad {
      self.title = @"Notifications";
 	
+	// Initialize location manager
 	locationController = [[CLController alloc] init];
     [locationController.locationManager startUpdatingLocation];
-	
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
