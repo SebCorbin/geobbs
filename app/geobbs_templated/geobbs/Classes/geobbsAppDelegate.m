@@ -14,7 +14,7 @@
 
 @synthesize window;
 @synthesize navigationController;
-
+@synthesize locationManager;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,6 +22,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	RootViewController *rootViewController = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+	
+	// Request the location service
+	if(![CLLocationManager locationServicesEnabled]) {
+		// Display an error mesage requiring the user to activate location service
+		
+	}
 	
     // Get the last notifications
     rootViewController.notifications = [NSArray arrayWithObjects:@"test1", @"test2", nil];
@@ -38,6 +44,43 @@
     return YES;
 }
 
+- (void)startStandardUpdates {
+	// Start the location manager
+	if (nil == locationManager) {
+        locationManager = [[CLLocationManager alloc] init];
+	}
+		
+	locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+	
+	locationManager.distanceFilter = 200;
+	
+    [locationManager startUpdatingLocation];
+	
+}
+
+- (void)startSignificantChangeUpdates {
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == locationManager)
+        locationManager = [[CLLocationManager alloc] init];
+	
+    locationManager.delegate = self;
+    [locationManager startMonitoringSignificantLocationChanges];
+}
+
+// Delegate method from the CLLocationManagerDelegate protocol.
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    // If it's a relatively recent event, turn off updates to save power
+    NSDate* eventDate = newLocation.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0) {
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+			  newLocation.coordinate.latitude,
+			  newLocation.coordinate.longitude);
+    }
+    // else skip the event and process the next one.
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

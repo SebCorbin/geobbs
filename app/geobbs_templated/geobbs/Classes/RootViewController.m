@@ -12,9 +12,12 @@
 
 @synthesize notifications;
 
-
 #pragma mark -
 #pragma mark View lifecycle
+
+-(void) getNotifications: (User*) user {
+
+}
 
 
 - (void)viewDidLoad {

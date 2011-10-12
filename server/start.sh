@@ -1,2 +1,3 @@
 mongod &
-node app.js dev
+node server/app.js dev &
+open "http://localhost/rockMongo"

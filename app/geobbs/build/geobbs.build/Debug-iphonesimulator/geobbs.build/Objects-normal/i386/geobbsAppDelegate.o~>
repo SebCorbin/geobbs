@@ -1,0 +1,3 @@
+/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m: In function '-[geobbsAppDelegate initializeList]':
+/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m:23: error: expected ':' before ']' token
+/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m:23: confused by earlier errors, bailing out
