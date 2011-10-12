@@ -11,6 +11,7 @@
 @implementation RootViewController
 
 @synthesize notifications;
+@synthesize locationController;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -22,7 +23,10 @@
 
 - (void)viewDidLoad {
      self.title = @"Notifications";
-
+	
+	locationController = [[CLController alloc] init];
+    [locationController.locationManager startUpdatingLocation];
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -157,6 +161,7 @@
 
 
 - (void)dealloc {
+	 [locationController release];
     [super dealloc];
 }
 

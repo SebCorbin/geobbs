@@ -19,6 +19,8 @@
 		BE28B9A6143B6743005F0308 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = BE28B9A5143B6743005F0308 /* Service.m */; };
 		BE685A4C1434620E005139A0 /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = BE685A4B1434620E005139A0 /* Check.m */; };
 		BE685A901434643E005139A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE685A8F1434643E005139A0 /* User.m */; };
+		BEC397E11446264F00C628F3 /* CLController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC397E01446264F00C628F3 /* CLController.m */; };
+		BEC398121446296500C628F3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC398111446296500C628F3 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		BE685A4B1434620E005139A0 /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Check.m; sourceTree = "<group>"; };
 		BE685A8E1434643E005139A0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BE685A8F1434643E005139A0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BEC397DF1446264F00C628F3 /* CLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLController.h; sourceTree = "<group>"; };
+		BEC397E01446264F00C628F3 /* CLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLController.m; sourceTree = "<group>"; };
+		BEC398111446296500C628F3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				BEC398121446296500C628F3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BEC397DF1446264F00C628F3 /* CLController.h */,
+				BEC397E01446264F00C628F3 /* CLController.m */,
 				BE28B969143B669F005F0308 /* SBJson */,
 				BE685A4A1434620E005139A0 /* Check.h */,
 				BE685A4B1434620E005139A0 /* Check.m */,
@@ -121,6 +129,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				BEC398111446296500C628F3 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 				BE685A4C1434620E005139A0 /* Check.m in Sources */,
 				BE685A901434643E005139A0 /* User.m in Sources */,
 				BE28B9A6143B6743005F0308 /* Service.m in Sources */,
+				BEC397E11446264F00C628F3 /* CLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

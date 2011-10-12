@@ -313,7 +313,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>BE68599114345701005139A0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>geobbsAppDelegate.h</string>
+								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -321,11 +321,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>BE68599214345701005139A0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>geobbsAppDelegate.h</string>
+										<string>RootViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BEC397D71446249D00C628F3</string>
+										<string>BEC3980A1446280700C628F3</string>
 										<key>history</key>
 										<array>
 											<string>BE6859D714345C46005139A0</string>
@@ -333,13 +333,15 @@
 											<string>BE28B9B9143CBC92005F0308</string>
 											<string>BE28B9BC143CBC92005F0308</string>
 											<string>BEC3979714461E7900C628F3</string>
-											<string>BEC3979814461E7900C628F3</string>
-											<string>BEC3979C14461E7900C628F3</string>
 											<string>BEC3979D14461E7900C628F3</string>
 											<string>BEC397AA1446200400C628F3</string>
-											<string>BEC397C51446240400C628F3</string>
-											<string>BEC397D51446249D00C628F3</string>
-											<string>BEC397D61446249D00C628F3</string>
+											<string>BEC397DB144625D000C628F3</string>
+											<string>BEC397E41446270400C628F3</string>
+											<string>BEC397E71446270400C628F3</string>
+											<string>BEC397F9144627A800C628F3</string>
+											<string>BEC398071446280700C628F3</string>
+											<string>BEC398081446280700C628F3</string>
+											<string>BEC398091446280700C628F3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -353,18 +355,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1077, 416}}</string>
+								<string>{{0, 0}, {1077, 583}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 39 1280 739 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>416pt</string>
+							<string>583pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>277pt</string>
+							<string>110pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -432,7 +434,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1077, 250}}</string>
+										<string>{{10, 27}, {1077, 83}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 39 1280 739 0 0 1280 778 </string>
 									</dict>

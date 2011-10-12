@@ -1,258 +1,0 @@
-Tgeobbs
-v7
-r0
-t338973278.354997
-cCheck dependencies
-cProcessInfoPlistFile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/Info.plist geobbs-Info.plist
-cCompileXIB /Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib
-cCompileXIB /Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib
-cProcessPCH /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch.gch geobbs_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/main.o /Users/sebastien/Documents/geobbs/app/geobbs/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsAppDelegate.o /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsViewController.o /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs normal i386
-cGenerateDSYMFile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app.dSYM /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs
-cTouch /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
-c000000004CC128950000000000000110
-t1287727253
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004CC12246000000000029B310
-t1287725638
-s2732816
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC1226D000000000029D5D0
-t1287725677
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC1225F0000000000001466
-t1287725663
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC1281F0000000000000AA1
-t1287727135
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC12883000000000074D7B0
-t1287727235
-s7657392
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.h
-c000000004E841DA70000000000000251
-t1317281191
-s593
-i<UIKit/UIKit.h>
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m
-c000000004E841F7D0000000000000ABD
-t1317281661
-s2749
-i"geobbsAppDelegate.h"
-i"geobbsViewController.h"
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.h
-c000000004E84147A00000000000000E9
-t1317278842
-s233
-i<UIKit/UIKit.h>
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m
-c000000004E84147A00000000000005BB
-t1317278842
-s1467
-i"geobbsViewController.h"
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib
-c000000004E841AD40000000000007D04
-t1317280468
-s32004
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app
-t1317280478
-s238
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app.dSYM
-t1317280268
-s102
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/Info.plist
-t1317280266
-s587
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/MainWindow.nib
-t1317280478
-s2022
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/PkgInfo
-t1317280266
-s8
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs
-t1317280268
-s17052
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbsViewController.nib
-t1317280266
-s795
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbs.LinkFileList
-c000000004E841A090000000000000197
-t1317280265
-s407
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsAppDelegate.o
-t1317280268
-s50848
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsViewController.o
-t1317280268
-s37492
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/main.o
-t1317280268
-s6316
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib
-c000000004E84147A0000000000001A41
-t1317278842
-s6721
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/geobbs_Prefix.pch
-c000000004E84147A00000000000000B5
-t1317278842
-s181
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/sebastien/Documents/geobbs/app/geobbs/main.m
-c000000004E84147A0000000000000166
-t1317278842
-s358
-i<UIKit/UIKit.h>
-
-N/var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch.gch
-t1317280267
-s15453392
-
-Ngeobbs-Info.plist
-c000000004E84147A000000000000038D
-t1317278842
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies338973277#338973277#0(0"0(0#1#0"8611538976#0"0#
-
-CCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsAppDelegate.o /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s338973067.924528
-e338973068.103513
-r1
-xCompileC
-xbuild/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsAppDelegate.o
-x/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m338973067#338973068#0(0"0(0#0#72"/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m8613087712#2056"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-generated-files.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-own-target-headers.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-all-target-headers.hmap -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-project-headers.hmap -F/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -I/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/include -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources/i386 -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources -include /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch -c /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsAppDelegate.m -o /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsAppDelegate.o0#
-
-CCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsViewController.o /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s338973068.085670
-e338973068.156070
-r1
-xCompileC
-xbuild/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsViewController.o
-x/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m338973068#338973068#0(0"0(0#0#75"/Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m8602952640#2062"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-generated-files.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-own-target-headers.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-all-target-headers.hmap -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-project-headers.hmap -F/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -I/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/include -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources/i386 -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources -include /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch -c /Users/sebastien/Documents/geobbs/app/geobbs/Classes/geobbsViewController.m -o /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbsViewController.o0#
-
-CCompileC build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/main.o /Users/sebastien/Documents/geobbs/app/geobbs/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s338973067.922880
-e338973068.085574
-r1
-xCompileC
-xbuild/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/main.o
-x/Users/sebastien/Documents/geobbs/app/geobbs/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/sebastien/Documents/geobbs/app/geobbs/main.m338973067#338973068#0(0"0(0#0#51"/Users/sebastien/Documents/geobbs/app/geobbs/main.m8613395616#2022"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-generated-files.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-own-target-headers.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-all-target-headers.hmap -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-project-headers.hmap -F/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -I/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/include -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources/i386 -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources -include /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch -c /Users/sebastien/Documents/geobbs/app/geobbs/main.m -o /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib
-s338973277.914477
-e338973278.351465
-r1
-xCompileXIB
-x/Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib
-o/* com.apple.ibtool.document.warnings */
-o/Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib:10: warning: 'Geobbs View Controller' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.
-lSLF07#2@25"CompileXIB MainWindow.xib338973277#338973278#0(227"/* com.apple.ibtool.document.warnings *//Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib:10: warning: 'Geobbs View Controller' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.1(22@112"'Geobbs View Controller' has both its 'View' and 'NIB Name' properties set. This configuration is not supported.338973278#18446744073709551615#0#0(6@59"/Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib338973268#10#0#10#0#0"0(0#0#59"/Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib8610704480#649"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/MainWindow.nib /Users/sebastien/Documents/geobbs/app/geobbs/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib
-s338973066.007787
-e338973066.823592
-r1
-xCompileXIB
-x/Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib
-lSLF07#2@35"CompileXIB geobbsViewController.xib338973066#338973066#0(0"0(0#0#69"/Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib8610327520#669"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbsViewController.nib /Users/sebastien/Documents/geobbs/app/geobbs/geobbsViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CGenerateDSYMFile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app.dSYM /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs
-s338973068.461756
-e338973068.535799
-r1
-xGenerateDSYMFile
-x/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app.dSYM
-x/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs
-lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/geobbs.app.dSYM build/Debug-iphonesimulator/geobbs.app/geobbs338973068#338973068#0(0"0(0#0#90"/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs8611489728#460"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/usr/bin/dsymutil /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs -o /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app.dSYM0#
-
-CLd /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs normal i386
-s338973068.156161
-e338973068.461667
-r1
-xLd
-x/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs
-xnormal
-xi386
-lSLF07#2@95"Link /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs338973068#338973068#0(0"0(0#0#0"8612603104#987"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -F/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -filelist /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/Objects-normal/i386/geobbs.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/geobbs0#
-
-CProcessInfoPlistFile /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/Info.plist geobbs-Info.plist
-s338973065.970202
-e338973066.005556
-r1
-xProcessInfoPlistFile
-x/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/Info.plist
-xgeobbs-Info.plist
-lSLF07#2@25"Process geobbs-Info.plist338973066#338973066#0(0"0(0#0#62"/Users/sebastien/Documents/geobbs/app/geobbs/geobbs-Info.plist32932993188560964#556"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    builtin-infoPlistUtility geobbs-Info.plist -genpkginfo /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app/Info.plist0#
-
-CProcessPCH /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch.gch geobbs_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s338973066.826734
-e338973067.922409
-r1
-xProcessPCH
-x/var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch.gch
-xgeobbs_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile geobbs_Prefix.pch338973066#338973067#0(0"0(0#0#62"/Users/sebastien/Documents/geobbs/app/geobbs/geobbs_Prefix.pch8612695040#1909"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-generated-files.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-own-target-headers.hmap -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-all-target-headers.hmap -iquote /Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/geobbs-project-headers.hmap -F/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator -I/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/include -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources/i386 -I/Users/sebastien/Documents/geobbs/app/geobbs/build/geobbs.build/Debug-iphonesimulator/geobbs.build/DerivedSources -c /Users/sebastien/Documents/geobbs/app/geobbs/geobbs_Prefix.pch -o /var/folders/+3/+3rZdI4FGQ8ny46wEqvaWU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/geobbs_Prefix-fltrikbmlpjhpeavgbyxzlyaxyar/geobbs_Prefix.pch.gch0#
-
-CTouch /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app
-s338973278.352039
-e338973278.354955
-r1
-xTouch
-x/Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app
-lSLF07#2@89"Touch /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app338973278#338973278#0(0"0(0#0#0"30962724186357872#351"    cd /Users/sebastien/Documents/geobbs/app/geobbs    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin"    /usr/bin/touch -c /Users/sebastien/Documents/geobbs/app/geobbs/build/Debug-iphonesimulator/geobbs.app0#
-

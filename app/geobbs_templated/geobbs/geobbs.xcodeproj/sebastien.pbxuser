@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* geobbsAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1016, 384}}";
-			sepNavSelRange = "{330, 0}";
-			sepNavVisRange = "{0, 565}";
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 551}}";
+			sepNavSelRange = "{433, 0}";
+			sepNavVisRange = "{0, 440}";
 		};
 	};
 	1D3623250D0F684500981E51 /* geobbsAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1016, 1898}}";
-			sepNavSelRange = "{321, 0}";
-			sepNavVisRange = "{0, 773}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1339}}";
+			sepNavSelRange = "{294, 0}";
+			sepNavVisRange = "{1829, 1406}";
 			sepNavWindowFrame = "{{83, 12}, {1098, 696}}";
 		};
 	};
@@ -30,16 +30,17 @@
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1016, 384}}";
-			sepNavSelRange = "{333, 53}";
-			sepNavVisRange = "{0, 433}";
+			sepNavIntBoundsRect = "{{0, 0}, {1039, 568}}";
+			sepNavSelRange = "{462, 0}";
+			sepNavVisRange = "{0, 508}";
+			sepNavWindowFrame = "{{61, 35}, {1098, 696}}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1016, 2327}}";
-			sepNavSelRange = "{237, 0}";
-			sepNavVisRange = "{0, 571}";
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 2431}}";
+			sepNavSelRange = "{265, 0}";
+			sepNavVisRange = "{0, 877}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -128,6 +129,30 @@
 			BEC397D51446249D00C628F3 /* PBXTextBookmark */ = BEC397D51446249D00C628F3 /* PBXTextBookmark */;
 			BEC397D61446249D00C628F3 /* XCBuildMessageTextBookmark */ = BEC397D61446249D00C628F3 /* XCBuildMessageTextBookmark */;
 			BEC397D71446249D00C628F3 /* PBXTextBookmark */ = BEC397D71446249D00C628F3 /* PBXTextBookmark */;
+			BEC397DA144625D000C628F3 /* PBXTextBookmark */ = BEC397DA144625D000C628F3 /* PBXTextBookmark */;
+			BEC397DB144625D000C628F3 /* PBXTextBookmark */ = BEC397DB144625D000C628F3 /* PBXTextBookmark */;
+			BEC397DC144625D000C628F3 /* PBXTextBookmark */ = BEC397DC144625D000C628F3 /* PBXTextBookmark */;
+			BEC397DD144625D000C628F3 /* PBXTextBookmark */ = BEC397DD144625D000C628F3 /* PBXTextBookmark */;
+			BEC397DE144625D000C628F3 /* PBXTextBookmark */ = BEC397DE144625D000C628F3 /* PBXTextBookmark */;
+			BEC397E41446270400C628F3 /* PBXTextBookmark */ = BEC397E41446270400C628F3 /* PBXTextBookmark */;
+			BEC397E51446270400C628F3 /* PBXTextBookmark */ = BEC397E51446270400C628F3 /* PBXTextBookmark */;
+			BEC397E61446270400C628F3 /* PBXTextBookmark */ = BEC397E61446270400C628F3 /* PBXTextBookmark */;
+			BEC397E71446270400C628F3 /* PBXTextBookmark */ = BEC397E71446270400C628F3 /* PBXTextBookmark */;
+			BEC397E81446270400C628F3 /* PBXTextBookmark */ = BEC397E81446270400C628F3 /* PBXTextBookmark */;
+			BEC397E91446270400C628F3 /* PBXTextBookmark */ = BEC397E91446270400C628F3 /* PBXTextBookmark */;
+			BEC397F01446272A00C628F3 /* PBXTextBookmark */ = BEC397F01446272A00C628F3 /* PBXTextBookmark */;
+			BEC397F11446272A00C628F3 /* PBXTextBookmark */ = BEC397F11446272A00C628F3 /* PBXTextBookmark */;
+			BEC397F21446272A00C628F3 /* PBXTextBookmark */ = BEC397F21446272A00C628F3 /* PBXTextBookmark */;
+			BEC397F9144627A800C628F3 /* PBXTextBookmark */ = BEC397F9144627A800C628F3 /* PBXTextBookmark */;
+			BEC397FA144627A800C628F3 /* PBXTextBookmark */ = BEC397FA144627A800C628F3 /* PBXTextBookmark */;
+			BEC397FB144627A800C628F3 /* PBXTextBookmark */ = BEC397FB144627A800C628F3 /* PBXTextBookmark */;
+			BEC397FC144627A800C628F3 /* XCBuildMessageTextBookmark */ = BEC397FC144627A800C628F3 /* XCBuildMessageTextBookmark */;
+			BEC397FD144627A800C628F3 /* PBXTextBookmark */ = BEC397FD144627A800C628F3 /* PBXTextBookmark */;
+			BEC39800144627C500C628F3 /* PBXTextBookmark */ = BEC39800144627C500C628F3 /* PBXTextBookmark */;
+			BEC398071446280700C628F3 /* PBXTextBookmark */ = BEC398071446280700C628F3 /* PBXTextBookmark */;
+			BEC398081446280700C628F3 /* PBXTextBookmark */ = BEC398081446280700C628F3 /* PBXTextBookmark */;
+			BEC398091446280700C628F3 /* PBXTextBookmark */ = BEC398091446280700C628F3 /* PBXTextBookmark */;
+			BEC3980A1446280700C628F3 /* PBXTextBookmark */ = BEC3980A1446280700C628F3 /* PBXTextBookmark */;
 		};
 		sourceControlManager = BE68599714345701005139A0 /* Source Control */;
 		userBuildSettings = {
@@ -198,7 +223,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 14";
 		rLen = 0;
-		rLoc = 329;
+		rLoc = 351;
 		rType = 0;
 		vrLen = 416;
 		vrLoc = 0;
@@ -208,7 +233,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 20";
 		rLen = 0;
-		rLoc = 324;
+		rLoc = 356;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 0;
@@ -228,7 +253,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 294;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 142;
@@ -396,7 +421,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 294;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 0;
@@ -416,7 +441,7 @@
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 18";
 		rLen = 53;
-		rLoc = 333;
+		rLoc = 355;
 		rType = 0;
 		vrLen = 433;
 		vrLoc = 0;
@@ -475,7 +500,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 294;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 0;
@@ -485,7 +510,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 946;
 		vrLoc = 239;
@@ -495,7 +520,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 845;
+		rLoc = 816;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 204;
@@ -505,7 +530,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 574;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 204;
@@ -515,7 +540,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 574;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 204;
@@ -525,7 +550,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 774;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 607;
@@ -535,7 +560,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 37";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 607;
@@ -545,7 +570,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 37";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 607;
@@ -555,7 +580,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 38";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 607;
@@ -565,7 +590,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 41";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 607;
@@ -575,7 +600,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 773;
+		rLoc = 745;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 466;
@@ -585,7 +610,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 61";
 		rLen = 0;
-		rLoc = 1742;
+		rLoc = 1317;
 		rType = 0;
 		vrLen = 1039;
 		vrLoc = 1314;
@@ -595,7 +620,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 77";
 		rLen = 0;
-		rLoc = 2480;
+		rLoc = 1317;
 		rType = 0;
 		vrLen = 1413;
 		vrLoc = 1715;
@@ -615,7 +640,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 48";
 		rLen = 0;
-		rLoc = 1438;
+		rLoc = 1317;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 1097;
@@ -665,8 +690,8 @@
 		comments = "'locationManager' undeclared (first use in this function)";
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 48;
+		rLen = 0;
+		rLoc = 45;
 		rType = 1;
 	};
 	BEC397CE1446242A00C628F3 /* PBXTextBookmark */ = {
@@ -674,7 +699,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 48";
 		rLen = 0;
-		rLoc = 1408;
+		rLoc = 1317;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 0;
@@ -684,7 +709,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 321;
+		rLoc = 294;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 0;
@@ -703,9 +728,262 @@
 		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
 		name = "geobbsAppDelegate.h: 15";
 		rLen = 0;
-		rLoc = 330;
+		rLoc = 310;
 		rType = 0;
 		vrLen = 565;
+		vrLoc = 0;
+	};
+	BEC397DA144625D000C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 10";
+		rLen = 0;
+		rLoc = 167;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 0;
+	};
+	BEC397DB144625D000C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BE685A8E1434643E005139A0 /* User.h */;
+		name = "User.h: 8";
+		rLen = 0;
+		rLoc = 128;
+		rType = 0;
+		vrLen = 336;
+		vrLoc = 0;
+	};
+	BEC397DC144625D000C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 166;
+		rType = 0;
+		vrLen = 603;
+		vrLoc = 0;
+	};
+	BEC397DD144625D000C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 17";
+		rLen = 0;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	BEC397DE144625D000C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 53";
+		rLen = 0;
+		rLoc = 1317;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	BEC397DF1446264F00C628F3 /* CLController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 384}}";
+			sepNavSelRange = "{419, 0}";
+			sepNavVisRange = "{0, 665}";
+		};
+	};
+	BEC397E01446264F00C628F3 /* CLController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1016, 572}}";
+			sepNavSelRange = "{278, 0}";
+			sepNavVisRange = "{0, 819}";
+		};
+	};
+	BEC397E41446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BEC397DF1446264F00C628F3 /* CLController.h */;
+		name = "CLController.h: 19";
+		rLen = 0;
+		rLoc = 419;
+		rType = 0;
+		vrLen = 665;
+		vrLoc = 0;
+	};
+	BEC397E51446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 53";
+		rLen = 0;
+		rLoc = 1317;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	BEC397E61446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 10";
+		rLen = 0;
+		rLoc = 167;
+		rType = 0;
+		vrLen = 433;
+		vrLoc = 0;
+	};
+	BEC397E71446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BEC397E01446264F00C628F3 /* CLController.m */;
+		name = "CLController.m: 18";
+		rLen = 0;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 679;
+		vrLoc = 223;
+	};
+	BEC397E81446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 166;
+		rType = 0;
+		vrLen = 603;
+		vrLoc = 0;
+	};
+	BEC397E91446270400C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 10";
+		rLen = 0;
+		rLoc = 165;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 0;
+	};
+	BEC397F01446272A00C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 10";
+		rLen = 0;
+		rLoc = 165;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 0;
+	};
+	BEC397F11446272A00C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 53";
+		rLen = 0;
+		rLoc = 1317;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	BEC397F21446272A00C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 32";
+		rLen = 0;
+		rLoc = 746;
+		rType = 0;
+		vrLen = 1090;
+		vrLoc = 326;
+	};
+	BEC397F9144627A800C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
+		name = "RootViewController.h: 21";
+		rLen = 0;
+		rLoc = 462;
+		rType = 0;
+		vrLen = 508;
+		vrLoc = 0;
+	};
+	BEC397FA144627A800C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 433;
+		rType = 0;
+		vrLen = 440;
+		vrLoc = 0;
+	};
+	BEC397FB144627A800C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 17";
+		rLen = 0;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 1314;
+		vrLoc = 0;
+	};
+	BEC397FC144627A800C628F3 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'MyCLController' undeclared (first use in this function)";
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 26;
+		rType = 1;
+	};
+	BEC397FD144627A800C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 26";
+		rLen = 0;
+		rLoc = 447;
+		rType = 0;
+		vrLen = 849;
+		vrLoc = 0;
+	};
+	BEC39800144627C500C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 163";
+		rLen = 0;
+		rLoc = 4322;
+		rType = 0;
+		vrLen = 849;
+		vrLoc = 0;
+	};
+	BEC398071446280700C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 433;
+		rType = 0;
+		vrLen = 440;
+		vrLoc = 0;
+	};
+	BEC398081446280700C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 17";
+		rLen = 0;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 1406;
+		vrLoc = 1829;
+	};
+	BEC398091446280700C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 14";
+		rLen = 0;
+		rLoc = 270;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 0;
+	};
+	BEC3980A1446280700C628F3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 14";
+		rLen = 0;
+		rLoc = 268;
+		rType = 0;
+		vrLen = 877;
 		vrLoc = 0;
 	};
 }
