@@ -103,6 +103,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BEB76FB71446F0EB007F60A9 /* New Group */,
 				BEC397DF1446264F00C628F3 /* CLController.h */,
 				BEC397E01446264F00C628F3 /* CLController.m */,
 				BEB76B261446C857007F60A9 /* SBJson */,
@@ -201,6 +202,13 @@
 				BEB76B401446C857007F60A9 /* SBJsonWriter.m */,
 			);
 			path = SBJson;
+			sourceTree = "<group>";
+		};
+		BEB76FB71446F0EB007F60A9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
