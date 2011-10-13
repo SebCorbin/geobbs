@@ -3,3 +3,5 @@ cahierSpecs/*.log
 cahierSpecs/specs.out
 cahierSpecs/*.gz
 cahierSpecs/*.fdb_latexmk
+app/geobbs_templated/geobbs/geobbs.xcodeproj/FG.pbxuser
+app/geobbs_templated/geobbs/geobbs.xcodeproj/FG.perspectivev3

@@ -28,10 +28,24 @@
     MongoDb.prototype.getUser = function(idUser, cb) {
       return this.Models.UserModel.getById(idUser, cb);
     };
-    MongoDb.prototype.addCheck = function(User, loc, cb) {
+    MongoDb.prototype.addCheck = function(User, params, cb) {
+      if (!params.lat || !params.lon) {
+        return cb(true, null);
+      }
       return this.Models.CheckModel.getCollection(__bind(function(collChecks) {
-        var Check;
-        Check = new this.Models.CheckModel(loc, User);
+        var Check, loc, opt;
+        loc = {
+          lat: params.lat,
+          lon: params.lon
+        };
+        opt = {};
+        if (params.description) {
+          opt.description = params.description;
+        }
+        if (params.imgUrl) {
+          opt.imgUrl = params.imgUrl;
+        }
+        Check = new this.Models.CheckModel(loc, User, opt);
         Check.save(collChecks);
         return User.addCheck(Check, cb);
       }, this));

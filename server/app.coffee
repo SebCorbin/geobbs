@@ -45,10 +45,18 @@ loadUser = (req, res, next) ->
 renderJSON = (res, json) ->
   res.send JSON.stringify(json), { 'Content-Type': 'text/javascript' }, json.code
 
+### 
+  POST
 
+  /user/:userId/check/
 
-# Check et retourne la liste X des utilisateurs les plus proches à moins de 100ms
-app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
+  Params:
+    - lat
+    - lon
+    - description
+    - imgUrl
+###
+app.all "/user/:userId/check/", loadUser, (req, res) ->
 
   out = {
       code:404 # User Not found
@@ -58,8 +66,9 @@ app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
   
   if(!req.user)
     return renderJSON(res, out)
+
   
-  mongodb.addCheck(req.user, {lat:req.params.lat, lon:req.params.lon}, (err, success) ->
+  mongodb.addCheck(req.user, req.query, (err, success) ->
 
     if err
       out.code = 500 # Internal Server error
@@ -73,8 +82,12 @@ app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
     renderJSON(res, out)
   )
 
+###
+  PUBLIC
 
-app.get "/check/", (req, res) ->
+  Retourne pour chaque item:
+###
+app.get "/checks/", (req, res) ->
   q = req.query
 
   out = {

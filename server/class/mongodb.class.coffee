@@ -36,12 +36,24 @@ module.exports = class MongoDb
     
   # Ajoute un check pour l'utilisateur @User
   # et retourner l'objet Check
-  addCheck: (User, loc, cb) ->
-    
+  addCheck: (User, params, cb) ->
+
+    if !params.lat || !params.lon
+      return cb(true, null)
 
     @Models.CheckModel.getCollection((collChecks) =>
       # Créer un check à partir du model
-      Check = new @Models.CheckModel(loc, User)
+
+      loc = 
+        lat:params.lat
+        lon:params.lon
+
+      opt = {}
+
+      opt.description = params.description if params.description
+      opt.imgUrl = params.imgUrl if params.imgUrl
+
+      Check = new @Models.CheckModel(loc, User, opt)
 
       # Enregistrer le check en BDD
       Check.save(collChecks)

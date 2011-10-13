@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Project</string>
+	<string>Debug</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -268,11 +268,13 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>BEB76B261446C857007F60A9</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>7</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -294,8 +296,6 @@
 							<string>MainColumn</string>
 							<real>206</real>
 						</array>
-						<key>RubberWindowFrame</key>
-						<string>0 39 1280 739 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -306,14 +306,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>BE68599114345701005139A0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>asm objc_msgSend  0x00f9ba4c</string>
+								<string>NSObject+SBJson.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -321,11 +319,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>BE68599214345701005139A0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>asm objc_msgSend  0x00f9ba4c</string>
+										<string>NSObject+SBJson.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BEB76D661446DA93007F60A9</string>
+										<string>BEB76D7D1446DBDD007F60A9</string>
 										<key>history</key>
 										<array>
 											<string>BE6859D714345C46005139A0</string>
@@ -372,12 +370,13 @@
 											<string>BEB76D111446D600007F60A9</string>
 											<string>BEB76D131446D600007F60A9</string>
 											<string>BEB76D141446D600007F60A9</string>
-											<string>BEB76D151446D600007F60A9</string>
 											<string>BEB76D231446D675007F60A9</string>
 											<string>BEB76D241446D675007F60A9</string>
 											<string>BEB76D3D1446D7D5007F60A9</string>
 											<string>BEB76D3E1446D7D5007F60A9</string>
-											<string>BEB76D3F1446D7D5007F60A9</string>
+											<string>BEB76D6D1446DBA3007F60A9</string>
+											<string>BEB76D6E1446DBA3007F60A9</string>
+											<string>BEB76D6F1446DBA3007F60A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -392,8 +391,6 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1052, 531}}</string>
-								<key>RubberWindowFrame</key>
-								<string>0 39 1280 739 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -471,8 +468,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1052, 135}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 39 1280 739 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -545,6 +540,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -556,6 +553,8 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1280, 223}}</string>
+						<key>RubberWindowFrame</key>
+						<string>0 39 1280 739 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -630,7 +629,11 @@
 							</array>
 							<key>Frame</key>
 							<string>{{0, 245}, {365, 225}}</string>
+							<key>RubberWindowFrame</key>
+							<string>0 39 1280 739 0 0 1280 778 </string>
 						</dict>
+						<key>RubberWindowFrame</key>
+						<string>0 39 1280 739 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -694,6 +697,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>BEB76D7E1446DBDD007F60A9</string>
 		<string>BEB76A361446BFDF007F60A9</string>
 		<string>BEB76A341446BF61007F60A9</string>
 		<string>/Users/sebastien/Documents/geobbs/app/geobbs_templated/geobbs/geobbs.xcodeproj</string>

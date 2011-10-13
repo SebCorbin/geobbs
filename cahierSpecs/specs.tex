@@ -149,20 +149,38 @@ Entry point (point d'entrée)
 http://IP:3000/api/
 
 \begin{description}
-  \item[/check/{userId}/] \textbf{POST}
-    \begin{itemize}
-      \item Paramètres: lat, lon, userId
-      \item
-    \end{itemize}
-  \item[/check/?lat={lat}\&lon={lon}\&d={distance}\&c={count}] \textbf{GET}
-    \begin{itemize}
-      \item Paramètres: lat, lon, distance, count
-    \end{itemize}
+  \item[POST /user/\{userId\}/check/]:
+
+    \begin{description}
+      \item[Description] Ajoute un check à l'utilisateur.
+      \item[Paramètres]:
+
+        \begin{description}
+          \item[lat (float)] Latitude
+          \item[lon (float)] Longitude
+        \end{description}
+    \end{description}
+
+  \item[GET /user/\{userId\}/check/]:
+  \item[GET /checks/]:
+
+    \begin{description}
+      \item[Description] Retourne la liste des checks aux alentours de \lstinline{lat},\lstinline{lon}.
+
+      \item[Paramètres]:
+        \begin{description}
+          \item[lat (float)] Latitude
+          \item[lon (float)] Longitude
+          \item[distance (entier)] (optionel) Distance maximum par rapport à \lstinline{lat},\lstinline{lon}.
+          \item[count (entier)] (optionel) Nombre maximum de données à retourner
+        \end{description}
+    \end{description}
+
 \end{description}
 
 \chapter*{Base de données}
 
-L'administration de la base de donnée se fera par l'utilisateur \lstinline{MongoDB}.
+L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo}.
 
 Collections en BDD:
 \begin{description}
@@ -174,7 +192,7 @@ Ajout d'une première entitée dans Checks:
 \begin{description}
   \item[loc] \lstinline{[1,1]}
   \item[userId] \lstinline{ObjectId("4e7e0614bd99e29380000000")}
-  \item[data] \lstinline{new Date()}
+  \item[date] \lstinline{new Date()}
 \end{description}
 
 Ajout d'une première entitée dans Users
