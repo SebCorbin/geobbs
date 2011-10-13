@@ -8,6 +8,7 @@
 
 #import "User.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SBJson.h"
 
 @interface Service : NSObject {
 	NSString* serverUrl;

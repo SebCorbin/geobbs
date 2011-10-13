@@ -7,12 +7,12 @@
 //
 
 #import "CLController.h"
-#import "Service.h"
-#import "User.h"
+#import "geobbsAppDelegate.h"
 
 @implementation CLController
 
 @synthesize locationManager;
+@synthesize delegate;
 
 - (id) init {
     self = [super init];
@@ -23,17 +23,14 @@
     return self;
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
 	// Get the notifiaction list
-	[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation];
+	NSArray *notifications = [[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation];
+	[self.delegate setNotifications:notifications];
+	[notifications release];
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-	   didFailWithError:(NSError *)error
-{
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
 	NSLog(@"Error: %@", [error description]);
 }
 

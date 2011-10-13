@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SBJson/SBJson.h"
 #import "User.h"
 #import "CLController.h"
 #import "Service.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <CLControllerDelegate> {
 	NSArray *notifications;
 	CLController *locationController;
 }
@@ -20,6 +19,6 @@
 @property (nonatomic, retain) NSArray *notifications;
 @property (retain) CLController *locationController;
 
--(void) getNotifications:(User*) user;
+-(void) setNotifications:(NSArray*) array;
 
 @end

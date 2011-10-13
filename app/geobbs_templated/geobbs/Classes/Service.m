@@ -77,8 +77,10 @@ static Service *serviceManager = nil;
 			NSLog(@"404 Not Found: %@", query);
 		}
 		else if(statusCode == 200) {
-			NSLog(@"hello");
-			NSLog(@"%@", data);
+			NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+			NSDictionary *json = [jsonString JSONValue];
+			NSArray *notifs = [json objectForKey:@"msg"];
+			return notifs;
 		}
 	}
 	return nil;

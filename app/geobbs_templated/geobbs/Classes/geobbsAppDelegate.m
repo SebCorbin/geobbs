@@ -22,19 +22,13 @@
     
 	RootViewController *rootViewController = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
 	
-	// Request the location service
-	if(![CLLocationManager locationServicesEnabled]) {
-		// Display an error mesage requiring the user to activate location service
-		
-	}
-	
     // Get the last notifications
-    rootViewController.notifications = [NSArray arrayWithObjects:@"test1", @"test2", nil];
+    rootViewController.notifications = [[NSArray alloc] init];
     
 	UINavigationController *aNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     self.navigationController = aNavigationController;
-    [aNavigationController release];
-    [rootViewController release];
+    //[aNavigationController release];
+    //[rootViewController release];
 	
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
