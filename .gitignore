@@ -1,7 +1,9 @@
-cahierSpecs/*.aux
-cahierSpecs/*.log
-cahierSpecs/specs.out
-cahierSpecs/*.gz
-cahierSpecs/*.fdb_latexmk
-app/geobbs_templated/geobbs/geobbs.xcodeproj/FG.pbxuser
-app/geobbs_templated/geobbs/geobbs.xcodeproj/FG.perspectivev3app/geobbs_templated/geobbs/geobbs.xcodeproj/project.pbxproj
+*.aux
+*.log
+specs.out
+*.gz
+*.fdb_latexmk
+*.pbxuser
+*.pbxproj
+build/
+*.perspectivev3

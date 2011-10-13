@@ -83,11 +83,9 @@ app.all "/user/:userId/check/", loadUser, (req, res) ->
   )
 
 ###
-  PUBLIC
-
-  Retourne pour chaque item:
+  Retourne chaque item les plus proches
 ###
-app.get "/checks/", (req, res) ->
+API_checks = (req, res) ->
   q = req.query
 
   out = {
@@ -105,6 +103,8 @@ app.get "/checks/", (req, res) ->
     renderJSON(res, out)
   )
 
+app.get "/checks/", API_checks
+app.get "/user/\{userId\}/check/", API_checks
 
 
 app.listen http.port, "0.0.0.0"

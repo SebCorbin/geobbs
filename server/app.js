@@ -1,5 +1,5 @@
 (function() {
-  var MongoDb, app, dbConfig, express, http, loadUser, mongodb, renderJSON, _ref;
+  var API_checks, MongoDb, app, dbConfig, express, http, loadUser, mongodb, renderJSON, _ref;
   express = require("express");
   _ref = require('./config'), dbConfig = _ref.db, http = _ref.http;
   MongoDb = require('mongodb');
@@ -77,11 +77,9 @@
     });
   });
   /*
-    PUBLIC
-  
-    Retourne pour chaque item:
+    Retourne chaque item les plus proches
   */
-  app.get("/checks/", function(req, res) {
+  API_checks = function(req, res) {
     var out, q;
     q = req.query;
     out = {
@@ -98,7 +96,9 @@
       out.msg = success;
       return renderJSON(res, out);
     });
-  });
+  };
+  app.get("/checks/", API_checks);
+  app.get("/user/\{userId\}/check/", API_checks);
   app.listen(http.port, "0.0.0.0");
   console.log("Express server listening on port %d", app.address().port);
 }).call(this);

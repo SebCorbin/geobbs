@@ -52,13 +52,13 @@
           opt.d = parseInt(opt.d, 10);
         }
         if (!opt.d || opt.d > 100) {
-          opt.d = 10000;
+          opt.d = 100;
         }
         if (opt.c) {
           opt.c = parseInt(opt.c, 10);
         }
         if (!opt.c || opt.c > 100) {
-          opt.c = 10000;
+          opt.c = 100;
         }
         return Check.getCollection(function(collChecks) {
           return collChecks.find({

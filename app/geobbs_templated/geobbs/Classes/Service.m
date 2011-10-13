@@ -58,13 +58,21 @@ static Service *serviceManager = nil;
 }
 
 -(NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location {
-	NSString *stringUrl = [NSString stringWithFormat:@"%@/check/?lat=%+.6f&lon=%+.6f", [[Service getService] serverUrl], location.coordinate.latitude, location.coordinate.longitude];
+	
+	NSString *stringUrl = [NSString stringWithFormat:@"%@/checks/?lat=%+.6f&lon=%+.6f", 
+							[[Service getService] serverUrl]
+							, location.coordinate.latitude
+							, location.coordinate.longitude];
+	
+	NSLog(@"Loading %@", stringUrl);
 	
 	NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:stringUrl]
-										   cachePolicy:NSURLRequestUseProtocolCachePolicy
-									   timeoutInterval:60.0];
+										cachePolicy:NSURLRequestUseProtocolCachePolicy
+										timeoutInterval:60.0];
+	
 	NSURLResponse *response = nil;
 	NSData *data = [NSURLConnection sendSynchronousRequest:query returningResponse:&response error:NULL];
+	
 	// Connection failed
 	if (!response) {
 		NSLog(@"La connection a échouée");
@@ -77,8 +85,14 @@ static Service *serviceManager = nil;
 			NSLog(@"404 Not Found: %@", query);
 		}
 		else if(statusCode == 200) {
+			// Passage de NSData en NSString
 			NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+			
+			NSLog(@"Data %@", jsonString);
+			
+			// Récupération du JSON
 			NSDictionary *json = [jsonString JSONValue];
+			
 			NSArray *notifs = [json objectForKey:@"msg"];
 			return notifs;
 		}
