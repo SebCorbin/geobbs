@@ -42,6 +42,9 @@
       'Content-Type': 'text/javascript'
     }, json.code);
   };
+  /* 
+    PRIVATE
+  */
   app.all("/:userId/check/:lat,:lon", loadUser, function(req, res) {
     var out;
     out = {
@@ -68,6 +71,16 @@
       return renderJSON(res, out);
     });
   });
+  /*
+    PUBLIC
+  
+    Retourne pour chaque item:
+      User
+      Geo
+      Date du check
+  
+      /?lat=&lon=&c=&
+  */
   app.get("/check/", function(req, res) {
     var out, q;
     q = req.query;

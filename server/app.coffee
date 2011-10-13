@@ -46,8 +46,9 @@ renderJSON = (res, json) ->
   res.send JSON.stringify(json), { 'Content-Type': 'text/javascript' }, json.code
 
 
-
-# Check et retourne la liste X des utilisateurs les plus proches à moins de 100ms
+### 
+  PRIVATE
+###
 app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
 
   out = {
@@ -73,7 +74,16 @@ app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
     renderJSON(res, out)
   )
 
+###
+  PUBLIC
 
+  Retourne pour chaque item:
+    User
+    Geo
+    Date du check
+
+    /?lat=&lon=&c=&
+###
 app.get "/check/", (req, res) ->
   q = req.query
 
