@@ -87,13 +87,9 @@ static Service *serviceManager = nil;
 		else if(statusCode == 200) {
 			// Passage de NSData en NSString
 			NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-			
-			NSLog(@"Data %@", jsonString);
-			
 			// Récupération du JSON
 			NSDictionary *json = [jsonString JSONValue];
-			
-			NSArray *notifs = [json objectForKey:@"msg"];
+			NSArray *notifs = [[NSArray alloc] initWithArray:[json objectForKey:@"msg"]];
 			return notifs;
 		}
 	}

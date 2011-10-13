@@ -17,7 +17,7 @@
 #pragma mark View lifecycle
 
 -(void) setNotifications:(NSArray*) array {
-	[self.notifications initWithObjects:nil];
+	//[self.notifications initWithObjects:nil];
 	for (NSDictionary *notif in array) {
 		NSLog(@"%@", [notif objectForKey:@"date"]);
 	}
@@ -25,10 +25,11 @@
 }
 
 - (void)viewDidLoad {
-     self.title = @"Notifications";
+	self.title = @"Notifications";
 	
 	// Initialize location manager
 	locationController = [[CLController alloc] init];
+	locationController.delegate = self;
     [locationController.locationManager startUpdatingLocation];
 }
 
