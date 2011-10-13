@@ -67,17 +67,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C5031C3914462AC100D1ABEA /* DomainModel */,
 				BEC397DF1446264F00C628F3 /* CLController.h */,
 				BEC397E01446264F00C628F3 /* CLController.m */,
 				BE28B969143B669F005F0308 /* SBJson */,
-				BE685A4A1434620E005139A0 /* Check.h */,
-				BE685A4B1434620E005139A0 /* Check.m */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* geobbsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* geobbsAppDelegate.m */,
-				BE685A8E1434643E005139A0 /* User.h */,
-				BE685A8F1434643E005139A0 /* User.m */,
 				BE28B9A4143B6743005F0308 /* Service.h */,
 				BE28B9A5143B6743005F0308 /* Service.m */,
 			);
@@ -132,6 +129,17 @@
 				BEC398111446296500C628F3 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5031C3914462AC100D1ABEA /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE685A8E1434643E005139A0 /* User.h */,
+				BE685A8F1434643E005139A0 /* User.m */,
+				BE685A4A1434620E005139A0 /* Check.h */,
+				BE685A4B1434620E005139A0 /* Check.m */,
+			);
+			name = DomainModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
