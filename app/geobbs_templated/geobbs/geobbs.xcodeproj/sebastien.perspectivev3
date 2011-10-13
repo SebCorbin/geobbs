@@ -268,13 +268,12 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>BEB76B261446C857007F60A9</string>
+								<string>1C77FABC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>4</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -311,7 +310,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>BE68599114345701005139A0</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NSObject+SBJson.m</string>
+								<string>CLController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -319,16 +318,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>BE68599214345701005139A0</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>NSObject+SBJson.m</string>
+										<string>CLController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BEB76D7D1446DBDD007F60A9</string>
+										<string>BEB76F951446ED91007F60A9</string>
 										<key>history</key>
 										<array>
 											<string>BE6859D714345C46005139A0</string>
 											<string>BEC3983114462C7100C628F3</string>
-											<string>BEC3983F14462CBF00C628F3</string>
 											<string>BEB76A8A1446C22E007F60A9</string>
 											<string>BEB76AD31446C56C007F60A9</string>
 											<string>BEB76AD51446C56C007F60A9</string>
@@ -356,13 +354,7 @@
 											<string>BEB76B7E1446C888007F60A9</string>
 											<string>BEB76B7F1446C888007F60A9</string>
 											<string>BEB76B811446C888007F60A9</string>
-											<string>BEB76BD21446CD00007F60A9</string>
-											<string>BEB76BEB1446CEE4007F60A9</string>
 											<string>BEB76CA11446D234007F60A9</string>
-											<string>BEB76CC91446D31C007F60A9</string>
-											<string>BEB76CEB1446D459007F60A9</string>
-											<string>BEB76CEC1446D459007F60A9</string>
-											<string>BEB76D0C1446D600007F60A9</string>
 											<string>BEB76D0D1446D600007F60A9</string>
 											<string>BEB76D0E1446D600007F60A9</string>
 											<string>BEB76D0F1446D600007F60A9</string>
@@ -370,13 +362,20 @@
 											<string>BEB76D111446D600007F60A9</string>
 											<string>BEB76D131446D600007F60A9</string>
 											<string>BEB76D141446D600007F60A9</string>
-											<string>BEB76D231446D675007F60A9</string>
-											<string>BEB76D241446D675007F60A9</string>
-											<string>BEB76D3D1446D7D5007F60A9</string>
-											<string>BEB76D3E1446D7D5007F60A9</string>
-											<string>BEB76D6D1446DBA3007F60A9</string>
 											<string>BEB76D6E1446DBA3007F60A9</string>
-											<string>BEB76D6F1446DBA3007F60A9</string>
+											<string>BEB76D831446DCB5007F60A9</string>
+											<string>BEB76DCC1446DF06007F60A9</string>
+											<string>BEB76DCD1446DF06007F60A9</string>
+											<string>BEB76DCE1446DF06007F60A9</string>
+											<string>BEB76DE91446E105007F60A9</string>
+											<string>BEB76E381446E26D007F60A9</string>
+											<string>BEB76E451446E281007F60A9</string>
+											<string>BEB76E6B1446E51E007F60A9</string>
+											<string>BEB76ED41446E997007F60A9</string>
+											<string>BEB76F691446ECCD007F60A9</string>
+											<string>BEB76F6A1446ECCD007F60A9</string>
+											<string>BEB76F861446ED69007F60A9</string>
+											<string>BEB76F871446ED69007F60A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,16 +389,16 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1052, 531}}</string>
+								<string>{{0, 0}, {1052, 693}}</string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>531pt</string>
+							<string>693pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>162pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -413,7 +412,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1077, 107}}</string>
+										<string>{{10, 27}, {1052, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -429,7 +428,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 31}, {603, 297}}</string>
+										<string>{{10, 27}, {1052, 181}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -467,7 +466,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1052, 135}}</string>
+										<string>{{10, 27}, {1052, 181}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -697,7 +696,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BEB76D7E1446DBDD007F60A9</string>
+		<string>BEB76F961446ED91007F60A9</string>
 		<string>BEB76A361446BFDF007F60A9</string>
 		<string>BEB76A341446BF61007F60A9</string>
 		<string>/Users/sebastien/Documents/geobbs/app/geobbs_templated/geobbs/geobbs.xcodeproj</string>
