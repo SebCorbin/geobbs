@@ -4,18 +4,27 @@ module.exports = (MongoDB, client) ->
   _collChecks = null
 
   return class Check
-    constructor: (@loc = {}, User, @_id = new BSON.ObjectID(), @date = Date.now()) ->
+    ###
+      _userId:
+      loc:
+      Check:{
+        
+      }
+    ###
+    constructor: (@loc = {}, User, @opt = {}, @_id = new BSON.ObjectID()) ->
       @_userId = if User && User._id then User._id else new BSON.ObjectID()
 
       @loc.lat = parseInt(@loc.lat, 10) || -1
       @loc.lon = parseInt(@loc.lon, 10) || -1
+
+      @opt.date or= Date.now()
 
     save: (CheckCollection)->
       CheckCollection.save(
         _id   : @_id
         _userId : @_userId
         loc   : [@loc.lat, @loc.lon]
-        date  : @date
+        Check : @opt
       )
     
     

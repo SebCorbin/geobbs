@@ -45,11 +45,18 @@ loadUser = (req, res, next) ->
 renderJSON = (res, json) ->
   res.send JSON.stringify(json), { 'Content-Type': 'text/javascript' }, json.code
 
-
 ### 
-  PRIVATE
+  POST
+
+  /user/:userId/check/
+
+  Params:
+    - lat
+    - lon
+    - description
+    - imgUrl
 ###
-app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
+app.all "/user/:userId/check/", loadUser, (req, res) ->
 
   out = {
       code:404 # User Not found
@@ -59,8 +66,9 @@ app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
   
   if(!req.user)
     return renderJSON(res, out)
+
   
-  mongodb.addCheck(req.user, {lat:req.params.lat, lon:req.params.lon}, (err, success) ->
+  mongodb.addCheck(req.user, req.query, (err, success) ->
 
     if err
       out.code = 500 # Internal Server error
@@ -78,13 +86,8 @@ app.all "/:userId/check/:lat,:lon", loadUser, (req, res) ->
   PUBLIC
 
   Retourne pour chaque item:
-    User
-    Geo
-    Date du check
-
-    /?lat=&lon=&c=&
 ###
-app.get "/check/", (req, res) ->
+app.get "/checks/", (req, res) ->
   q = req.query
 
   out = {

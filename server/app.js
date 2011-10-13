@@ -43,9 +43,17 @@
     }, json.code);
   };
   /* 
-    PRIVATE
+    POST
+  
+    /user/:userId/check/
+  
+    Params:
+      - lat
+      - lon
+      - description
+      - imgUrl
   */
-  app.all("/:userId/check/:lat,:lon", loadUser, function(req, res) {
+  app.all("/user/:userId/check/", loadUser, function(req, res) {
     var out;
     out = {
       code: 404,
@@ -55,10 +63,7 @@
     if (!req.user) {
       return renderJSON(res, out);
     }
-    return mongodb.addCheck(req.user, {
-      lat: req.params.lat,
-      lon: req.params.lon
-    }, function(err, success) {
+    return mongodb.addCheck(req.user, req.query, function(err, success) {
       if (err) {
         out.code = 500;
         out.type = 'error';
@@ -75,13 +80,8 @@
     PUBLIC
   
     Retourne pour chaque item:
-      User
-      Geo
-      Date du check
-  
-      /?lat=&lon=&c=&
   */
-  app.get("/check/", function(req, res) {
+  app.get("/checks/", function(req, res) {
     var out, q;
     q = req.query;
     out = {
