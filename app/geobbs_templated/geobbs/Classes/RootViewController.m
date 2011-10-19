@@ -17,10 +17,8 @@
 #pragma mark View lifecycle
 
 -(void) setNotifications:(NSArray*) array {
-	//[self.notifications initWithObjects:nil];
-	for (NSDictionary *notif in array) {
-		NSLog(@"%@", [notif objectForKey:@"date"]);
-	}
+	[notifications release];
+	notifications = [[NSArray alloc] initWithArray:array];
 	[self.tableView reloadData];
 }
 
@@ -90,8 +88,8 @@
     }
     
 	// Configure the cell.
-    NSString *notification = [notifications objectAtIndex:indexPath.row];
-    cell.textLabel.text = notification;
+    NSString *notification = [[[notifications objectAtIndex:indexPath.row] valueForKey:@"Check"] valueForKey:@"description"];
+    [[cell textLabel] setText:notification];
 
     return cell;
 }
