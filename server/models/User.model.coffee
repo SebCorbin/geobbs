@@ -36,6 +36,8 @@ module.exports = (MongoDB, client, opt = {}) ->
 
       @
     
+    getGeneralInfo: () ->
+      login: @login
     ###
     # Collection level
     ###

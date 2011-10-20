@@ -42,6 +42,11 @@
         }, this));
         return this;
       };
+      User.prototype.getGeneralInfo = function() {
+        return {
+          login: this.login
+        };
+      };
       /*
           # Collection level
           */

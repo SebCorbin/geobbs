@@ -17,6 +17,7 @@ module.exports = (MongoDB, client) ->
       @loc.lat = parseInt(@loc.lat, 10) || -1
       @loc.lon = parseInt(@loc.lon, 10) || -1
 
+      @User = User.getGeneralInfo()
       @opt.date or= Date.now()
 
     save: (CheckCollection)->
@@ -25,8 +26,8 @@ module.exports = (MongoDB, client) ->
         _userId : @_userId
         loc   : [@loc.lat, @loc.lon]
         Check : @opt
+        User  : @User
       )
-    
     
     # Collection
     Check.getCollection = (cb) ->

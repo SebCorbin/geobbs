@@ -11,10 +11,12 @@
 #import "SBJson/SBJson.h"
 
 @interface Service : NSObject {
-	NSString* serverUrl;
+	NSString* userId;
+	NSDictionary* apis;
 }
 
-@property (nonatomic, retain) NSString* serverUrl;
+@property (nonatomic, retain) NSDictionary* apis;
+@property (nonatomic, retain) NSString* userId;
 
 + (Service*)getService;
 - (NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location;

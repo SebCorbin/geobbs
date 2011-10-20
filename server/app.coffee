@@ -38,8 +38,7 @@ app.get "/", (req, res) ->
 
 loadUser = (req, res, next) ->
   # Est-ce que l'user est présent en BDD ?
-  mongodb.getUser(req.params.userId, (err, user) ->
-    console.log user
+  mongodb.getUser(req.query.userId, (err, user) ->
     req.user = user
     next()
   )
@@ -54,15 +53,16 @@ renderJSON = (res, json) ->
 ### 
   POST
 
-  /user/:userId/check/
+  /check/create/
 
   Params:
+    - userId
     - lat
     - lon
-    - description
-    - imgUrl
+    - [description]
+    - [imgUrl]
 ###
-app.all "/user/:userId/check/", [logger, loadUser], (req, res) ->
+app.all "/check/create/", [logger, loadUser], (req, res) ->
 
   out = {
       code:404 # User Not found
@@ -90,6 +90,13 @@ app.all "/user/:userId/check/", [logger, loadUser], (req, res) ->
 
 ###
   Retourne chaque item les plus proches
+
+  GET
+  
+  /check/list
+
+  Params:
+    -userId
 ###
 API_checks = (req, res) ->
   q = req.query
@@ -109,8 +116,7 @@ API_checks = (req, res) ->
     renderJSON(res, out)
   )
 
-app.get "/checks/", logger, API_checks
-app.get "/user/\{userId\}/check/", logger, API_checks
+app.get "/check/list", [logger, loadUser], API_checks
 
 
 app.listen http.port, "0.0.0.0"

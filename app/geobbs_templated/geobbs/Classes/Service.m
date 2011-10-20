@@ -10,13 +10,20 @@
 
 @implementation Service
 
-@synthesize serverUrl;
+@synthesize apis;
+@synthesize userId;
 
 static Service *serviceManager = nil;
 
 -(id)init {
 	if (self = [super init]) {
-		[self setServerUrl:@"http://localhost:3000"];
+		//[self setServerUrl:@"http://localhost:3000"];
+		self.userId = @"4e7f08f0bd99e46165000001";
+		
+		self.apis = [NSDictionary dictionaryWithObjectsAndKeys:
+				@"http://localhost:3000/check/create/", @"checkCreate"
+			,	@"http://localhost:3000/check/list/", @"checkList"
+			,	nil];
 	}
 	return self;
 }
@@ -60,8 +67,9 @@ static Service *serviceManager = nil;
 // getNotificationsList should return an array
 -(NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location {
 	
-	NSString *stringUrl = [NSString stringWithFormat:@"%@/checks/?lat=%+.6f&lon=%+.6f", 
-							[[Service getService] serverUrl]
+	NSString *stringUrl = [NSString stringWithFormat:@"%@?userId=%@&lat=%+.6f&lon=%+.6f",
+							[[[Service getService] apis] objectForKey:@"checkList"]
+						    , [[Service getService] userId]
 							, location.coordinate.latitude
 							, location.coordinate.longitude];
 	

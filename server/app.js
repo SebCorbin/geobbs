@@ -32,8 +32,7 @@
     });
   });
   loadUser = function(req, res, next) {
-    return mongodb.getUser(req.params.userId, function(err, user) {
-      console.log(user);
+    return mongodb.getUser(req.query.userId, function(err, user) {
       req.user = user;
       return next();
     });
@@ -50,15 +49,16 @@
   /* 
     POST
   
-    /user/:userId/check/
+    /check/create/
   
     Params:
+      - userId
       - lat
       - lon
-      - description
-      - imgUrl
+      - [description]
+      - [imgUrl]
   */
-  app.all("/user/:userId/check/", [logger, loadUser], function(req, res) {
+  app.all("/check/create/", [logger, loadUser], function(req, res) {
     var out;
     out = {
       code: 404,
@@ -83,6 +83,13 @@
   });
   /*
     Retourne chaque item les plus proches
+  
+    GET
+    
+    /check/list
+  
+    Params:
+      -userId
   */
   API_checks = function(req, res) {
     var out, q;
@@ -102,8 +109,7 @@
       return renderJSON(res, out);
     });
   };
-  app.get("/checks/", logger, API_checks);
-  app.get("/user/\{userId\}/check/", logger, API_checks);
+  app.get("/check/list", [logger, loadUser], API_checks);
   app.listen(http.port, "0.0.0.0");
   console.log("Express server listening on port %d", app.address().port);
 }).call(this);

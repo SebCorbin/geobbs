@@ -18,6 +18,7 @@
         this._userId = User && User._id ? User._id : new BSON.ObjectID();
         this.loc.lat = parseInt(this.loc.lat, 10) || -1;
         this.loc.lon = parseInt(this.loc.lon, 10) || -1;
+        this.User = User.getGeneralInfo();
         (_base = this.opt).date || (_base.date = Date.now());
       }
       Check.prototype.save = function(CheckCollection) {
@@ -25,7 +26,8 @@
           _id: this._id,
           _userId: this._userId,
           loc: [this.loc.lat, this.loc.lon],
-          Check: this.opt
+          Check: this.opt,
+          User: this.User
         });
       };
       Check.getCollection = function(cb) {
