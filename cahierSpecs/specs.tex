@@ -149,26 +149,29 @@ Entry point (point d'entrée)
 http://IP:3000/api/
 
 \begin{description}
-  \item[POST /user/\{userId\}/check/]:
+  \item[POST /check/create/]:
 
     \begin{description}
-      \item[Description] Ajoute un check à l'utilisateur.
+      \item[Description] Ajoute un check
       \item[Paramètres]:
 
         \begin{description}
+          \item[userId (string)] Id de l'utilisateur
           \item[lat (float)] Latitude
           \item[lon (float)] Longitude
+          \item[description (string)] (optionel) Description du check
+          \item[imgUrl (string)] (optionel) Url de l'image à lier
         \end{description}
     \end{description}
 
-  \item[GET /user/\{userId\}/check/]:
-  \item[GET /checks/]:
+  \item[GET /check/list/]:
 
     \begin{description}
       \item[Description] Retourne la liste des checks aux alentours de \lstinline{lat},\lstinline{lon}.
 
       \item[Paramètres]:
         \begin{description}
+          \item[userId (string)] Id de l'utilisateur
           \item[lat (float)] Latitude
           \item[lon (float)] Longitude
           \item[distance (entier)] (optionel) Distance maximum par rapport à \lstinline{lat},\lstinline{lon}.
