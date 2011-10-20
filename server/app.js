@@ -1,8 +1,9 @@
 (function() {
-  var API_checks, MongoDb, app, dbConfig, express, http, loadUser, mongodb, renderJSON, _ref;
+  var API_checks, MongoDb, app, dbConfig, express, http, loadUser, log, logger, mongodb, renderJSON, _ref;
   express = require("express");
   _ref = require('./config'), dbConfig = _ref.db, http = _ref.http;
   MongoDb = require('mongodb');
+  log = require('util').log;
   mongodb = new (require('./class/mongodb.class'))(dbConfig, MongoDb);
   mongodb.init(function() {
     return console.log("Mongodb connected on " + dbConfig.ip + ":" + dbConfig.port);
@@ -37,6 +38,10 @@
       return next();
     });
   };
+  logger = function(req, res, next) {
+    log(req.originalMethod + ' ' + req.originalUrl);
+    return next();
+  };
   renderJSON = function(res, json) {
     return res.send(JSON.stringify(json), {
       'Content-Type': 'text/javascript'
@@ -53,7 +58,7 @@
       - description
       - imgUrl
   */
-  app.all("/user/:userId/check/", loadUser, function(req, res) {
+  app.all("/user/:userId/check/", [logger, loadUser], function(req, res) {
     var out;
     out = {
       code: 404,
@@ -97,8 +102,8 @@
       return renderJSON(res, out);
     });
   };
-  app.get("/checks/", API_checks);
-  app.get("/user/\{userId\}/check/", API_checks);
+  app.get("/checks/", logger, API_checks);
+  app.get("/user/\{userId\}/check/", logger, API_checks);
   app.listen(http.port, "0.0.0.0");
   console.log("Express server listening on port %d", app.address().port);
 }).call(this);

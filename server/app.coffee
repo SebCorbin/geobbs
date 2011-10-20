@@ -6,6 +6,8 @@ express = require("express")
 # Chargement des modèles de données
 MongoDb = require('mongodb')
 
+log = require('util').log
+
 mongodb = new (require('./class/mongodb.class'))(dbConfig, MongoDb)
 
 mongodb.init(() ->
@@ -42,6 +44,10 @@ loadUser = (req, res, next) ->
     next()
   )
 
+logger = (req, res, next) ->
+  log(req.originalMethod + ' ' + req.originalUrl)
+  next()
+
 renderJSON = (res, json) ->
   res.send JSON.stringify(json), { 'Content-Type': 'text/javascript' }, json.code
 
@@ -56,7 +62,7 @@ renderJSON = (res, json) ->
     - description
     - imgUrl
 ###
-app.all "/user/:userId/check/", loadUser, (req, res) ->
+app.all "/user/:userId/check/", [logger, loadUser], (req, res) ->
 
   out = {
       code:404 # User Not found
@@ -103,8 +109,8 @@ API_checks = (req, res) ->
     renderJSON(res, out)
   )
 
-app.get "/checks/", API_checks
-app.get "/user/\{userId\}/check/", API_checks
+app.get "/checks/", logger, API_checks
+app.get "/user/\{userId\}/check/", logger, API_checks
 
 
 app.listen http.port, "0.0.0.0"

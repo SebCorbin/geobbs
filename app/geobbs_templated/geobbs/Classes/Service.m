@@ -57,6 +57,7 @@ static Service *serviceManager = nil;
     return self;
 }
 
+// getNotificationsList should return an array
 -(NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location {
 	
 	NSString *stringUrl = [NSString stringWithFormat:@"%@/checks/?lat=%+.6f&lon=%+.6f", 
@@ -93,7 +94,8 @@ static Service *serviceManager = nil;
 			return notifs;
 		}
 	}
-	return nil;
+	
+	return [NSArray alloc];
 }
 
 @end
