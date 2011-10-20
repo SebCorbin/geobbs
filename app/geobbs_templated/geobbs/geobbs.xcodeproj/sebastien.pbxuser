@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* geobbsAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {991, 424}}";
+			sepNavIntBoundsRect = "{{0, 0}, {919, 482}}";
 			sepNavSelRange = "{198, 0}";
 			sepNavVisRange = "{0, 561}";
 		};
 	};
 	1D3623250D0F684500981E51 /* geobbsAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1157}}";
-			sepNavSelRange = "{572, 0}";
-			sepNavVisRange = "{0, 1365}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 988}}";
+			sepNavSelRange = "{449, 0}";
+			sepNavVisRange = "{142, 1659}";
 			sepNavWindowFrame = "{{83, 12}, {1098, 696}}";
 		};
 	};
@@ -38,9 +38,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* NotifViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {991, 1768}}";
-			sepNavSelRange = "{97, 0}";
-			sepNavVisRange = "{80, 720}";
+			sepNavIntBoundsRect = "{{0, 0}, {991, 1794}}";
+			sepNavSelRange = "{498, 0}";
+			sepNavVisRange = "{213, 716}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -51,9 +51,9 @@
 			1D6058900D05DD3D006BFB54 /* geobbs */,
 		);
 		breakpoints = (
-			BEB76E951446E70A007F60A9 /* NotifViewController.m:96 */,
-			BEB76E9F1446E7CD007F60A9 /* NotifViewController.m:81 */,
-			BEB76F311446EB87007F60A9 /* NotifViewController.m:34 */,
+			BEB76E951446E70A007F60A9 /* NotifViewController.m:94 */,
+			BEB76E9F1446E7CD007F60A9 /* NotifViewController.m:79 */,
+			BEB76F311446EB87007F60A9 /* NotifViewController.m:32 */,
 			BEB76F911446ED90007F60A9 /* NotifViewController.m:22 */,
 		);
 		codeSenseManager = BE68599814345701005139A0 /* Code sense */;
@@ -733,6 +733,20 @@
 			BEFCF8DF14501A7A001A156A /* PBXTextBookmark */ = BEFCF8DF14501A7A001A156A /* PBXTextBookmark */;
 			BEFCF8E014501A7A001A156A /* PBXTextBookmark */ = BEFCF8E014501A7A001A156A /* PBXTextBookmark */;
 			BEFCF8E114501A7A001A156A /* PBXTextBookmark */ = BEFCF8E114501A7A001A156A /* PBXTextBookmark */;
+			BEFCF8EA14501C02001A156A /* PBXTextBookmark */ = BEFCF8EA14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8EB14501C02001A156A /* PBXTextBookmark */ = BEFCF8EB14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8EC14501C02001A156A /* PBXTextBookmark */ = BEFCF8EC14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8ED14501C02001A156A /* PBXTextBookmark */ = BEFCF8ED14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8EE14501C02001A156A /* PBXTextBookmark */ = BEFCF8EE14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8EF14501C02001A156A /* PBXTextBookmark */ = BEFCF8EF14501C02001A156A /* PBXTextBookmark */;
+			BEFCF8F014501C02001A156A /* PBXTextBookmark */ = BEFCF8F014501C02001A156A /* PBXTextBookmark */;
+			BEFCF8F114501C03001A156A /* PBXTextBookmark */ = BEFCF8F114501C03001A156A /* PBXTextBookmark */;
+			BEFCF8F314501C13001A156A /* PBXTextBookmark */ = BEFCF8F314501C13001A156A /* PBXTextBookmark */;
+			BEFCF8F414501C13001A156A /* PBXTextBookmark */ = BEFCF8F414501C13001A156A /* PBXTextBookmark */;
+			BEFCF8F914501C20001A156A /* PBXTextBookmark */ = BEFCF8F914501C20001A156A /* PBXTextBookmark */;
+			BEFCF8FA14501C20001A156A /* PBXTextBookmark */ = BEFCF8FA14501C20001A156A /* PBXTextBookmark */;
+			BEFCF8FB14501C20001A156A /* PBXTextBookmark */ = BEFCF8FB14501C20001A156A /* PBXTextBookmark */;
+			BEFCF8FC14501C20001A156A /* PBXTextBookmark */ = BEFCF8FC14501C20001A156A /* PBXTextBookmark */;
 		};
 		sourceControlManager = BE68599714345701005139A0 /* Source Control */;
 		userBuildSettings = {
@@ -2113,7 +2127,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 744;
+		rLoc = 527;
 		rType = 0;
 		vrLen = 2077;
 		vrLoc = 79;
@@ -2153,7 +2167,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 29";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 903;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 0;
@@ -2163,7 +2177,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 29";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 903;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 0;
@@ -2173,7 +2187,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 29";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 903;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 0;
@@ -2203,7 +2217,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 744;
+		rLoc = 527;
 		rType = 0;
 		vrLen = 2077;
 		vrLoc = 79;
@@ -2243,7 +2257,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 29";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 903;
 		rType = 0;
 		vrLen = 897;
 		vrLoc = 0;
@@ -2439,7 +2453,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 79;
@@ -2459,7 +2473,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 0;
@@ -2469,7 +2483,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 0;
@@ -2479,7 +2493,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 684;
 		vrLoc = 0;
@@ -2529,7 +2543,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 79;
@@ -2539,7 +2553,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 79;
@@ -2549,7 +2563,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1451;
 		vrLoc = 79;
@@ -2569,7 +2583,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1440;
 		vrLoc = 79;
@@ -2616,7 +2630,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 79;
@@ -2626,7 +2640,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 27;
@@ -2636,7 +2650,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1362;
 		vrLoc = 27;
@@ -2656,7 +2670,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 141;
@@ -2666,7 +2680,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1493;
 		vrLoc = 38;
@@ -2676,7 +2690,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1493;
 		vrLoc = 38;
@@ -2696,7 +2710,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 0;
@@ -2706,7 +2720,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 26";
 		rLen = 0;
-		rLoc = 644;
+		rLoc = 610;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 314;
@@ -2716,7 +2730,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 26";
 		rLen = 0;
-		rLoc = 644;
+		rLoc = 610;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 314;
@@ -2726,7 +2740,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 141;
@@ -2736,7 +2750,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 25";
 		rLen = 0;
-		rLoc = 644;
+		rLoc = 610;
 		rType = 0;
 		vrLen = 661;
 		vrLoc = 210;
@@ -2746,7 +2760,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 25";
 		rLen = 0;
-		rLoc = 644;
+		rLoc = 610;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 175;
@@ -2756,7 +2770,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 762;
+		rLoc = 545;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 27;
@@ -2766,7 +2780,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 79;
@@ -2776,7 +2790,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1511;
 		vrLoc = 79;
@@ -2786,7 +2800,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 571;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 79;
@@ -2803,7 +2817,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 553;
 		rType = 0;
 		vrLen = 709;
 		vrLoc = 3;
@@ -2813,7 +2827,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1572;
 		vrLoc = 79;
@@ -2823,7 +2837,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 553;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 0;
@@ -2833,7 +2847,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 553;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 42;
@@ -2843,7 +2857,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 553;
 		rType = 0;
 		vrLen = 749;
 		vrLoc = 42;
@@ -2853,7 +2867,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 587;
+		rLoc = 553;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 42;
@@ -2863,7 +2877,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 525;
 		rType = 0;
 		vrLen = 674;
 		vrLoc = 42;
@@ -2873,7 +2887,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 525;
 		rType = 0;
 		vrLen = 676;
 		vrLoc = 42;
@@ -2883,7 +2897,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1618;
 		vrLoc = 41;
@@ -2903,7 +2917,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 21";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 525;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 3;
@@ -2913,7 +2927,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 28";
 		rLen = 0;
-		rLoc = 831;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 738;
 		vrLoc = 143;
@@ -2923,7 +2937,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 28";
 		rLen = 0;
-		rLoc = 831;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 143;
@@ -2933,7 +2947,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 28";
 		rLen = 0;
-		rLoc = 831;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 653;
 		vrLoc = 143;
@@ -2982,7 +2996,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 28";
 		rLen = 0;
-		rLoc = 831;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 749;
 		vrLoc = 210;
@@ -2992,7 +3006,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1610;
 		vrLoc = 41;
@@ -3052,7 +3066,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 41;
@@ -3062,7 +3076,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 588;
+		rLoc = 554;
 		rType = 0;
 		vrLen = 653;
 		vrLoc = 142;
@@ -3112,7 +3126,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 28";
 		rLen = 0;
-		rLoc = 831;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 749;
 		vrLoc = 210;
@@ -3122,7 +3136,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 122";
 		rLen = 0;
-		rLoc = 3080;
+		rLoc = 3046;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 2113;
@@ -3132,7 +3146,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 122";
 		rLen = 0;
-		rLoc = 3080;
+		rLoc = 3046;
 		rType = 0;
 		vrLen = 830;
 		vrLoc = 2113;
@@ -3152,7 +3166,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 122";
 		rLen = 0;
-		rLoc = 3080;
+		rLoc = 3046;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 210;
@@ -3205,7 +3219,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 122";
 		rLen = 0;
-		rLoc = 3080;
+		rLoc = 3046;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 2089;
@@ -3215,7 +3229,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1184;
 		vrLoc = 41;
@@ -3315,7 +3329,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 122";
 		rLen = 0;
-		rLoc = 3080;
+		rLoc = 3046;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 2078;
@@ -3514,7 +3528,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 0;
@@ -3524,7 +3538,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 0;
@@ -3534,7 +3548,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 0;
@@ -3544,7 +3558,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 734;
 		vrLoc = 0;
@@ -3574,7 +3588,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1081;
 		vrLoc = 41;
@@ -3611,7 +3625,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 0;
@@ -3641,7 +3655,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1589;
 		vrLoc = 38;
@@ -3911,7 +3925,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 38;
@@ -3921,7 +3935,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 80;
@@ -4267,7 +4281,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 38;
@@ -4287,7 +4301,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 80;
@@ -4297,7 +4311,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 80;
@@ -4307,7 +4321,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 80;
@@ -4317,7 +4331,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 80;
@@ -4337,7 +4351,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 80;
@@ -4347,7 +4361,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 0;
@@ -4377,7 +4391,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 573;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 38;
@@ -4387,7 +4401,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 38;
@@ -4397,7 +4411,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 38;
@@ -4407,7 +4421,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 38;
@@ -4417,7 +4431,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 80;
@@ -4427,7 +4441,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 38;
@@ -4454,7 +4468,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 38;
@@ -4781,7 +4795,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 22";
 		rLen = 0;
-		rLoc = 552;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 0;
@@ -4791,7 +4805,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 831;
 		vrLoc = 2290;
@@ -5020,7 +5034,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 831;
 		vrLoc = 2290;
@@ -5120,7 +5134,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 26";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 831;
 		vrLoc = 2290;
@@ -5130,7 +5144,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1492;
 		vrLoc = 79;
@@ -5140,7 +5154,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 79;
@@ -5160,7 +5174,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1044;
 		vrLoc = 79;
@@ -5170,7 +5184,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 38;
@@ -5200,7 +5214,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 39;
@@ -5210,7 +5224,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 39;
@@ -5220,7 +5234,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1044;
 		vrLoc = 79;
@@ -5230,7 +5244,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 712;
 		vrLoc = 39;
@@ -5270,7 +5284,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 3;
@@ -5280,7 +5294,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 3;
@@ -5290,7 +5304,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 3;
@@ -5300,7 +5314,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 712;
 		vrLoc = 39;
@@ -5337,7 +5351,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 3;
@@ -5347,7 +5361,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 33";
 		rLen = 0;
-		rLoc = 872;
+		rLoc = 838;
 		rType = 0;
 		vrLen = 862;
 		vrLoc = 3;
@@ -5357,7 +5371,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 33";
 		rLen = 0;
-		rLoc = 872;
+		rLoc = 838;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 3;
@@ -5367,7 +5381,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 33";
 		rLen = 0;
-		rLoc = 872;
+		rLoc = 838;
 		rType = 0;
 		vrLen = 862;
 		vrLoc = 3;
@@ -5377,7 +5391,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 33";
 		rLen = 0;
-		rLoc = 872;
+		rLoc = 838;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 3;
@@ -5387,7 +5401,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 32";
 		rLen = 0;
-		rLoc = 872;
+		rLoc = 838;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 3;
@@ -5534,7 +5548,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 23";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 0;
@@ -5544,7 +5558,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 23";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1107;
 		vrLoc = 0;
@@ -5554,7 +5568,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
@@ -5564,12 +5578,12 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
 	};
-	BEB76E951446E70A007F60A9 /* NotifViewController.m:96 */ = {
+	BEB76E951446E70A007F60A9 /* NotifViewController.m:94 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5581,9 +5595,9 @@
 		functionName = "-tableView:cellForRowAtIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 96;
+		lineNumber = 94;
 		location = geobbs;
-		modificationTime = 340793928.532044;
+		modificationTime = 340794372.896232;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -5591,7 +5605,7 @@
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		rLen = 1;
-		rLoc = 95;
+		rLoc = 93;
 		rType = 1;
 	};
 	BEB76E991446E72A007F60A9 /* PBXTextBookmark */ = {
@@ -5599,7 +5613,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
@@ -5609,12 +5623,12 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
 	};
-	BEB76E9F1446E7CD007F60A9 /* NotifViewController.m:81 */ = {
+	BEB76E9F1446E7CD007F60A9 /* NotifViewController.m:79 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5626,9 +5640,9 @@
 		functionName = "-tableView:numberOfRowsInSection:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 81;
+		lineNumber = 79;
 		location = geobbs;
-		modificationTime = 340793928.533648;
+		modificationTime = 340794372.898132;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -5637,7 +5651,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
@@ -5647,7 +5661,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 25";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
@@ -5657,7 +5671,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 25";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 0;
@@ -5687,7 +5701,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 0;
@@ -5697,7 +5711,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 0;
@@ -5737,7 +5751,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 0;
@@ -5767,7 +5781,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 0;
@@ -5834,7 +5848,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 25";
 		rLen = 0;
-		rLoc = 513;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 862;
 		vrLoc = 0;
@@ -5844,7 +5858,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1991;
 		vrLoc = 0;
@@ -5862,7 +5876,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 0;
@@ -5872,7 +5886,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 0;
@@ -5882,7 +5896,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 24";
 		rLen = 0;
-		rLoc = 508;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 0;
@@ -5931,7 +5945,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 80;
@@ -5951,7 +5965,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 80;
@@ -5961,7 +5975,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 80;
@@ -5971,7 +5985,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 80;
@@ -5981,7 +5995,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 125;
@@ -5991,7 +6005,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 968;
 		vrLoc = 80;
@@ -6001,7 +6015,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 80;
@@ -6011,7 +6025,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 80;
@@ -6021,7 +6035,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 31";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 80;
@@ -6031,7 +6045,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 30";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 873;
 		vrLoc = 80;
@@ -6041,7 +6055,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 30";
 		rLen = 0;
-		rLoc = 614;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 80;
@@ -6068,7 +6082,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 74;
-		rLoc = 2418;
+		rLoc = 2384;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 1984;
@@ -6078,7 +6092,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 96";
 		rLen = 74;
-		rLoc = 2418;
+		rLoc = 2384;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 1984;
@@ -6143,7 +6157,7 @@
 		vrLen = 1021;
 		vrLoc = 3;
 	};
-	BEB76F311446EB87007F60A9 /* NotifViewController.m:34 */ = {
+	BEB76F311446EB87007F60A9 /* NotifViewController.m:32 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -6155,9 +6169,9 @@
 		functionName = "-viewDidLoad";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 34;
+		lineNumber = 32;
 		location = geobbs;
-		modificationTime = 340793928.534817;
+		modificationTime = 340794372.89899;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -6356,7 +6370,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 23";
 		rLen = 0;
-		rLoc = 518;
+		rLoc = 498;
 		rType = 0;
 		vrLen = 862;
 		vrLoc = 42;
@@ -6442,7 +6456,7 @@
 		ignoreCount = 0;
 		lineNumber = 22;
 		location = geobbs;
-		modificationTime = 340793928.536147;
+		modificationTime = 340794372.899822;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -6581,7 +6595,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 671;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1929;
 		vrLoc = 0;
@@ -6828,7 +6842,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 32";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 667;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 39;
@@ -6838,7 +6852,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 32";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 667;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 39;
@@ -6848,7 +6862,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 32";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 667;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 69;
@@ -6872,9 +6886,9 @@
 	};
 	BEC397E01446264F00C628F3 /* CLController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1039, 546}}";
-			sepNavSelRange = "{818, 0}";
-			sepNavVisRange = "{0, 1090}";
+			sepNavIntBoundsRect = "{{0, 0}, {991, 546}}";
+			sepNavSelRange = "{897, 17}";
+			sepNavVisRange = "{33, 992}";
 			sepNavWindowFrame = "{{15, 77}, {1098, 696}}";
 		};
 	};
@@ -6963,7 +6977,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 29";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 903;
 		rType = 0;
 		vrLen = 736;
 		vrLoc = 80;
@@ -6997,7 +7011,7 @@
 		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
 		name = "RootViewController.m: 32";
 		rLen = 0;
-		rLoc = 717;
+		rLoc = 683;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 42;
@@ -7037,7 +7051,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 1627;
 		vrLoc = 261;
@@ -7047,7 +7061,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 1613;
 		vrLoc = 261;
@@ -7057,7 +7071,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 261;
@@ -7067,7 +7081,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 1398;
 		vrLoc = 261;
@@ -7086,7 +7100,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		rLen = 0;
-		rLoc = 25;
+		rLoc = 19;
 		rType = 1;
 	};
 	BEFCF8851450188F001A156A /* PBXTextBookmark */ = {
@@ -7094,7 +7108,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 793;
+		rLoc = 576;
 		rType = 0;
 		vrLen = 1763;
 		vrLoc = 241;
@@ -7104,7 +7118,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 793;
+		rLoc = 576;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 261;
@@ -7154,7 +7168,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 793;
+		rLoc = 576;
 		rType = 0;
 		vrLen = 1763;
 		vrLoc = 241;
@@ -7184,7 +7198,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 793;
+		rLoc = 576;
 		rType = 0;
 		vrLen = 1614;
 		vrLoc = 261;
@@ -7194,7 +7208,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2582;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 2244;
@@ -7204,7 +7218,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2582;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 2244;
@@ -7214,7 +7228,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2582;
 		rType = 0;
 		vrLen = 744;
 		vrLoc = 2324;
@@ -7224,7 +7238,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 87";
 		rLen = 0;
-		rLoc = 2799;
+		rLoc = 2582;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 2126;
@@ -7243,7 +7257,7 @@
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		rLen = 0;
-		rLoc = 20;
+		rLoc = 19;
 		rType = 1;
 	};
 	BEFCF8C114501959001A156A /* PBXTextBookmark */ = {
@@ -7251,7 +7265,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 1553;
 		vrLoc = 204;
@@ -7262,7 +7276,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 88;
+		rLoc = 82;
 		rType = 1;
 	};
 	BEFCF8C714501970001A156A /* PBXTextBookmark */ = {
@@ -7300,7 +7314,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 0;
@@ -7380,7 +7394,7 @@
 		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
 		name = "geobbsAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 454;
 		rType = 0;
 		vrLen = 1365;
 		vrLoc = 0;
@@ -7434,5 +7448,145 @@
 		rType = 0;
 		vrLen = 530;
 		vrLoc = 0;
+	};
+	BEFCF8EA14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BE685A4A1434620E005139A0 /* Check.h */;
+		name = "Check.h: 6";
+		rLen = 0;
+		rLoc = 99;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 0;
+	};
+	BEFCF8EB14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BEC397DF1446264F00C628F3 /* CLController.h */;
+		name = "CLController.h: 18";
+		rLen = 0;
+		rLoc = 368;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 0;
+	};
+	BEFCF8EC14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* NotifViewController.h */;
+		name = "NotifViewController.h: 13";
+		rLen = 0;
+		rLoc = 229;
+		rType = 0;
+		vrLen = 530;
+		vrLoc = 0;
+	};
+	BEFCF8ED14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BEC397E01446264F00C628F3 /* CLController.m */;
+		name = "CLController.m: 32";
+		rLen = 17;
+		rLoc = 897;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 33;
+	};
+	BEFCF8EE14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 307;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	BEFCF8EF14501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 25";
+		rLen = 0;
+		rLoc = 454;
+		rType = 0;
+		vrLen = 1266;
+		vrLoc = 172;
+	};
+	BEFCF8F014501C02001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 25";
+		rLen = 0;
+		rLoc = 454;
+		rType = 0;
+		vrLen = 1491;
+		vrLoc = 172;
+	};
+	BEFCF8F114501C03001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 25";
+		rLen = 0;
+		rLoc = 454;
+		rType = 0;
+		vrLen = 1270;
+		vrLoc = 172;
+	};
+	BEFCF8F314501C13001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* geobbsAppDelegate.h */;
+		name = "geobbsAppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 198;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	BEFCF8F414501C13001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 142;
+	};
+	BEFCF8F914501C20001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* geobbsAppDelegate.m */;
+		name = "geobbsAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 449;
+		rType = 0;
+		vrLen = 1402;
+		vrLoc = 172;
+	};
+	BEFCF8FA14501C20001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
+		name = "NotifViewController.m: 6";
+		rLen = 0;
+		rLoc = 97;
+		rType = 0;
+		vrLen = 720;
+		vrLoc = 80;
+	};
+	BEFCF8FB14501C20001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
+		name = "NotifViewController.m: 26";
+		rLen = 0;
+		rLoc = 498;
+		rType = 0;
+		vrLen = 718;
+		vrLoc = 213;
+	};
+	BEFCF8FC14501C20001A156A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* NotifViewController.m */;
+		name = "NotifViewController.m: 26";
+		rLen = 0;
+		rLoc = 498;
+		rType = 0;
+		vrLen = 716;
+		vrLoc = 213;
 	};
 }

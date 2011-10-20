@@ -17,13 +17,7 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    	
-	NotifViewController *notifViewController = [[NotifViewController alloc] initWithStyle:UITableViewStylePlain];
-	
-    // Get the last notifications
-    notifViewController.notifications = [[NSArray alloc] init];
-	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    		
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];

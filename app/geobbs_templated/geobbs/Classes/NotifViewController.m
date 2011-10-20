@@ -23,8 +23,6 @@
 }
 
 - (void)viewDidLoad {
-	self.title = @"Notifications";
-	
 	// Initialize location manager
 	locationController = [[CLController alloc] init];
 	locationController.delegate = self;

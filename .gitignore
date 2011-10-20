@@ -7,3 +7,4 @@ specs.out
 *.pbxproj
 build/
 *.perspectivev3
+server/node_modules
