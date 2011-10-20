@@ -24,9 +24,9 @@
 
 - (void)viewDidLoad {
 	// Initialize location manager
-	locationController = [[CLController alloc] init];
-	locationController.delegate = self;
-    [locationController.locationManager startUpdatingLocation];
+	self.locationController = [[CLController alloc] init];
+	self.locationController.delegate = self;
+    [self.locationController.locationManager startUpdatingLocation];
 }
 
 
@@ -71,25 +71,34 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [notifications count];
+    return [self.notifications count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+	
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		// UITableViewCellStyleSubtitle == 2 labels
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"] autorelease];
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
-    
-	// Configure the cell.
-    NSString *notification = [[[notifications objectAtIndex:indexPath.row] valueForKey:@"Check"] valueForKey:@"description"];
-    [[cell textLabel] setText:notification];
 
+	NSDictionary *item = (NSDictionary *)[self.notifications objectAtIndex:indexPath.row];
+	
+	cell.textLabel.text = [item valueForKeyPath:@"User.login"];
+	cell.detailTextLabel.text = [item valueForKeyPath:@"Check.description"];
+	
+	
+	// Ajout de la flèche bleu
+	// cf: http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7-SW1
+	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	
     return cell;
 }
+
 
 #pragma mark -
 #pragma mark Table view delegate
