@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "NotifViewController.h"
 
-@implementation RootViewController
+@implementation NotifViewController
 
 @synthesize notifications;
 @synthesize locationController;

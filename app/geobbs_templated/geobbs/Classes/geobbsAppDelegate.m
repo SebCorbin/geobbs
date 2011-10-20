@@ -7,31 +7,25 @@
 //
 
 #import "geobbsAppDelegate.h"
-#import "RootViewController.h"
-
 
 @implementation geobbsAppDelegate
 
 @synthesize window;
-@synthesize navigationController;
+@synthesize tabBarController;
+@synthesize notifController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-	RootViewController *rootViewController = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    	
+	NotifViewController *notifViewController = [[NotifViewController alloc] initWithStyle:UITableViewStylePlain];
 	
     // Get the last notifications
-    rootViewController.notifications = [[NSArray alloc] init];
-    
-	UINavigationController *aNavigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    self.navigationController = aNavigationController;
-    //[aNavigationController release];
-    //[rootViewController release];
+    notifViewController.notifications = [[NSArray alloc] init];
 	
     // Add the navigation controller's view to the window and display.
-    [self.window addSubview:navigationController.view];
+    [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -86,7 +80,7 @@
 
 
 - (void)dealloc {
-	[navigationController release];
+	[tabBarController release];
 	[window release];
 	[super dealloc];
 }

@@ -11,7 +11,7 @@
 #import "CLController.h"
 #import "Service.h"
 
-@interface RootViewController : UITableViewController <CLControllerDelegate> {
+@interface NotifViewController : UITableViewController <CLControllerDelegate> {
 	NSArray *notifications;
 	CLController *locationController;
 }
