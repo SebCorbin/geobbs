@@ -12,13 +12,13 @@
 #import "Service.h"
 
 @interface NotifViewController : UITableViewController <CLControllerDelegate> {
-	NSArray *notifications;
-	CLController *locationController;
+    NSArray *notifications;
+    CLController *locationController;
 }
 
-@property (nonatomic, retain) NSArray *notifications;
-@property (retain) CLController *locationController;
+@property(nonatomic, retain) NSArray *notifications;
+@property(retain) CLController *locationController;
 
--(void) setNotifications:(NSArray*) array;
+- (void)setNotifications:(NSArray *)array;
 
 @end

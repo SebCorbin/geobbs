@@ -16,19 +16,18 @@
 #pragma mark -
 #pragma mark View lifecycle
 
--(void) setNotifications:(NSArray*) array {
-	[notifications release];
-	notifications = [[NSArray alloc] initWithArray:array];
-	[self.tableView reloadData];
+- (void)setNotifications:(NSArray *)array {
+    [notifications release];
+    notifications = [[NSArray alloc] initWithArray:array];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
-	// Initialize location manager
-	self.locationController = [[CLController alloc] init];
-	self.locationController.delegate = self;
+    // Initialize location manager
+    self.locationController = [[CLController alloc] init];
+    self.locationController.delegate = self;
     [self.locationController.locationManager startUpdatingLocation];
 }
-
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,20 +41,20 @@
 
 
 - (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
 }
 
 
 - (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
+    [super viewDidDisappear:animated];
 }
 
 
 
- // Override to allow orientations other than the default portrait orientation.
+// Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // Return YES for supported orientations.
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 
@@ -77,25 +76,25 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-	
+
     if (cell == nil) {
-		// UITableViewCellStyleSubtitle == 2 labels
+        // UITableViewCellStyleSubtitle == 2 labels
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"] autorelease];
-		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
 
-	NSDictionary *item = (NSDictionary *)[self.notifications objectAtIndex:indexPath.row];
-	
-	cell.textLabel.text = [item valueForKeyPath:@"User.login"];
-	cell.detailTextLabel.text = [item valueForKeyPath:@"Check.description"];
-	
-	
-	// Ajout de la flèche bleu
-	// cf: http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7-SW1
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-	
+    NSDictionary *item = (NSDictionary *) [self.notifications objectAtIndex:indexPath.row];
+
+    cell.textLabel.text = [item valueForKeyPath:@"User.login"];
+    cell.detailTextLabel.text = [item valueForKeyPath:@"Check.description"];
+
+
+    // Ajout de la flèche bleu
+    // cf: http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7-SW1
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+
     return cell;
 }
 
@@ -104,7 +103,7 @@
 #pragma mark Table view delegate
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	return nil;
+    return nil;
 }
 
 
@@ -114,7 +113,7 @@
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Relinquish ownership any cached data, images, etc that aren't in use.
 }
 
@@ -125,8 +124,8 @@
 
 
 - (void)dealloc {
-	[locationController release];
-	[notifications release];
+    [locationController release];
+    [notifications release];
     [super dealloc];
 }
 

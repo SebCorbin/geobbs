@@ -17,11 +17,11 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    		
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
-	
+
     return YES;
 }
 
@@ -74,9 +74,9 @@
 
 
 - (void)dealloc {
-	[tabBarController release];
-	[window release];
-	[super dealloc];
+    [tabBarController release];
+    [window release];
+    [super dealloc];
 }
 
 

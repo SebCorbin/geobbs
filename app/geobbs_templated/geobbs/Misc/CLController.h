@@ -12,18 +12,18 @@
 #import "Service.h"
 #import "User.h"
 
-@protocol CLControllerDelegate 
+@protocol CLControllerDelegate
 @required
 - (void)setNotifications:(NSArray *)notifications;
 @end
 
 @interface CLController : NSObject <CLLocationManagerDelegate> {
-	CLLocationManager *locationManager;
-	id delegate;
+    CLLocationManager *locationManager;
+    id delegate;
 }
 
-@property (nonatomic, retain) CLLocationManager *locationManager;  
-@property (nonatomic, assign) id  delegate;
+@property(nonatomic, retain) CLLocationManager *locationManager;
+@property(nonatomic, assign) id delegate;
 
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation

@@ -8,22 +8,23 @@
 
 
 @interface User : NSObject {
-	NSString *login;
-	NSString *password;
-	NSArray *checks;
+    NSString *login;
+    NSString *password;
+    NSArray *checks;
 }
 
-@property (retain) NSString *login;
-@property (retain) NSString *password;
-@property (retain) NSArray *checks;
+@property(retain) NSString *login;
+@property(retain) NSString *password;
+@property(retain) NSArray *checks;
 
-+(User*) getCurrentUser;
++ (User *)getCurrentUser;
 
 @end
 
 @interface NSString (Extensions)
-- (NSString *) md5;
+- (NSString *)md5;
 @end
+
 @interface NSData (Extensions)
-- (NSString*)md5;
+- (NSString *)md5;
 @end

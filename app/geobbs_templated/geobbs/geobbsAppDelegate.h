@@ -10,15 +10,15 @@
 #import "NotifViewController.h"
 
 @interface geobbsAppDelegate : NSObject <UIApplicationDelegate> {
-    
+
     UIWindow *window;
     UITabBarController *tabBarController;
-	NotifViewController *notifController;
+    NotifViewController *notifController;
 }
 
-@property (retain) IBOutlet UIWindow *window;
-@property (retain) IBOutlet UITabBarController *tabBarController;
-@property (retain) IBOutlet NotifViewController *notifController;
+@property(retain) IBOutlet UIWindow *window;
+@property(retain) IBOutlet UITabBarController *tabBarController;
+@property(retain) IBOutlet NotifViewController *notifController;
 
 @end
 

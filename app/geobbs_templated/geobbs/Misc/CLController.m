@@ -14,7 +14,7 @@
 @synthesize locationManager;
 @synthesize delegate;
 
-- (id) init {
+- (id)init {
     self = [super init];
     if (self != nil) {
         self.locationManager = [[[CLLocationManager alloc] init] autorelease];
@@ -24,13 +24,13 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-	// Get the notifiaction list
-	NSArray *notifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation] autorelease];
-	[self.delegate setNotifications:notifications];
+    // Get the notifiaction list
+    NSArray *notifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation] autorelease];
+    [self.delegate setNotifications:notifications];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-	NSLog(@"Error: %@", [error description]);
+    NSLog(@"Error: %@", [error description]);
 }
 
 - (void)dealloc {

@@ -14,5 +14,10 @@
 @synthesize location;
 @synthesize userId;
 @synthesize date;
+@synthesize description;
 
+
+- (void)dealloc {
+    [super dealloc];
+}
 @end
