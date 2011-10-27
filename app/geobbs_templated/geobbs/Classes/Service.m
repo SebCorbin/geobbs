@@ -103,7 +103,7 @@ static Service *serviceManager = nil;
 		}
 	}
 	
-	return [NSArray alloc];
+	return [[NSArray alloc] init];
 }
 
 @end
