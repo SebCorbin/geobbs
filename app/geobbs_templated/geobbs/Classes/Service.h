@@ -19,8 +19,6 @@
 @property (nonatomic, retain) NSString* userId;
 
 + (Service*)getService;
-- (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User;
-- (NSString *)doHttpRequest:(NSString*)url;
 - (NSArray*)getNotificationsList:(User*)user withLocation:(CLLocation*)location;
 
 @end
