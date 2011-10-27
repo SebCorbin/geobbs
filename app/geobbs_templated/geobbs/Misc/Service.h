@@ -21,6 +21,10 @@
 
 + (Service *)getService;
 
+- (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User;
+
+- (NSString *)doHttpRequest:(NSString *)url;
+
 - (NSArray *)getNotificationsList:(User *)user withLocation:(CLLocation *)location;
 
 + (void)postCheck:(Check *)check;

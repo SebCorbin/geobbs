@@ -77,8 +77,16 @@ static Service *serviceManager = nil;
     NSLog(@"%@", stringUrl);
 }
 
-// getNotificationsList should return an array
-- (NSArray *)getNotificationsList:(User *)user withLocation:(CLLocation *)location {
+- (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User {
+    return [NSString stringWithFormat:@"%@?userId=%@&lat=%+.6f&lon=%+.6f",
+                                      [[[Service getService] apis] objectForKey:@"checkList"]
+            , [[Service getService] userId]
+            , location.coordinate.latitude
+            , location.coordinate.longitude];
+}
+
+// Get the page within a string content
+- (NSString *)doHttpRequest:(NSString *)url {
 
     NSString *stringUrl = [NSString stringWithFormat:@"%@?userId=%@&lat=%+.6f&lon=%+.6f",
                                                      [[[Service getService] apis] objectForKey:@"checkList"],
@@ -88,35 +96,46 @@ static Service *serviceManager = nil;
 
     NSLog(@"Loading %@", stringUrl);
 
-    NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:stringUrl]
+    NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                        timeoutInterval:60.0];
+
+    NSLog(@"Req: %@", url);
 
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:query returningResponse:&response error:NULL];
 
     // Connection failed
     if (!response) {
-        NSLog(@"La connection a échouée");
-    }
-            // Connection ok
-    else {
-        // HTTP Status code must be 200
-        int statusCode = [(NSHTTPURLResponse *) response statusCode];
-        if (statusCode == 404) {
-            NSLog(@"404 Not Found: %@", query);
-        }
-        else if (statusCode == 200) {
-            // Passage de NSData en NSString
-            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            // Récupération du JSON
-            NSDictionary *json = [jsonString JSONValue];
-            NSArray *notifs = [[NSArray alloc] initWithArray:[json objectForKey:@"msg"]];
-            return notifs;
-        }
+        NSLog(@"Req: Failed");
+        return [[NSString alloc] initWithString:@""];
     }
 
-    return [[NSArray alloc] init];
+    int statusCode = [(NSHTTPURLResponse *) response statusCode];
+
+    // If other than 200 HTPP Status code
+    if (statusCode != 200) {
+        NSLog(@"Req: Error %d %@", statusCode, query);
+        return [[NSString alloc] initWithString:@""];
+    }
+
+    // Convert NSData to NSString
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+
+}
+
+// getNotificationsList should return an array
+- (NSArray *)getNotificationsList:(User *)user withLocation:(CLLocation *)location {
+
+    // Make request url
+    NSString *requestUrl = [self getApiUrlForCheckList:location withUser:user];
+
+    // Do http request
+    NSString *pageContent = [self doHttpRequest:requestUrl];
+
+
+    // Make a JSON object out of the string and create an array from it
+    return [[NSArray alloc] initWithArray:[[pageContent JSONValue] objectForKey:@"msg"]];
 }
 
 @end
