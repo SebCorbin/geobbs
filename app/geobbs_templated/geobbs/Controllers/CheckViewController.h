@@ -11,14 +11,13 @@
 
 @interface CheckViewController : UIViewController <UITextFieldDelegate> {
     IBOutlet MKMapView *mapView;
-    IBOutlet UIBarButtonItem *doneButton;
     IBOutlet UITextField *messageField;
 }
 
 @property(nonatomic, retain) IBOutlet MKMapView *mapView;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 @property(nonatomic, retain) IBOutlet UITextField *messageField;
 
 
-- (void)doneButtonClicked:(id)sender;
+- (void)postCheck;
+
 @end

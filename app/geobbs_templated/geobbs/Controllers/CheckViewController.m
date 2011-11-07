@@ -17,36 +17,40 @@
 
 @synthesize mapView;
 @synthesize messageField;
-@synthesize doneButton;
 
 
 - (void)viewDidLoad {
     //[mapView setCenterCoordinate:[[mapView userLocation] coordinate] animated:TRUE];
+    
+    // Add the CheckViewController controller as a delegate for the textfield
     messageField.delegate = self;
-    [doneButton initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClicked:)];
 }
 
-- (void)doneButtonClicked:(id)sender {
-    Check *check = [[[Check alloc] init] autorelease];
 
-    [check setDate:[NSDate date]];
-    [check setLocation:[[mapView userLocation] location]];
-    [check setUserId:@"fg"];
+- (void)postCheck {
     NSLog(@"%@", [messageField text]);
-    [check setDescription:[messageField text]];
-
-    [Service postCheck:check];
+	
+    // Create a check and post it
+    [Service postCheck:[[[Check alloc] 
+                         initWithLocation:[[mapView userLocation] location] 
+                         userId:@"fg" 
+                         description:[messageField text]
+                         ] autorelease]];
 }
 
+// When a user click on the keyboard "Add" button
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [self doneButtonClicked:NULL];
+    
+    [self postCheck];
+    
+    // TODO switch to NotifViewController
+    
     return YES;
 }
 
 - (void)dealloc {
     [mapView release];
-    [doneButton release];
     [messageField release];
     [super dealloc];
 }
