@@ -33,6 +33,10 @@
 		C01FCF5008A9545400542487 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A9545400542486 /* User.m */; };
 		C01FCF5008A9545400542493 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A9545400542492 /* CheckViewController.m */; };
 		C01FCF5008A9545400542496 /* NotifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A9545400542495 /* NotifViewController.m */; };
+		C54E2DA9145966E9000D7A0F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DA7145966E9000D7A0F /* settings.png */; };
+		C54E2DAA145966E9000D7A0F /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DA8145966E9000D7A0F /* world.png */; };
+		C54E2DAD1459675E000D7A0F /* photography.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DAB1459675E000D7A0F /* photography.png */; };
+		C54E2DAE1459675E000D7A0F /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DAC1459675E000D7A0F /* plus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,10 @@
 		C01FCF5008A9545400542492 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
 		C01FCF5008A9545400542494 /* NotifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifViewController.h; sourceTree = "<group>"; };
 		C01FCF5008A9545400542495 /* NotifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifViewController.m; sourceTree = "<group>"; };
+		C54E2DA7145966E9000D7A0F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		C54E2DA8145966E9000D7A0F /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		C54E2DAB1459675E000D7A0F /* photography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photography.png; sourceTree = "<group>"; };
+		C54E2DAC1459675E000D7A0F /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C54E2DA6145966E9000D7A0F /* Png */,
 				BEB76B261446C857007F60A9 /* SBJson */,
 				8D1107310486CEB800E47090 /* geobbs-Info.plist */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
@@ -217,6 +226,17 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		C54E2DA6145966E9000D7A0F /* Png */ = {
+			isa = PBXGroup;
+			children = (
+				C54E2DAB1459675E000D7A0F /* photography.png */,
+				C54E2DAC1459675E000D7A0F /* plus.png */,
+				C54E2DA7145966E9000D7A0F /* settings.png */,
+				C54E2DA8145966E9000D7A0F /* world.png */,
+			);
+			path = Png;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				C54E2DA9145966E9000D7A0F /* settings.png in Resources */,
+				C54E2DAA145966E9000D7A0F /* world.png in Resources */,
+				C54E2DAD1459675E000D7A0F /* photography.png in Resources */,
+				C54E2DAE1459675E000D7A0F /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
