@@ -37,6 +37,7 @@
 		C54E2DAA145966E9000D7A0F /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DA8145966E9000D7A0F /* world.png */; };
 		C54E2DAD1459675E000D7A0F /* photography.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DAB1459675E000D7A0F /* photography.png */; };
 		C54E2DAE1459675E000D7A0F /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DAC1459675E000D7A0F /* plus.png */; };
+		C54E2DAE1459675E000D7A11 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C54E2DAE1459675E000D7A10 /* MapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		C54E2DA8145966E9000D7A0F /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
 		C54E2DAB1459675E000D7A0F /* photography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photography.png; sourceTree = "<group>"; };
 		C54E2DAC1459675E000D7A0F /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		C54E2DAE1459675E000D7A10 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		C54E2DAE1459675E000D7A12 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 		C01FCF5008A9545400542490 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				C54E2DAE1459675E000D7A12 /* MapAnnotation.h */,
+				C54E2DAE1459675E000D7A10 /* MapAnnotation.m */,
 				BE28B9A5143B6743005F0308 /* Service.m */,
 				BE28B9A4143B6743005F0308 /* Service.h */,
 				BEC397E01446264F00C628F3 /* CLController.m */,
@@ -322,6 +327,7 @@
 				C01FCF5008A9545400542487 /* User.m in Sources */,
 				C01FCF5008A9545400542493 /* CheckViewController.m in Sources */,
 				C01FCF5008A9545400542496 /* NotifViewController.m in Sources */,
+				C54E2DAE1459675E000D7A11 /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

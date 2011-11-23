@@ -14,7 +14,7 @@
 
 @protocol CLControllerDelegate
 @required
-- (void)setNotifications:(NSArray *)notifications;
+- (void)newLocation:(CLLocation *)location;
 @end
 
 @interface CLController : NSObject <CLLocationManagerDelegate> {

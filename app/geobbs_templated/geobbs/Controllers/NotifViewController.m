@@ -16,17 +16,18 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-- (void)setNotifications:(NSArray *)array {
+- (void)newLocation:(CLLocation *)location {
+    NSArray *newNotifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:location] autorelease];
     [notifications release];
-    notifications = [[NSArray alloc] initWithArray:array];
+    notifications = [[NSArray alloc] initWithArray:newNotifications];
     [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
     // Initialize location manager
-    self.locationController = [[CLController alloc] init];
-    self.locationController.delegate = self;
-    [self.locationController.locationManager startUpdatingLocation];
+    locationController = [[CLController alloc] init];
+    locationController.delegate = self;
+    [locationController.locationManager startUpdatingLocation];
 }
 
 

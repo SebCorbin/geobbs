@@ -13,12 +13,11 @@
 
 @interface NotifViewController : UITableViewController <CLControllerDelegate> {
     NSArray *notifications;
-    CLController *locationController;
 }
 
 @property(nonatomic, retain) NSArray *notifications;
 @property(retain) CLController *locationController;
 
-- (void)setNotifications:(NSArray *)array;
+- (void)newLocation:(CLLocation *)location;
 
 @end

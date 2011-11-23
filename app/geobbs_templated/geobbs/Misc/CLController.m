@@ -24,9 +24,8 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    // Get the notifiaction list
-    NSArray *notifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:newLocation] autorelease];
-    [self.delegate setNotifications:notifications];
+    // Notify the new location
+    [self.delegate newLocation:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
