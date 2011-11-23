@@ -1,10 +1,12 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
+    "name": "GeoBBS"
+  , "version": "0.0.2"
   , "private": true
   , "dependencies": {
-    "jade": ">= 0.0.1",
-    "express":"*",
-    "mongodb":"*"
+    "jade": "0.18.0"
+  ,  "express":"2.5.1"
+  ,  "mongodb":"0.9.6-10"
   }
+  , "main":"./app.js"
+  , "engines": { "node": ">= 0.4.11 <= 0.4.12" }
 }
