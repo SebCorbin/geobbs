@@ -7,6 +7,7 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
+#import <RestKit/RestKit.h>
 #import "Service.h"
 
 @implementation Service
@@ -89,8 +90,8 @@ static Service *serviceManager = nil;
 - (NSString *)doHttpRequest:(NSString *)url {
 
     NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
-                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                       timeoutInterval:60.0];
+                                    	cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                        timeoutInterval:60.0];
 
     NSLog(@"Req: %@", url);
 
