@@ -18,10 +18,39 @@
   
     // Don't reload if newNotifications == notification
     if(![newNotifications isEqualToArray:notifications]){
+        
+        NSArray* diff = [self getDifferenceBetween:notifications andNew:newNotifications];
+        
+        if([diff count] > 0){
+            NSDictionary *item = (NSDictionary *)[diff objectAtIndex:0];
+            
+            
+            UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"New user around"
+                                                    message:[NSString stringWithFormat:@"%@ - %@"
+                                                        ,   [item valueForKeyPath:@"User.login"]
+                                                        ,   [item valueForKeyPath:@"Check.description"]]
+                                                    delegate:nil 
+                                                    cancelButtonTitle:@"OK!"
+                                                    otherButtonTitles:nil];
+            [alert show];
+        }
+        
+        // Update the UITableView
         [notifications release];
         notifications = [[NSArray alloc] initWithArray:newNotifications];
         [self.tableView reloadData];
     }
+}
+
+// Get the difference between old & new data array
+- (NSArray*)getDifferenceBetween:(NSArray*) oldData andNew:(NSArray*) newData{
+    
+    NSMutableSet *old = [NSMutableSet setWithArray:oldData];
+    NSMutableSet *new = [NSMutableSet setWithArray:newData];
+    
+    [new minusSet:old];
+    
+    return [new allObjects];
 }
 
 - (void)viewDidLoad {

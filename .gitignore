@@ -11,3 +11,4 @@ server/node_modules
 .idea/
 *.xcuserdata
 
+*.xcexplist
