@@ -1,10 +1,7 @@
 //
 //  CLController.m
 //  geobbs
-//
-//  Created by sebcorbin on 12/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+
 
 #import "CLController.h"
 #import "geobbsAppDelegate.h"

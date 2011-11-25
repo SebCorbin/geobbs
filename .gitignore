@@ -9,4 +9,5 @@ build/
 *.perspectivev3
 server/node_modules
 .idea/
+*.xcuserdata
 

@@ -2,9 +2,7 @@
 //  CheckViewController.m
 //  geobbs
 //
-//  Created by sebcorbin on 20/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
+
 
 #import <MapKit/MapKit.h>
 #import "CheckViewController.h"
