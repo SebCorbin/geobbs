@@ -15,9 +15,13 @@
 
 - (void)newLocation:(CLLocation *)location {
     NSArray *newNotifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:location] autorelease];
-    [notifications release];
-    notifications = [[NSArray alloc] initWithArray:newNotifications];
-    [self.tableView reloadData];
+  
+    // Don't reload if newNotifications == notification
+    if(![newNotifications isEqualToArray:notifications]){
+        [notifications release];
+        notifications = [[NSArray alloc] initWithArray:newNotifications];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewDidLoad {
