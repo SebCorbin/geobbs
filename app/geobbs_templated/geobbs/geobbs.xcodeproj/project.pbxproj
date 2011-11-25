@@ -27,6 +27,7 @@
 		C01FCF5008A9545400542480 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01FCF5008A954540054247F /* MapKit.framework */; };
 		C01FCF5008A9545400542484 /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A9545400542483 /* Check.m */; };
 		C01FCF5008A9545400542487 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C01FCF5008A9545400542486 /* User.m */; };
+		C5425EFF148013F6003CB447 /* ARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5425EFE148013F6003CB447 /* ARViewController.mm */; };
 		C54E2DA9145966E9000D7A0F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DA7145966E9000D7A0F /* settings.png */; };
 		C54E2DAA145966E9000D7A0F /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DA8145966E9000D7A0F /* world.png */; };
 		C54E2DAD1459675E000D7A0F /* photography.png in Resources */ = {isa = PBXBuildFile; fileRef = C54E2DAB1459675E000D7A0F /* photography.png */; };
@@ -121,6 +122,8 @@
 		C01FCF5008A9545400542486 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		C01FCF5008A9545400542491 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
 		C01FCF5008A9545400542494 /* NotifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifViewController.h; sourceTree = "<group>"; };
+		C5425EFB148013A2003CB447 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		C5425EFE148013F6003CB447 /* ARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARViewController.mm; sourceTree = "<group>"; };
 		C54E2DA7145966E9000D7A0F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		C54E2DA8145966E9000D7A0F /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
 		C54E2DAB1459675E000D7A0F /* photography.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photography.png; sourceTree = "<group>"; };
@@ -298,10 +301,12 @@
 		C01FCF5008A9545400542489 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01FCF5008A9545400542491 /* CheckViewController.h */,
+				C5425EFB148013A2003CB447 /* ARViewController.h */,
 				C01FCF5008A9545400542494 /* NotifViewController.h */,
+				C5425EFE148013F6003CB447 /* ARViewController.mm */,
 				C590077514800C4A0089DD40 /* CheckViewController.mm */,
 				C590077614800C4A0089DD40 /* NotifViewController.mm */,
-				C01FCF5008A9545400542491 /* CheckViewController.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				C590077414800C280089DD40 /* Service.mm in Sources */,
 				C590077714800C4A0089DD40 /* CheckViewController.mm in Sources */,
 				C590077814800C4A0089DD40 /* NotifViewController.mm in Sources */,
+				C5425EFF148013F6003CB447 /* ARViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

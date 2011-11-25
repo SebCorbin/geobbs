@@ -4,7 +4,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PanicARLib/PanicARLib.h>
 #import "NotifViewController.h"
+
 
 @interface geobbsAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
