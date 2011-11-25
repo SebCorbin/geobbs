@@ -42,10 +42,11 @@
     NSLog(@"%@", [messageField text]);
 
     // Create a check and post it
+    // TODO: userId should be the currentUserId
     [Service postCheck:[[[Check alloc]
             initWithLocation:[[mapView userLocation] location]
-                      userId:@"fg"
-                 description:[messageField text]
+            userId:@"4e7f08f0bd99e46165000001"
+            description:[messageField text]
     ] autorelease]];
 }
 
@@ -56,7 +57,6 @@
     [self postCheck];
 
     // TODO switch to NotifViewController
-
     return YES;
 }
 

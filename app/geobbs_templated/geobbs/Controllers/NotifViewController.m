@@ -119,7 +119,7 @@
     NSDictionary *item = (NSDictionary *) [self.notifications objectAtIndex:indexPath.row];
 
     cell.textLabel.text = [item valueForKeyPath:@"User.login"];
-    cell.detailTextLabel.text = [item valueForKeyPath:@"Check.description"];
+    cell.detailTextLabel.text = [item valueForKey:@"description"];
 
 
     // Ajout de la flèche bleu

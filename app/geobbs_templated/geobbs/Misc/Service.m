@@ -83,9 +83,9 @@ static Service *serviceManager = nil;
 
 + (void)postCheck:(Check *)check {
 
-  Service* s = [Service getService];
+    Service* s = [Service getService];
 
-  NSString *stringUrl = [NSString stringWithFormat:@"%@%@?userId=%@&lat=%+.6f&lon=%+.6f&description=%@"
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@?userId=%@&lat=%+.6f&lon=%+.6f&description=%@"
                         , s.endpoint
                         , [s.apis objectForKey:@"checkCreate"]
                         , check.userId
@@ -94,7 +94,14 @@ static Service *serviceManager = nil;
                         , [check.description stringByAddingPercentEscapesUsingEncoding:
                                NSASCIIStringEncoding]];
 
-  NSLog(@"%@", stringUrl);
+    
+
+    // Do http request
+    [s doHttpRequest:requestUrl];
+    
+    NSLog(@"%@", requestUrl);
+    
+    // Todo: inform the user wether or not the check-in succeed
 }
 
 - (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User {
@@ -114,8 +121,6 @@ static Service *serviceManager = nil;
     NSURLRequest *query = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
                                     	cachePolicy:NSURLRequestUseProtocolCachePolicy
                                         timeoutInterval:60.0];
-
-    NSLog(@"Req: %@", url);
 
     NSURLResponse *response = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:query returningResponse:&response error:NULL];

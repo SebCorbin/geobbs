@@ -7,9 +7,12 @@ module.exports = (MongoDB, client) ->
     ###
       _userId:
       loc:
-      Check:{
-        
-      }
+        0:(int)
+        1:(int)
+      date:(long)timestamp
+      description:(string)
+      User:
+        [user]
     ###
     constructor: (@loc = {}, User, @opt = {}, @_id = new BSON.ObjectID()) ->
       @_userId = if User && User._id then User._id else new BSON.ObjectID()
@@ -25,7 +28,8 @@ module.exports = (MongoDB, client) ->
         _id   : @_id
         _userId : @_userId
         loc   : [@loc.lat, @loc.lon]
-        Check : @opt
+        date  : @opt.date
+        description : @opt.description
         User  : @User
       )
     
@@ -52,14 +56,23 @@ module.exports = (MongoDB, client) ->
       opt.d = parseInt(opt.d, 10) if opt.d
 
       if(!opt.d || opt.d > 100) # Max distance = 100
-        opt.d = 100
+        opt.d = 10000
       
       opt.c = parseInt(opt.c, 10) if opt.c
       if(!opt.c || opt.c > 100) # Max count = 100
         opt.c = 100
-
+      
       Check.getCollection((collChecks) ->
-        collChecks.find({ loc :{ $near : [opt.lat,opt.lon] , $maxDistance : opt.d} }, {} ,{limit:opt.c}).toArray(cb)
+        collChecks
+          .find({
+              loc :
+                $near : [opt.lat,opt.lon] , 
+                $maxDistance : opt.d
+            }
+            , {}
+            , limit:opt.c)
+          .sort(date:-1)
+          .toArray(cb)
       )
 
 

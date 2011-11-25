@@ -10,5 +10,6 @@ build/
 server/node_modules
 .idea/
 *.xcuserdata
+*.xcuserstate
 
 *.xcexplist
