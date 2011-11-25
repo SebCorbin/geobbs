@@ -51,7 +51,7 @@ module.exports = (MongoDB, client) ->
     Check.geoGet = (opt, cb) ->
 
       if(!opt.lat || !opt.lon)
-        return cb("Wrong geo")
+        return cb("Wrong geo", null)
 
       opt.d = parseInt(opt.d, 10) if opt.d
 
@@ -63,6 +63,9 @@ module.exports = (MongoDB, client) ->
         opt.c = 100
       
       Check.getCollection((collChecks) ->
+
+        # Todo: Only get distinct userId by using map-reduce
+
         collChecks
           .find({
               loc :
@@ -70,10 +73,25 @@ module.exports = (MongoDB, client) ->
                 $maxDistance : opt.d
             }
             , {}
-            , limit:opt.c)
+            , 
+              limit:opt.c
+            )
           .sort(date:-1)
-          .toArray(cb)
+          .toArray((err, success) ->
+            # temporary work-around
+            ids = {}
+
+            cb(null, success.filter((el) ->
+
+              if !ids[el._userId]
+                ids[el._userId] = true
+                return true
+              else
+                return false
+            ))
+          )
       )
+
 
 
 
