@@ -4,7 +4,6 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#import <RestKit/RestKit.h>
 #import "Service.h"
 
 @implementation Service

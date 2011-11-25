@@ -1,6 +1,7 @@
 //
 //  CheckViewController.m
 //  geobbs
+//  ViewController for adding check-in
 //
 
 
