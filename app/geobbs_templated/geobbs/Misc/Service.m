@@ -5,7 +5,6 @@
 //  Created by sebcorbin on 04/10/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-
 #import <CoreLocation/CoreLocation.h>
 #import <RestKit/RestKit.h>
 #import "Service.h"
@@ -13,6 +12,8 @@
 @implementation Service
 
 @synthesize apis;
+@synthesize port;
+@synthesize ip;
 @synthesize userId;
 
 static Service *serviceManager = nil;
@@ -20,12 +21,19 @@ static Service *serviceManager = nil;
 
 - (id)init {
     if (self = [super init]) {
-        //[self setServerUrl:@"http://localhost:3000"];
+        
+        // Setup
+        self.ip = @"192.168.0.11";
+        self.port = @"3000";
+        
+        
         self.userId = @"4e7f08f0bd99e46165000001";
-
+        
+        
+        // API
         self.apis = [NSDictionary dictionaryWithObjectsAndKeys:
-                @"http://localhost:3000/check/create/", @"checkCreate",
-                @"http://localhost:3000/check/list/", @"checkList",
+                @"/check/create/", @"checkCreate",
+                @"/check/list/", @"checkList",
                 nil];
     }
     return self;
@@ -35,6 +43,8 @@ static Service *serviceManager = nil;
 	[ super dealloc ];
 }
 
+
+
 /////////////////////
 // Singleton methods
 + (Service*)getService {
@@ -43,6 +53,12 @@ static Service *serviceManager = nil;
     }
     return serviceManager;
 }
+
+  // Return the API endpoint
+- (NSString*)endpoint {
+    return [NSString stringWithFormat:@"http://%@:%@", self.ip, self.port];
+}
+
 + (id)allocWithZone:(NSZone *)zone {
     return [[self getService] retain];
 }
@@ -59,31 +75,40 @@ static Service *serviceManager = nil;
     return NSUIntegerMax;  //denotes an object that cannot be released
 }
 
-- (void)release {
+/*- (void)release {
     //do nothing
-}
+}*/
 
 - (id)autorelease {
     return self;
 }
 
+
 + (void)postCheck:(Check *)check {
-    NSString *stringUrl = [NSString stringWithFormat:@"%@?userId=%@&lat=%+.6f&lon=%+.6f&description=%@",
-                                                     [[[Service getService] apis] objectForKey:@"checkCreate"],
-                                                     check.userId,
-                                                     check.location.coordinate.latitude,
-                                                     check.location.coordinate.longitude,
-                                                     [check.description stringByAddingPercentEscapesUsingEncoding:
-                                                             NSASCIIStringEncoding]];
-    NSLog(@"%@", stringUrl);
+
+  Service* s = [Service getService];
+
+  NSString *stringUrl = [NSString stringWithFormat:@"%@%@?userId=%@&lat=%+.6f&lon=%+.6f&description=%@"
+                        , s.endpoint
+                        , [s.apis objectForKey:@"checkCreate"]
+                        , check.userId
+                        , check.location.coordinate.latitude
+                        , check.location.coordinate.longitude
+                        , [check.description stringByAddingPercentEscapesUsingEncoding:
+                               NSASCIIStringEncoding]];
+
+  NSLog(@"%@", stringUrl);
 }
 
 - (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User {
-    return [NSString stringWithFormat:@"%@?userId=%@&lat=%+.6f&lon=%+.6f",
-                                      [[[Service getService] apis] objectForKey:@"checkList"]
-            , [[Service getService] userId]
-            , location.coordinate.latitude
-            , location.coordinate.longitude];
+  Service* s = [Service getService];
+  
+  return [NSString stringWithFormat:@"%@%@?userId=%@&lat=%+.6f&lon=%+.6f"
+          , s.endpoint
+          , [s.apis objectForKey:@"checkList"]
+          , s.userId
+          , location.coordinate.latitude
+          , location.coordinate.longitude];
 }
 
 // Get the page within a string content

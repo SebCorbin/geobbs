@@ -13,13 +13,19 @@
 
 @interface Service : NSObject {
     NSString *userId;
+    NSString *ip;
+    NSString *port;
     NSDictionary *apis;
 }
 
 @property(nonatomic, retain) NSDictionary *apis;
 @property(nonatomic, retain) NSString *userId;
+@property(nonatomic, retain) NSString *ip;
+@property(nonatomic, retain) NSString *port;
 
 + (Service *)getService;
+
+- (NSString *)endpoint;
 
 - (NSString *)getApiUrlForCheckList:(CLLocation *)location withUser:(User *)User;
 
