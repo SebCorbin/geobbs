@@ -51,11 +51,11 @@
 - (NSArray*)getDifferenceBetween:(NSArray*) oldData andNew:(NSArray*) newData{
     
     NSMutableSet *old = [NSMutableSet setWithArray:oldData];
-    NSMutableSet *new = [NSMutableSet setWithArray:newData];
+    NSMutableSet *newSet = [NSMutableSet setWithArray:newData];
     
-    [new minusSet:old];
+    [newSet minusSet:old];
     
-    return [new allObjects];
+    return [newSet allObjects];
 }
 
 - (void)viewDidLoad {

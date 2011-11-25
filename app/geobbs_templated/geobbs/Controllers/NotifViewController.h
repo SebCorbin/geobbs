@@ -16,6 +16,6 @@
 @property(retain) CLController *locationController;
 
 - (void)newLocation:(CLLocation *)location;
-- (NSArray*)getDifferenceBetween:(NSArray*) old andNew:(NSArray*) new;
+- (NSArray*)getDifferenceBetween:(NSArray*) old andNew:(NSArray*)newData;
 
 @end
