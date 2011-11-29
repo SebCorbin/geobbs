@@ -1,3 +1,3 @@
 mongod &
-coffee server/app.js dev &
-open "http://localhost/rockMongo"
+coffee server/app.coffee
+#open "http://localhost/rockMongo"
