@@ -6,17 +6,23 @@
 
 #import <UIKit/UIKit.h>
 #import <PanicARLib/PanicARLib.h>
+#import "Service.h"
+#import "CLController.h"
+#import "Check.h"
 
 @class ARController;
 
 
-@interface ARViewController : UIViewController <ARControllerDelegate>{
+@interface ARViewController : UIViewController <ARControllerDelegate, CLControllerDelegate>{
     ARController* m_ARController; // the AR controller instance of the app 
-    UIView* view;
+    NSArray *notifications;
 }
 
-@property (nonatomic, retain) IBOutlet UIView* view;
+@property(retain) CLController *locationController;
+@property(nonatomic, retain) NSArray *notifications;
 
+- (void)newLocation:(CLLocation *)location;
+- (NSArray*)getDifferenceBetween:(NSArray*) old andNew:(NSArray*)newData;
 
 // AR functionality
 - (void) createAR;

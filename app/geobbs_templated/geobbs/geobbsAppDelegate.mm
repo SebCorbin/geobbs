@@ -10,6 +10,7 @@
 @synthesize window;
 @synthesize tabBarController;
 @synthesize notifController;
+@synthesize arViewController;
 
 #pragma mark -
 #pragma mark Application lifecycle

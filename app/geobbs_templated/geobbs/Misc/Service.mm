@@ -20,7 +20,8 @@ static Service *serviceManager = nil;
     if (self = [super init]) {
         
         // Setup
-        self.ip = @"192.168.0.11";
+        //self.ip = @"192.168.0.11";
+        self.ip = @"192.168.5.146";
         self.port = @"3000";
         
         

@@ -10,8 +10,103 @@
 
 @implementation ARViewController
 
-@synthesize view;
+@synthesize locationController;
+@synthesize notifications;
 
+- (void) arDidTapMarker:(ARMarker*)marker {
+    
+}
+
+
+/** AR System Error Callback 
+ sent to the delegate when an error occured
+ this will most likely be caused by an error in the locationManager
+ 
+ error types:
+ kCLErrorLocationUnknown
+ kCLErrorDenied
+ kCLErrorNetwork
+ */
+- (void) arDidReceiveErrorCode:(int)code {
+    
+}
+
+
+/** Info Update Callback
+ sent to delegate when location or heading changes
+ use this to change the output in the infoLabel or to perform other output functions
+ */
+- (void) arDidUpdateLocation {
+    if (m_ARController.lastLocation == nil) {
+        m_ARController.infoLabel.text = @"could not retrieve location";
+        m_ARController.infoLabel.textColor = [UIColor redColor];
+    }
+    else {
+        m_ARController.infoLabel.text = [NSString stringWithFormat:@"GPS signal quality: %f Meters", m_ARController.lastLocationQuality];
+        m_ARController.infoLabel.textColor = [UIColor whiteColor];
+    }
+}
+
+/** Device Orientation Changed Callback
+ sent to delegate when arOrientation changed, use it to adjust AR views (like radar)
+ */
+- (void) arDidChangeOrientation:(UIDeviceOrientation)orientation radarOrientation:(UIDeviceOrientation)radarOrientation {
+    if (!m_ARController.isVisible || (m_ARController.isVisible && !m_ARController.isModalView)) {
+        if (radarOrientation == UIDeviceOrientationPortrait) [ARController setRadarPosition:0 y:-11];
+        else if (radarOrientation == UIDeviceOrientationPortraitUpsideDown) [ARController setRadarPosition:0 y:11];
+        else if (radarOrientation == UIDeviceOrientationFaceUp) [ARController setRadarPosition:0 y:-11];
+        else if (radarOrientation == UIDeviceOrientationLandscapeLeft) [ARController setRadarPosition:-11 y:0];
+        else if (radarOrientation == UIDeviceOrientationLandscapeRight) [ARController setRadarPosition:11 y:0];
+    }
+}
+
+- (void)newLocation:(CLLocation *)location {
+    NSArray *newNotifications = [[[Service getService] getNotificationsList:[User getCurrentUser] withLocation:location] autorelease];
+    
+    // Don't reload if newNotifications == notification
+    if(![newNotifications isEqualToArray:notifications]){
+        
+        NSArray* diff = [self getDifferenceBetween:notifications andNew:newNotifications];
+        
+        if([diff count] > 0){
+            NSDictionary *item = (NSDictionary *)[diff objectAtIndex:0];
+            
+            // If the last user check-in isn't the current user
+            // TODO: @"4e7f08f0bd99e46165000001" should be the current UserID
+            if(![(NSString*)[item valueForKey:@"_userId"] isEqualToString:@"4e7f08f0bd99e46165000001"]){
+                NSLog(@"%@", (NSString*)[item valueForKey:@"description"]);
+                
+                UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"New user around"
+                                                                  message:[NSString stringWithFormat:@"%@ - %@"
+                                                                           ,   [item valueForKeyPath:@"User.login"]
+                                                                           ,   [item valueForKey:@"description"]]
+                                                                 delegate:nil 
+                                                        cancelButtonTitle:@"OK!"
+                                                        otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+        
+        // Update the UITableView
+        [notifications release];
+        notifications = [[NSArray alloc] initWithArray:newNotifications];
+        [self createMarkers];
+    }
+}
+
+// Get the difference between old & new data array
+- (NSArray*)getDifferenceBetween:(NSArray*) oldData andNew:(NSArray*) newData{
+    
+    NSMutableSet *old = [NSMutableSet setWithArray:oldData];
+    NSMutableSet *newSet = [NSMutableSet setWithArray:newData];
+    
+    [newSet minusSet:old];
+    
+    return [newSet allObjects];
+}
+
+
+/*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -20,7 +115,7 @@
     }
     return self;
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -56,10 +151,14 @@
 
 - (void)viewDidLoad{
     NSLog(@"Vue didload !");
-    
+        
+    // Initialize location manager
+    locationController = [[CLController alloc] init];
+    locationController.delegate = self;
+    [locationController.locationManager startUpdatingLocation];
+
     // create ARController and Markers
  	[self createAR];
-	[self createMarkers];
     
     // check if AR is available and if so show the controller in first view of TabBarController
     if ([self checkForAR:YES]) [self showAR];
@@ -124,11 +223,11 @@
 // create the ARController
 - (void) createAR {
 	//setup ARController properties
-    [ARController setAPIKey:@"none"];
+    [ARController setAPIKey:@"6f81e2673e662416a72813ce"];
 	[ARController setEnableCameraView:YES];
 	[ARController setEnableRadar:YES];
 	[ARController setEnableInteraction:YES];
-	[ARController setEnableLoadingView:YES]; // enable loading view, call has no effect on iOS 5 (not supported yet)
+	[ARController setEnableLoadingView:NO]; // enable loading view, call has no effect on iOS 5 (not supported yet)
 	[ARController setEnableAccelerometer:YES];
 	[ARController setEnableAutoswitchToRadar:YES];
 	[ARController setEnableViewOrientationUpdate:YES];
@@ -156,23 +255,16 @@
 
 // create a few test markers
 - (void) createMarkers {
-    // first: setup a new marker with title and content
-    ARMarker* newMarker = [[ARMarker alloc] initWithTitle:@"Rome" contentOrNil:@"Italy"];
-    
-    // second: add the marker to the ARController using the addMarkerAtLocation method
-    // pass the geolocation (latitude, longitude) that specifies where the marker should be located
-    // WARNING: use double-precision coordinates whenever possible (the following coordinates are from Google Maps which only provides 8-9 digit coordinates
-	[m_ARController addMarkerAtLocation: newMarker atLocation:[[[CLLocation alloc] initWithLatitude:41.890156 longitude:12.492304] autorelease]];
-    
-    
-    // add a second marker
-    newMarker = [[ARMarker alloc] initWithTitle:@"Berlin" contentOrNil:@"Germany"];
-    [m_ARController addMarkerAtLocation:newMarker atLocation:[[[CLLocation alloc] initWithLatitude:52.523402 longitude:13.41141] autorelease]];
-    
-    // add a third marker, this time allocation of a new marker and adding to the ARController are wrapped up in one line
-	[m_ARController addMarkerAtLocation:[[ARMarker alloc] initWithTitle:@"London" contentOrNil:@"United Kingdom"] atLocation:[[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257] autorelease]];
-    
-
+    // TODO : Flush all the old markers
+    for (NSDictionary *item in notifications) {
+        CLLocation* location = [[[CLLocation alloc] 
+           initWithLatitude:[[(NSArray*)[item valueForKeyPath:@"loc"] objectAtIndex:0] floatValue] 
+                                 longitude:[[(NSArray*)[item valueForKeyPath:@"loc"] objectAtIndex:1] floatValue]] autorelease];
+        [m_ARController addMarkerAtLocation:[[ARMarker alloc] 
+                                             initWithTitle:[item valueForKeyPath:@"User.login"] 
+                                             contentOrNil:[item valueForKeyPath:@"description"]] 
+                                 atLocation: location];
+    }
 }
 
 
@@ -202,7 +294,7 @@
     }
     
     // show AR Controller in tab bar by assigning the ARView to the first view controller of the tab bar
-    //[[tabBarController.viewControllers objectAtIndex:0] setView:m_ARController.view];
+    [self setView:m_ARController.view];
     // now tell the ARController to become visbiel in a non-modal way while keeping the status bar visible
     // NOTE: the camera feed will mess with the status bar's visibility while being loaded, so far there is no way to avoid that (iOS SDK weakness)
     [m_ARController showController:NO showStatusBar:YES];
