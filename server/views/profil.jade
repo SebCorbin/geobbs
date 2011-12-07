@@ -1,0 +1,17 @@
+
+form(action='', method='post')
+  h1.roundedRectHead Profil
+  dl.roundedRect.formFields
+    dt
+      label#a(for='txt_msrp') Name:
+    dd
+      input#a(type='text', name='login', size='10', value=user.login)
+    dt
+      label#b(for='txt_msrp') Password:
+    dd
+      input#b(type='password', name='password', size='10', value=user.password)
+    dt.edgeToEdgeRow
+      label(for='txt_term') Checkins
+    dd
+      span=user.checks.length
+    input(type='submit', name='submit_btn', value='Change')
