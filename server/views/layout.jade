@@ -1,6 +1,10 @@
-!!!
+!!! 5
 html
   head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width = 320')
+    meta(name='viewport', content='initial-scale=1, user-scalable=no')
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    link(rel='stylesheet', type='text/css', media='only screen and (max-device-width: 480px)', href='/stylesheets/iPhoneUI.css')
+    link(rel='stylesheet', type='text/css', media='screen', href='/stylesheets/iPhoneUI.css')
+  body.roundedRect!= body
