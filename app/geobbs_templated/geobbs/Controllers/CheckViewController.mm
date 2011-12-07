@@ -40,12 +40,13 @@
 
 - (void)postCheck {
     NSLog(@"%@", [messageField text]);
-
+    
+    
     // Create a check and post it
     // TODO: userId should be the currentUserId
     [Service postCheck:[[[Check alloc]
             initWithLocation:[[mapView userLocation] location]
-            userId:@"4e7f08f0bd99e46165000001"
+            userId:[[Service getService] userId]
             description:[messageField text]
     ] autorelease]];
 }

@@ -20,20 +20,22 @@ static Service *serviceManager = nil;
     if (self = [super init]) {
         
         // Setup
-        //self.ip = @"192.168.0.11";
-        self.ip = @"192.168.5.146";
+        self.ip = @"192.168.1.29";
+        //self.ip = @"192.168.5.146";
         self.port = @"3000";
         
         
-        self.userId = @"4e7f08f0bd99e46165000001";
+        self.userId = @"4edf7b167aa6701c98ebf400";
+        // FG:4e7f08f0bd99e46165000001
+        // Sebcorbin: 4edf7b167aa6701c98ebf400
         
         
         // API
         self.apis = [NSDictionary dictionaryWithObjectsAndKeys:
-                @"/check/create/", @"checkCreate",
-                @"/check/list/", @"checkList",
+                     @"/check/create/", @"checkCreate",
+                     @"/check/list/", @"checkList",
                      @"/user/profil/", @"userProfile",
-                nil];
+                     nil];
     }
     return self;
 }

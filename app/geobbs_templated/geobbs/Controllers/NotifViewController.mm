@@ -26,7 +26,7 @@
             
             // If the last user check-in isn't the current user
             // TODO: @"4e7f08f0bd99e46165000001" should be the current UserID
-            if(![(NSString*)[item valueForKey:@"_userId"] isEqualToString:@"4e7f08f0bd99e46165000001"]){
+            if(![(NSString*)[item valueForKey:@"_userId"] isEqualToString:[[Service getService] userId]]){
                 NSLog(@"%@", (NSString*)[item valueForKey:@"description"]);
                 
                 UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"New user around"

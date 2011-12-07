@@ -68,24 +68,6 @@
         
         NSArray* diff = [self getDifferenceBetween:notifications andNew:newNotifications];
         
-        if([diff count] > 0){
-            NSDictionary *item = (NSDictionary *)[diff objectAtIndex:0];
-            
-            // If the last user check-in isn't the current user
-            // TODO: @"4e7f08f0bd99e46165000001" should be the current UserID
-            if(![(NSString*)[item valueForKey:@"_userId"] isEqualToString:@"4e7f08f0bd99e46165000001"]){
-                NSLog(@"%@", (NSString*)[item valueForKey:@"description"]);
-                
-                UIAlertView *alert = [[UIAlertView alloc]   initWithTitle:@"New user around"
-                                                                  message:[NSString stringWithFormat:@"%@ - %@"
-                                                                           ,   [item valueForKeyPath:@"User.login"]
-                                                                           ,   [item valueForKey:@"description"]]
-                                                                 delegate:nil 
-                                                        cancelButtonTitle:@"OK!"
-                                                        otherButtonTitles:nil];
-                [alert show];
-            }
-        }
         
         // Update the UITableView
         [notifications release];
