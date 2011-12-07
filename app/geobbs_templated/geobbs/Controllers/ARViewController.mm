@@ -224,6 +224,7 @@
 - (void) createAR {
 	//setup ARController properties
     [ARController setAPIKey:@"6f81e2673e662416a72813ce"];
+    NSLog(@"API Key is 6f81e2673e662416a72813ce");
 	[ARController setEnableCameraView:YES];
 	[ARController setEnableRadar:YES];
 	[ARController setEnableInteraction:YES];

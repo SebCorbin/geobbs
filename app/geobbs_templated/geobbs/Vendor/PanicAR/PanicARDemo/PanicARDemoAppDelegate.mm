@@ -155,16 +155,13 @@
 - (void) showAR {
     // on DEVICE: show error if device does not support AR functionality
     // AR is not supported if either camera or compass is not available
-    
-
 #if !(TARGET_IPHONE_SIMULATOR)
     if (![ARController deviceSupportsAR]) {
-        UIAlertView *alert = [[UIAlertView alloc] 
-            initWithTitle:NSLocalizedString(@"No AR Error Title", @"No AR Support")
-              message:NSLocalizedString(@"No AR Error Message", @"This device does not support AR functionality!") 
-              delegate:nil 
-              cancelButtonTitle:NSLocalizedString(@"OK Button", @"OK") 
-              otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No AR Error Title", @"No AR Support")
+                                                        message:NSLocalizedString(@"No AR Error Message"@, "This device does not support AR functionality!") 
+                                                       delegate:nil 
+                                              cancelButtonTitle:NSLocalizedString(@"OK Button", @"OK") 
+                                              otherButtonTitles:nil];
         [alert show];
         return;
     }

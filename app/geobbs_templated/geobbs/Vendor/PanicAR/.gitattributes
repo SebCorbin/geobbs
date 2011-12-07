@@ -1,3 +1,0 @@
-*.pbxproj -crlf -diff -merge
-*.xib -crlf -diff -merge
-Framework*/ binary

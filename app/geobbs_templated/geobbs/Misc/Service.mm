@@ -32,6 +32,7 @@ static Service *serviceManager = nil;
         self.apis = [NSDictionary dictionaryWithObjectsAndKeys:
                 @"/check/create/", @"checkCreate",
                 @"/check/list/", @"checkList",
+                     @"/user/profil/", @"userProfile",
                 nil];
     }
     return self;

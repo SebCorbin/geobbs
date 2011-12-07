@@ -11,6 +11,7 @@
 @synthesize tabBarController;
 @synthesize notifController;
 @synthesize arViewController;
+@synthesize webViewController;
 
 #pragma mark -
 #pragma mark Application lifecycle

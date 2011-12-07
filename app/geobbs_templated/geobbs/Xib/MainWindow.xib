@@ -19,6 +19,7 @@
 			<string>IBUICustomObject</string>
 			<string>IBUIWindow</string>
 			<string>IBUITabBar</string>
+			<string>IBUIWebView</string>
 			<string>IBUITabBarItem</string>
 			<string>IBUITableViewController</string>
 			<string>IBUIView</string>
@@ -54,7 +55,7 @@
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
+				<object class="NSColor" key="IBUIBackgroundColor" id="611148524">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
 				</object>
@@ -73,12 +74,22 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="227121331">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="134995612">
-						<string key="IBUITitle">AR</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="616740316">
+					<object class="IBUIWebView" key="IBUIView" id="240148332">
+						<reference key="NSNextResponder"/>
+						<int key="NSvFlags">274</int>
+						<string key="NSFrame">{{0, 20}, {320, 411}}</string>
+						<reference key="NSSuperview"/>
+						<reference key="IBUIBackgroundColor" ref="611148524"/>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIDataDetectorTypes">1</int>
+						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
+					</object>
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="692595371">
+						<string key="IBUITitle">Profil</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">photography.png</string>
+							<string key="NSResourceName">settings.png</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -187,7 +198,7 @@
 									<object class="NSColor" key="IBUITextColor">
 										<int key="NSColorSpace">3</int>
 										<bytes key="NSWhite">MAA</bytes>
-										<object class="NSColorSpace" key="NSCustomColorSpace" id="604953567">
+										<object class="NSColorSpace" key="NSCustomColorSpace">
 											<int key="NSID">2</int>
 										</object>
 									</object>
@@ -302,24 +313,12 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
-					<reference ref="227121331"/>
-					<object class="IBUIViewController" id="616740316">
-						<object class="IBUIView" key="IBUIView" id="91537479">
-							<nil key="NSNextResponder"/>
-							<int key="NSvFlags">274</int>
-							<string key="NSFrame">{{0, 20}, {320, 411}}</string>
-							<object class="NSColor" key="IBUIBackgroundColor">
-								<int key="NSColorSpace">3</int>
-								<bytes key="NSWhite">MQA</bytes>
-								<reference key="NSCustomColorSpace" ref="604953567"/>
-							</object>
-							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						</object>
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="692595371">
-							<string key="IBUITitle">Profil</string>
+					<object class="IBUIViewController" id="227121331">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="134995612">
+							<string key="IBUITitle">AR</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">settings.png</string>
+								<string key="NSResourceName">photography.png</string>
 							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -332,6 +331,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
 					</object>
+					<reference ref="616740316"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="526844187">
 					<reference key="NSNextResponder"/>
@@ -373,19 +373,27 @@ AAgACAAIAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">notifController</string>
-						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="952242245"/>
-					</object>
-					<int key="connectionID">35</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">arViewController</string>
 						<reference key="source" ref="664661524"/>
 						<reference key="destination" ref="227121331"/>
 					</object>
 					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">notifController</string>
+						<reference key="source" ref="664661524"/>
+						<reference key="destination" ref="952242245"/>
+					</object>
+					<int key="connectionID">60</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">webViewController</string>
+						<reference key="source" ref="664661524"/>
+						<reference key="destination" ref="616740316"/>
+					</object>
+					<int key="connectionID">61</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -402,6 +410,14 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<reference key="destination" ref="975380852"/>
 					</object>
 					<int key="connectionID">46</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">webView</string>
+						<reference key="source" ref="616740316"/>
+						<reference key="destination" ref="240148332"/>
+					</object>
+					<int key="connectionID">65</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -506,7 +522,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="692595371"/>
-							<reference ref="91537479"/>
+							<reference ref="240148332"/>
 						</object>
 						<reference key="parent" ref="444625924"/>
 					</object>
@@ -565,8 +581,8 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<reference key="parent" ref="996667139"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">48</int>
-						<reference key="object" ref="91537479"/>
+						<int key="objectID">62</int>
+						<reference key="object" ref="240148332"/>
 						<reference key="parent" ref="616740316"/>
 					</object>
 				</object>
@@ -589,6 +605,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<string>23.CustomClassName</string>
 					<string>23.IBPluginDependency</string>
 					<string>24.IBPluginDependency</string>
+					<string>25.CustomClassName</string>
 					<string>25.IBPluginDependency</string>
 					<string>26.IBPluginDependency</string>
 					<string>27.CustomClassName</string>
@@ -601,7 +618,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<string>41.IBPluginDependency</string>
 					<string>42.IBPluginDependency</string>
 					<string>43.IBPluginDependency</string>
-					<string>48.IBPluginDependency</string>
+					<string>62.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -623,6 +640,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<string>ARViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>WebViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>NotifViewController</string>
@@ -650,7 +668,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">58</int>
+			<int key="maxID">65</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
