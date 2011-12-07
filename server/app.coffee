@@ -89,6 +89,25 @@ app.all "/check/create/", [logger, loadUser], (req, res) ->
   )
 
 ###
+# Afficher le profil de l'utilisateur
+#
+# POST
+#
+# Params:
+#  	- userId
+###
+app.all "/user/profil/", [logger, loadUser], (req, res) ->
+
+  out = {
+      code:404 # User Not found
+      type:'error'
+      msg:'User not found'
+  }
+  
+  res.render "profil", title: "Profil", user:req.user
+
+
+###
   Retourne chaque item les plus proches
 
   GET
