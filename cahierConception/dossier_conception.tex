@@ -1,0 +1,244 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet} % police
+\usepackage{lmodern}
+\usepackage{layout}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{shorttoc}
+\usepackage{xcolor}
+\usepackage{currfile}
+\usepackage{hyperref}
+
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{4}
+\setcounter{totalnumber}{10}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\floatpagefraction}{0.66}
+
+%\include{chapterStyle}
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \@chapapp{} \thechapter
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \vphantom{\@chapapp{} \thechapter}
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+
+\renewcommand\thesection{\arabic{section}}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+
+% Redéfinition de commandes
+
+% Pour avoir les noms de chapitre en 1.1.3 etc...
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+% Désactiver les alinéas automatiques
+%\parindent=0cm
+
+
+% Création du glossaire
+
+\setcounter{tocdepth}{4}
+
+\begin{document}
+  \begin{onehalfspace}
+
+  % Page de garde
+    \begin{titlepage}
+      \begin{center}
+        Sébastien Corbin et François-Guillaume Ribreau\\
+        CSII 2\ieme année\\
+        Le 21 Septembre 2011\\
+      \end{center}
+      \hrulefill
+      \vspace{7cm}
+      \begin{center}
+        \LARGE \textbf{Dossier de conception}\\
+        \vspace{3cm}
+        \normalsize Génie Logiciel Embarqué
+      \end{center}
+
+      \vspace{9,5cm}
+
+      \begin{center}
+      \line(1,0){250}
+      \end{center}
+
+      \begin{center}
+      \tiny{\currfilename}
+      \end{center}
+
+
+    \end{titlepage}
+    \clearpage
+
+  \thispagestyle{empty}
+  \setcounter{page}{0}
+  \clearpage
+
+\chapter{Objectifs du système}
+L’objectif de ce projet est de fournir une application mobile destinée à exploiter une plateforme d'application géo-localisée.
+
+\chapter{Interfaces}
+\section{Interfaces Utilisateurs}
+L’application GeoBBS est conçue pour être utilisée sur un téléphone mobile iPhone.
+Cette interface utilisateur a été amplement décrite dans le dossier de spécifications dans lequel vous retrouvez tous les détails nécessaires à la compréhension de cette interface.
+Cette application mobile va donc être utilisée pour l’exploitation du projet GeoBBS et son accès est protégé par le couple login / mot de passe.
+
+\section{Interfaces Logicielles}
+Les interfaces logicielles mentionnées ici sont des interfaces internes au système.
+
+\begin{description}
+  \item[Interface avec la base de données centrale]: l’application doit interagir avec la base de données centrale (MongoDb, installée sur le serveur de base de données) au moyen de pilotes dédiés, de manière synchronisée. Cette base de données rassemble toutes les données manipulées par l’application.
+
+\end{description}
+
+\section{Interfaces de communication}
+  Les interfaces de communication mentionnées ici sont des interfaces internes au système.
+
+  \begin{description}
+    \item[Interface entre l'application mobile et le serveur]: pour accéder aux données et aux services présentés par l’application mobile, une connexion TCP/IP est nécessaire.
+  \end{description}
+
+\chapter{Bases de données externes}
+  Aucune base de données externe n’est prévue pour interagir avec notre système. Les seules bases de données, mentionnées précédemment, font partie du système à concevoir.
+
+\chapter{Contraintes générales de conception}
+  Plusieurs contraintes provenant de différentes sources sont à prendre en compte dans la phase de conception du système. Ci-dessous, un récapitulatif des contraintes imposées par le cahier des charges :
+
+\begin{itemize}
+  \item Le framework PanicAR doit être utilisée pour la création de l'écran utilisant la réalité augmentée.
+  \item La base de données doit être de type MongoDB. La base de données doit être synchronisée à intervalle régulier avec l'application mobile.
+  \item La phase de conception n’est démarrée qu’après validation du modèle métier (et du modèle conceptuel des données) par le maître d’ouvrage.
+  \item L’application doit être en anglais. Le code en anglais.
+\end{itemize}
+
+\chapter{Documents de référence}
+.
+
+\chapter{Normes, Standards et Outils}
+
+\subsection{Méthodes de conception}
+  Les méthodes de conception sont utilisées afin d’améliorer la qualité de la conception finale.
+
+\begin{itemize}
+\item La méthode de conception MERISE a été utilisée pour mettre en place le Modèle Métier du système,  le  Modèle Conceptuel de Données (MCD), le  Modèle Logique de Données (MLD)  pour aboutir enfin au script de génération de la base de données.
+
+\item Les recommandations ACAI en terme de modélisation et de conception-réalisation d’applications (documents applicables) ont constitué des références pour les phases d’analyse et de conception du projet. Elles peuvent être vues comme un ensemble de bonnes pratiques permettant d’orienter l’architecture et les choix techniques du système.
+
+
+\item La  norme IEEE 1471 (2000) représente également une source de recommandations importante en ce qui concerne l’architecture en 5 couches de l’application web côté serveur. Elle préconise ainsi l’utilisation intensive de vues et notamment le Modèle-Vue-Contrôleur (MVC– cf. Dossier Développeur) utilisé par la couche «Client».
+
+\item Les designs patterns sont utilisés pour améliorer l’architecture du logiciel. Ce sont des modèles de conception réutilisables qui répondent à des problématiques courantes de conception indépendamment de tout langage. Ces modèles de conception fournissent un support fort pour la mise en oeuvre de principes chers à l'approche par  objets : la flexibilité, la réutilisabilité, la modularité, la maintenabilité...\\
+\end{itemize}
+
+  Concernant l’élaboration du système, un style de conception ascendante (ou « bottomup ») a été choisi. Cette approche permet de s’appuyer sur un modèle métier validé par le maître d’ouvrage, puis de le transférer rapidement en modèle objet. Elle permet également d’intégrer les frameworks et l’architecture en couches, dans l’optique de fournir des composants réutilisables et autonomes.
+
+
+\subsection{Environnement et outils de développement}
+  Le matériel de développement utilisé est une machine préparée pour chaque développeur, équipée de  Mac OS et d’une quantité suffisante de mémoire vive (le minimum a été fixé à 2Go pour avoir une qualité de développement acceptable, en partie en raison des nombreux services à exécuter).
+
+  Les deux membres de l’équipe de développement exécutent les applications du projet GeoBBS sur leurs propres machines. La base de données MongoDb est située sur chaque machine personnelle. Deux machines sont donc nécessaires pour le développement du projet.
+
+  L’outil de développement XCODE est mis à disposition de l’équipe de développement. Les environnements de développement qui interviennent dans la conception et le développement du système sont NodeJS et AppKit.
+
+  La base de données MongoDb est manipulée et testée grâce à l’outil RockMongo ou MongoHub (lors de la phase de développement, un ensemble de données tests est utilisé afin d’avoir un support convenable pour les différents services à créer).
+
+  La gestion de configuration est effectuée sur un serveur GIT pour les composants sources (classes, scripts, fichiers de configurations, pages WEB).
+
+\subsection{Notations utilisées}
+  La terminologie utilisée dans le projet GeoBBS est disponible dans le Cahier Des Charges. Les conventions suivantes seront utilisées pour les schémas de modélisation : normes UML 1.5 et conventions MERISE.
+
+\chapter{Application}
+Au sein de l’application GeoBBS, il convient de nommer chaque couche de façon prédéfinie. En effet, chaque couche est stockée dans un package différent :
+\begin{description}
+\item[la couche physique] n’est pas représentée car il s’agit de la base de données
+\item[la couche mapping] est stockée dans les packages : model
+\item[la couche métier] est stockée dans le package : business
+\item[la couche application] est stockée dans le package : controllers
+\item[la couche présentation] est stockée dans le dossier views.
+\end{description}
+
+\chapter{Standards de programmation}
+  L’équipe de développement suit un ensemble de conventions de codage qui permettent une homogénéisation des sources :
+\begin{itemize}
+  \item Les conventions approuvées par le W3C seront appliquées dans le cadre du développement WEB (HTML et CSS).
+\end{itemize}
+
+\chapter{Conception générale}
+\section{Langages utilisés} % (fold)
+\label{sub:langages_utilis_s}
+
+
+% subsection langages_utilis_s (end)
+Voici la liste des différents langages utilisés dans le projet GeoBBS:
+
+\begin{description}
+  \item[Objective-C] pour l'application mobile
+  \item[CoffeeScript\/JavaScript] pour le développement du serveur
+  \item[HTML5, CSS3, ECMASCRIPT5 (JavaScript)] pour le contenu des vues web
+\end{description}
+
+\section{Diagramme de déploiement} % (fold)
+\label{sec:diagramme_de_d_ploiement}
+TODO @seb mettre un diag. de déploiement rapide ici (3 devices: téléphone mobile, serveur d'application et serveur de base de données)
+
+\section{Architecture des Composants en 5 couches} % (fold)
+\label{sec:architecture_des_composants_en_5_couches}
+
+L’application mobile est divisée en cinq couches de fonctionnalités, totalement autonomes les unes des autres, et communiquant par un système de file : chaque couche ne dialogue qu’avec les couches voisines supérieure et inférieure. Toutes les couches doivent agir de façon transparente les unes des autres. La séparation des couches est la suivante :
+
+Couche Données : cette couche contient les données physiques stockées dans la base de données MongoDB. Elle ne requiert pas d’implémentation Objective-C particulière et fonctionne simplement comme un espace de consultation massif.
+
+Couche Mapping : cette couche contient l’implémentation des accès à la base de données afin de la masquer à la couche métier.
+
+Couche Métier : cette couche contient les objets métiers de l’application. Il existe un objet par fonctionnalité de l’application. Ces objets implémentent les fonctionnalités spécifiques relatives à la gestion du covoiturage, et font le lien entre la couche contrôleur et la couche mapping.
+
+Couche Application : cette couche contient la partie fonctionnelle de l’application. Elle s’appuie sur les objets métier pour réaliser les actions sollicitées par l’utilisateur par l’intermédiaire de la couche présentation. Elle est en charge de vérifier la validité des requêtes de la couche présentation. Il existe un contrôleur par fonctionnalité de l’application. Le schéma utilisé est le MVC (Modèle Vue Contrôleur), mis en oeuvre en utilisant le framework Foundation d'Apple. Plus d’informations sont disponibles dans le paragraphe suivant.
+
+Couche Présentation : cette couche représente les interfaces qui permettent de présenter les contenus générés par la couche présentation, grâce à des vues dynamiques. Elle se charge d’afficher des contenus à l’utilisateur et de lui offrir des interfaces avec la couche contrôleur pour interagir avec l’application.
+
+\subsubsection{L'architecture MVC} % (fold)
+\label{ssub:l_architecture_mvc}
+Les couches présentation et application s’appuient  sur l’architecture « Modèle-Vue-Contrôleur » qui permet de séparer le fonctionnel de l’interface. Cette architecture est réalisée par une conjonction d’un contrôleur et d’un nombre quelconque de vues qui offrent le rendu à l’utilisateur. Les données calculées par le contrôleur et fournies aux vues pour être affichées sont les modèles. Le contrôleur s’appuie  sur les couches inférieures pour obtenir ces données.
+
+L'utilisateur sollicite une action par l’intermédiaire d’une Vue. Cette action est transmise au contrôleur, qui en vérifie la validité et s’appuie sur la couche métier pour l’effectuer. Enfin le contrôleur renvoi sur la vue correspondant à la demande de l’utilisateur.
+
+\chapter{Structure des données globales, des fichiers et des bases de données} % (fold)
+  Les données sont centralisées dans une unique base de données MongoDB installée sur le serveur de base de données (les scripts de création des collections et des tuples de la base de données sont livrés avec l’application). Ces données sont utilisées par l’application GeoBBS.
+
+% chapter chapter_name (end)
+
+  \end{onehalfspace}
+\end{document}
