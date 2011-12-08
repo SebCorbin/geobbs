@@ -71,14 +71,14 @@
 \setcounter{tocdepth}{4}
 
 \begin{document}
-	\begin{onehalfspace}
+  \begin{onehalfspace}
 
-	% Page de garde
+  % Page de garde
     \begin{titlepage}
       \begin{center}
         Sébastien Corbin et François-Guillaume Ribreau\\
         CSII 2\ieme année\\
-    		Le 21 Septembre 2011\\
+        Le 21 Septembre 2011\\
       \end{center}
       \hrulefill
       \vspace{7cm}
@@ -106,130 +106,130 @@
   \setcounter{page}{0}
   \clearpage
 
-	\chapter*{Expression des besoins}
-	\paragraph*{}
-	Il s'agit d'une application se basant sur la géolocalisation pour diffuser des messages. C'est un réseau social sans idée de segmentation, se basant uniquement sur les informations envoyées dans les messages (position, catégorie). Ces messages devront s'inscrire dans une optique de partage en temps réel.
-	
-	on souhaite dev une plateforme d'app geoloca et de notif pour nos users
-	cette plateforme devra permettre a nos users d'ajouter ces app geoloc sur leur mobile
-	
-	\paragraph*{}
-	L'application est un point d'entrée vers une API côté serveur permettant à d'autres services d'insérer ou de récupérer des messages de par une catégorie bien distincte, par exemple : les promotions des magasins, les événements culturels, etc.
+  \chapter*{Expression des besoins}
+  \paragraph*{}
+  Il s'agit d'une application se basant sur la géolocalisation pour diffuser des messages. C'est un réseau social sans idée de segmentation, se basant uniquement sur les informations envoyées dans les messages (position, catégorie). Ces messages devront s'inscrire dans une optique de partage en temps réel.
 
-	\paragraph*{}
-	L'application se veut simpliste, avec un système d'envoi et d'affichage de messages, ainsi que la gestion de son profil.
-	
-	\chapter*{Etude de faisabilité}
-	Il existe actuellement 5 principaux systèmes d'exploitation mobile sur le marché :
-	\begin{itemize}
-		\item Android de Google Inc.
-		\item BlackBerry OS de RIM
-		\item iOS d'Apple
-		\item Symbian OS de Symbian Foundation
-		\item Windows Phone de Microsoft
-	\end{itemize}
-	
-	\paragraph*{}
-	Pour les objectifs de ce cours (informatique embarquée), l'application se voudra native. Mais du fait que tous ces systèmes d'exploitation exploitent un kit de développement différent, il faudra n'en choisir qu'un par contrainte temporelle.
-	
-	\paragraph*{}
-	Au mois d'octobre 2011, les parts de marché mondial des systèmes d'exploitation mobiles (smartphones et tablettes comprises) se répartissaient de la manière suivante :
-	\begin{description}
-		\item[Apple iOS] 61,4\%
-		\item[Google Android] 18,9\%
-		\item[Java ME] 12,8\%
-		\item[Symbian] 3,5\%
-		\item[RIM] 2,5\%
-		\item[Autres] 0,7\%
-	\end{description}
-	\emph{Source : Net Applications}
-	
-	\paragraph*{}
-	De par ces statistiques, le matériel à disposition des élèves (ordinateurs Mac et smartphones Apple), le choix a été porté sur le développement d'une application native iPhone sous iOS.
-	
-	\paragraph*{}
-	Les smartphones d'Apple sont entre autres équipés d'un système de géolocalisation par satellite (GPS) répondant aux besoins de l'application.
+  on souhaite dev une plateforme d'app geoloca et de notif pour nos users
+  cette plateforme devra permettre a nos users d'ajouter ces app geoloc sur leur mobile
 
-	\paragraph*{}
-	Le serveur devra répondre aux requêtes des terminaux mobiles pour donner et enregistrer les messages de ceux-ci, le besoin de rapidité sera un élément décisif.
-	
-	\chapter*{Spécifications}
+  \paragraph*{}
+  L'application est un point d'entrée vers une API côté serveur permettant à d'autres services d'insérer ou de récupérer des messages de par une catégorie bien distincte, par exemple : les promotions des magasins, les événements culturels, etc.
 
-	\begin{description}
-	\item[Plateforme :] Apple (iPhone, iPad)
-	\item[Language :] Objective-C
-	\item[Dénomination :] Application de notifications géolocalisées
-	\item[Nom de code :] GeoBbs
-	\item[Utilisation des capacités matérielles :] GPS
-	\item[Languages :] Objective-C (client mobile) / JavaScript (côté serveur)
-	\item[Technologies et plateforme :]
-	\item[Bdd :] MongoDb (support natif de la géolocalisation autant dans l’indexation que dans le requêtage)
-	\item[Côté serveur :] NodeJS
-	\item[Descriptif :] GeoBbs est une application mobile permettant d’informer et d’être informé de façon géolocalisée.
-	\end{description}
+  \paragraph*{}
+  L'application se veut simpliste, avec un système d'envoi et d'affichage de messages, ainsi que la gestion de son profil.
 
-	\newpage
+  \chapter*{Etude de faisabilité}
+  Il existe actuellement 5 principaux systèmes d'exploitation mobile sur le marché :
+  \begin{itemize}
+    \item Android de Google Inc.
+    \item BlackBerry OS de RIM
+    \item iOS d'Apple
+    \item Symbian OS de Symbian Foundation
+    \item Windows Phone de Microsoft
+  \end{itemize}
 
-	\chapter*{Interface utilisateur}
-	\section*{Accueil}
-	\begin{description}
-		\item[Cas 1 :] GeoBbs est lié à Twitter, Foursquare, Facebook.
+  \paragraph*{}
+  Pour les objectifs de ce cours (informatique embarquée), l'application se voudra native. Mais du fait que tous ces systèmes d'exploitation exploitent un kit de développement différent, il faudra n'en choisir qu'un par contrainte temporelle.
 
-		Affichage des derniers Tweets/Check-in (avec algorithme d’importance) de ses amis dans le secteur où se trouve l’utilisateur
+  \paragraph*{}
+  Au mois d'octobre 2011, les parts de marché mondial des systèmes d'exploitation mobiles (smartphones et tablettes comprises) se répartissaient de la manière suivante :
+  \begin{description}
+    \item[Apple iOS] 61,4\%
+    \item[Google Android] 18,9\%
+    \item[Java ME] 12,8\%
+    \item[Symbian] 3,5\%
+    \item[RIM] 2,5\%
+    \item[Autres] 0,7\%
+  \end{description}
+  \emph{Source : Net Applications}
 
-		\item[Cas 2 :] Aucun compte lié
+  \paragraph*{}
+  De par ces statistiques, le matériel à disposition des élèves (ordinateurs Mac et smartphones Apple), le choix a été porté sur le développement d'une application native iPhone sous iOS.
 
-		Affichage des dernières notifications envoyées dans le secteur où se trouve l’utilisateur.
-		L’UI de la home ressemble à Foursquare:
-			\begin{description}
-			\item[Liste] Une liste des notifications
-			\item[Menu en bas] Liste | Notifier | Réalité augmentée
-			\end{description}
-	\end{description}
+  \paragraph*{}
+  Les smartphones d'Apple sont entre autres équipés d'un système de géolocalisation par satellite (GPS) répondant aux besoins de l'application.
+
+  \paragraph*{}
+  Le serveur devra répondre aux requêtes des terminaux mobiles pour donner et enregistrer les messages de ceux-ci, le besoin de rapidité sera un élément décisif.
+
+  \chapter*{Spécifications}
+
+  \begin{description}
+  \item[Plateforme :] Apple (iPhone, iPad)
+  \item[Language :] Objective-C
+  \item[Dénomination :] Application de notifications géolocalisées
+  \item[Nom de code :] GeoBbs
+  \item[Utilisation des capacités matérielles :] GPS
+  \item[Languages :] Objective-C (client mobile) / JavaScript (côté serveur)
+  \item[Technologies et plateforme :]
+  \item[Bdd :] MongoDb (support natif des données géolocalisées autant dans l’indexation que dans le requêtage)
+  \item[Côté serveur :] NodeJS
+  \item[Descriptif :] GeoBbs est une application mobile permettant d’informer et d’être informé de façon géolocalisée.
+  \end{description}
+
+  \newpage
+
+  \chapter*{Interface utilisateur}
+  \section*{Accueil}
+  \begin{description}
+    \item[Cas 1 :] GeoBbs est lié à Twitter, Foursquare, Facebook.
+
+    Affichage des derniers Tweets/Check-in (avec algorithme d’importance) de ses amis dans le secteur où se trouve l’utilisateur
+
+    \item[Cas 2 :] Aucun compte lié
+
+    Affichage des dernières notifications envoyées dans le secteur où se trouve l’utilisateur.
+    L’UI de la home ressemble à Foursquare:
+      \begin{description}
+      \item[Liste] Une liste des notifications
+      \item[Menu en bas] Liste | Notifier | Réalité augmentée
+      \end{description}
+  \end{description}
 
 
-	\section*{Ajout}
-	Les utilisateurs peuvent envoyer anonymement (ou non) une notification aux X (paramètre personnalisable) premières personnes autour de lui à moins de Y mètres.
+  \section*{Ajout}
+  Les utilisateurs peuvent envoyer anonymement (ou non) une notification aux X (paramètre personnalisable) premières personnes autour de lui à moins de Y mètres.
 
-	L’UI d’envoi comporte:
-		\begin{description}
-		\item[Texte] Description en un nombre illimité de caractères
-		\item[Uploader] Champs photo/vidéo (facultatif)
-		\item[Slider] Choix de X, Y (par défaut “au 30 premières personne à moins de 2km”)
-		Le slider propose ces combinaisons (mais non affiché à l’écran), dans l’ordre (de gauche à droite) :
-			\begin{itemize}
-			\item “au 30 premières personnes à moins de 2km”
-			\item “au 20 premières personnes à moins de 5km”
-			\item “au 10 premières personnes à moins de 10km”
-			\end{itemize}
-		Le slider supporte juste 3 positions (exemple) [ --- | --- | --- ]
-		Par défaut en position 1 cad “au 30 premières personnes à moins de 2km”
-		\item[Slider] simple Anonyme/Profil publique
-		\end{description}
+  L’UI d’envoi comporte:
+    \begin{description}
+    \item[Texte] Description en un nombre illimité de caractères
+    \item[Uploader] Champs photo/vidéo (facultatif)
+    \item[Slider] Choix de X, Y (par défaut “au 30 premières personne à moins de 2km”)
+    Le slider propose ces combinaisons (mais non affiché à l’écran), dans l’ordre (de gauche à droite) :
+      \begin{itemize}
+      \item “au 30 premières personnes à moins de 2km”
+      \item “au 20 premières personnes à moins de 5km”
+      \item “au 10 premières personnes à moins de 10km”
+      \end{itemize}
+    Le slider supporte juste 3 positions (exemple) [ --- | --- | --- ]
+    Par défaut en position 1 cad “au 30 premières personnes à moins de 2km”
+    \item[Slider] simple Anonyme/Profil publique
+    \end{description}
 
-	L’application envoie à intervalle régulier la position de l’utilisateur via les API fournies par Apple.
+  L’application envoie à intervalle régulier la position de l’utilisateur via les API fournies par Apple.
 
-	\chapter*{Cas d’utilisation}
+  \chapter*{Cas d’utilisation}
 
-	\emph{X,Y,Z sont paramétrables}
+  \emph{X,Y,Z sont paramétrables}
 
-	\paragraph{}
-	L’utilisateur lie son compte Foursquare à l’application, s’il s’approche d’un endroit où une promotion est faite contre un check-in, d’un événement (ex: festival), il reçoit des infos dessus.
+  \paragraph{}
+  L’utilisateur lie son compte Foursquare à l’application, s’il s’approche d’un endroit où une promotion est faite contre un check-in, d’un événement (ex: festival), il reçoit des infos dessus.
 
-	\paragraph{}
-	L’utilisateur lie son compte Twitter, lui permet de publier une information à la fois de façon géolocalisée (c'est-à-dire aux X premières personnes autour de lui à moins de Y mètres) et sur Twitter en plus s’il le souhaite.
+  \paragraph{}
+  L’utilisateur lie son compte Twitter, lui permet de publier une information à la fois de façon géolocalisée (c'est-à-dire aux X premières personnes autour de lui à moins de Y mètres) et sur Twitter en plus s’il le souhaite.
 
-	\paragraph{}
-	L’utilisateur lie son compte Facebook, il est informé si certains de ses amis "checkent" à proximité où s’il passe à côté d’un endroit où ont "checké" ses amis il y a moins de Z minutes.
+  \paragraph{}
+  L’utilisateur lie son compte Facebook, il est informé si certains de ses amis "checkent" à proximité où s’il passe à côté d’un endroit où ont "checké" ses amis il y a moins de Z minutes.
 
-	\section*{Améliorations}
+  \section*{Améliorations}
 
-	"In-app purchase" d’applications basée sur la plate-forme GeoBbs (développé par la communauté via des API et SDK open-source), exemple :
-		\begin{description}
-		\item[la TAN :] informe l’utilisateur par push lorsqu’il se trouve sur une voie avec un contrôleur proche
-		\item[domotique :] permet de déclencher des actions dès que le téléphone se trouve à moins de X mètres dans une tranche d’heure précise
-		\end{description}
+  "In-app purchase" d’applications basée sur la plate-forme GeoBbs (développé par la communauté via des API et SDK open-source), exemple :
+    \begin{description}
+    \item[la TAN :] informe l’utilisateur par push lorsqu’il se trouve sur une voie avec un contrôleur proche
+    \item[domotique :] permet de déclencher des actions dès que le téléphone se trouve à moins de X mètres dans une tranche d’heure précise
+    \end{description}
 
-	\end{onehalfspace}
+  \end{onehalfspace}
 \end{document}
 
