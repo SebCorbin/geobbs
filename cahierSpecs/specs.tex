@@ -107,8 +107,153 @@
   \setcounter{page}{0}
   \clearpage
 
-\chapter{Introduction}
+\chapter{But du document}
+Le but de ce document est de lister toutes les fonctionnalités du projet GeoBBS ainsi que de donner un aperçu des interfaces et des interactions la composant. Ce document fournit aussi une description des utilisateurs et leur rôle dans le logiciel.
 
+\chapter{Documents applicables et de références}
+
+\subsection{Documents applicables} % (fold)
+\label{sub:documents_applicables}
+.
+% subsection documents_applicables (end)
+
+\subsection{Documents de références} % (fold)
+\label{ssub:documents_de_r_f_rences}
+.
+% subsubsection documents_de_r_f_rences (end)
+
+\chapter{Diagramme de cas d’utilisation}
+TODO Diagramme global des cas d'utilisation ici
+
+
+\chapter{Description globale}
+
+\subsection{Environnement} % (fold)
+\label{sub:environnement}
+L’application est hébergée sur le serveur internet de la société GEOBBS CORP. Et est accessible depuis l’extérieur via l'application mobile.
+
+% subsection environnement (end)
+
+\subsection{Profils des utilisateurs} % (fold)
+\label{sub:profils_des_utilisateurs}
+
+GeoBBS accepte deux types d’utilisateurs, les visiteurs et les membres.
+
+\subsubsection{Les visiteurs}
+Toute personne qui arrive sur le site (ou l'application) pour la première fois et qui ne possède pas de compte ou n’est pas connecté est appelée visiteur.
+
+\subsubsection{Les membres}
+Un membre est une personne qui s’est identifiée auprès du site (ou de l'application mobile). Elle est distinguée des autres membres par un identifiant unique et peux utiliser l’intégralité des services qu’offre GeoBBS.
+
+
+\chapter{Spécifications générales} % (fold)
+\label{cha:sp_cifications_g_n_rales}
+
+\subsection{Description des services attendus}
+
+Les services attendus sont répartis dans les différents modules de l’application. Ces modules sont accessibles ou non en fonction du type d’utilisateur, visiteur ou membre.
+
+Les visiteurs ont uniquement accès au formulaire de création de compte et au formulaire de connexion. Aucun autre écran n’est accessible au grand public.
+
+Les membres peuvent agir sur les 4 grands modules :
+\begin{description}
+  \item[Near] répertories les membres proches géographiquement de l'utilisateur actuel
+  \item[Check] permet au membre de "checker" c'est à dire informer proactivement GeoBBS de sa position en y ajoutant s'il le souhaite une description et une image (ou vidéo)
+  \item[AR] Affiche en réalité augmenté les points d'intérêts autour de l'utilisateur
+  \item[Profil] permet à l'utilisateur d'éditer son profil
+\end{description}
+
+\subsection{Approche utilisée dans ce document} % (fold)
+\label{sub:approche_utilis_e_dans_ce_document}
+Plutôt que de disperser les spécifications (diagramme de cas d’utilisation, diagramme de classe, diagramme de séquence, maquettes) d’un même module à diverses endroits du document. La spécification par composant a été préférée. Elle permet une lecture plus aisée et rapide de l’intégralité du fonctionnement d’un composant d’un module.
+% subsection approche_utilis_e_dans_ce_document (end)
+
+\subsection{Description générale des fonctions} % (fold)
+\label{sub:description_g_n_rale_des_fonctions}
+
+\chapter{Le visiteur s’inscrit}
+Un visiteur peut effectuer 2 actions, s’inscrire et se connecter.
+
+\subsubsection{Cas d'utilisation: le visiteur s'inscrit} % (fold)
+\begin{description}
+  \item[But]: Enregistrer les informations du visiteur en base
+  \item[Résumé]: /
+  \item[Acteurs]:
+    \begin{itemize}
+      \item Visiteur (acteur principal)
+    \end{itemize}
+\end{description}
+
+\subsubsection{Description des enchaînements} % (fold)
+\label{sub:description_des_encha_nements}
+
+\begin{description}
+  \item[Pré-conditions]:
+    \begin{itemize}
+      \item Le site est accessible, la base de données est disponible, le visiteur est sur le site
+    \end{itemize}
+
+  \item[Enchaînements nominaux]:
+    \begin{itemize}
+      \item Évènement déclencheur : Lorsque le visiteur souhaite se créer un compte
+    \end{itemize}
+
+    TODO: faire tableau avec les différentes étapes | Visiteur | Logiciel |
+
+  \item[Enchaînements alternatifs]:
+    \begin{description}
+      \item[alternatif 1]: Le visiteur souhaite s’inscrire via son compte Facebook, Twitter. TODO:
+    \end{description}
+
+  \item[Enchaînements d’erreurs]:
+  \begin{description}
+    \item[Exception 1]: Les informations obligatoires ne sont pas toutes saisies
+    \begin{itemize}
+      \item Afficher un message d’erreur récapitulant les champs restant à saisir
+    \end{itemize}
+    \item[Exception 2]: Certaines informations saisies sont incorrectes (Email, nom d’utilisateur, code postal)
+    \item[Exception 3]: Le nom d’utilisateur est déjà présent en BDD
+    \begin{itemize}
+      \item Afficher un message d’erreur : « Ce nom d’utilisateur est déjà présent en BDD, veuillez en choisir un autre »
+    \end{itemize}
+  \end{description}
+
+  \item[Post-conditions]: /
+\end{description}
+
+\section{Ecrans} % (fold)
+\label{sec:ecrans}
+TODO: Insérer les écrans ici
+% section ecrans (end)
+
+TODO: Liste des cas d'utilisation que l'on POURRAIT traiter (tu vas quand même pas tous les faires, ça prendrait trop de temps...)
+- Connexion du visiteur (on s'en branle)
+- Visualiser et editer profil (on s'en branle)
+- Ajouter un checker (ok)
+- Visualiser les checks autour (ok)
+- Consulter le profil d'un amis (on s'en branle)
+- Ajouter une application
+- Lancer une application
+-
+- ...
+
+Au pire, tu peux en faire quelque un (genre juste "ajouter check" et "visualiser checks", en fait juste ceux dont j'ai fait des mockups/capture d'écran, t'embête pas pour le reste) et peut-être citer les autres cas comme étant réalisable mais dans le futur.
+
+\chapter{Ecrans supplémentaires} % (fold)
+\label{cha:ecrans_suppl_mentaires}
+.
+
+\chapter{Diagramme de classes} % (fold)
+\label{cha:diagramme_de_classes}
+
+L'application serveur et l'application mobile étant des prototypes développés suivant le paradigme fonctionnel, ils n'utilisent aucun classe. Il n'y a donc pas de diagramme de classe dans ce document. Cependant les spécifications futures (post-prototype) inclueront classes et un diagramme de classe devra donc être présent.
+
+\chapter{Spécifications technologiques et opératoires}
+
+% chapter diagramme_de_classes (end)
+
+% chapter ecrans_suppl_mentaires (end)
+% subsection description_g_n_rale_des_fonctions (end)
 \section{Matériel}
 \subsection{Description}
 L'iPhone  est une famille de smartphones conçue et commercialisée par Apple Inc. depuis 2007. Les modèles, dont l'interface utilisateur a été conçue avec le multi-touch, disposent d'un appareil photo, d'une fonction baladeur numérique, d'un client Internet (pour naviguer sur le Web ou consulter son courrier électronique), et de fonctions basiques telles que les SMS/MMS (messages texte et multimédia) ; mais disposent aussi de la messagerie vocale visuelle et de l'App Store, qui permet de télécharger des applications, allant des jeux aux réseaux sociaux, en passant par les GPS, la télévision, la presse électronique ou encore les bandes-dessinées. Au mois de mai 2010, on compte plus de 225 000 applications.
@@ -180,11 +325,22 @@ L'adresse du serveur et le port sont défini directement dans le code de l'appli
         \end{description}
     \end{description}
 
+  \item[GET /user/profil/]:
+
+    \begin{description}
+      \item[Description] Affiche une page HTML d'édition du profil et des préférences de l'utilisateur.
+
+      \item[Paramètres]:
+        \begin{description}
+          \item[userId (string)] Id de l'utilisateur
+        \end{description}
+    \end{description}
+
 \end{description}
 
 \chapter*{Base de données}
 
-L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo}.
+L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo}ou \lstinline{MongoHub}.
 
 Collections en BDD:
 \begin{description}
@@ -195,10 +351,10 @@ Collections en BDD:
 Ajout d'une première entitée dans Checks:
 \begin{description}
   \item[loc] \lstinline{[1,1]}
-  \item[_userId] \lstinline{ObjectId("4e7e0614bd99e29380000000")}
+  \item[\_userId] \lstinline{ObjectId("4e7e0614bd99e29380000000")}
   \item[date] \lstinline{new Date()}
   \item[description] \lstinline{test}
-  \item[User] \lstinline{\{login: FG\}}
+  \item[User] \lstinline{ login: FG }
 \end{description}
 
 Ajout d'une première entitée dans Users
@@ -214,63 +370,47 @@ Ajout d'un index sur les checks via le CLI \lstinline{$mongo}:
 > db.checks.ensureIndex({ loc : "2d" })
 \end{lstlisting}
 
-\chapter*{Ce qu'il faut traiter}
-Intro
-  Les os de l'embarqué
-  ->(liste et ce qu'il font chacun)
+% \chapter*{Ce qu'il faut traiter}
+% Intro
+%   Les os de l'embarqué
+%   ->(liste et ce qu'il font chacun)
+%
+%   Notion d'entrée/sortie
+%
+%   Les Env. de dev (avec particularité du remote debugging)
+%
+%   Résumé des différentes méthodes (agile, xp etc..., tdd etc...)
+%
+% Projet
+%   -> Equipe
+%   -> Cahier des charges
+%
+% Choix de la méthodo:
+%   -> Méthode Agile
+%   -> + TDD
+%
+% Languages:
+% Objective-C / JavaScript
+%
+% Libraries:
+% ExpressJS (serveur http)
+% Mongoose http://mongoosejs.com/ (mongodb)
+%
+% La sécuration est faites par oAuth
 
-  Notion d'entrée/sortie
+% \chapter*{Matériel existant}
+% iPhone
 
-  Les Env. de dev (avec particularité du remote debugging)
+% MacBookPro 13 et 15 pouces
 
-  Résumé des différentes méthodes (agile, xp etc..., tdd etc...)
+% \chapter*{Analyse des librairies}
 
-Projet
-  -> Equipe
-  -> Cahier des charges
+% \href{http://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/index.html}{Guide de programmation iOs}
 
-Choix de la méthodo:
-  -> Méthode Agile
-  -> + TDD
+% Géolocalisation:
 
-Languages:
-Objective-C / JavaScript
+% \href{http://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html}{Introduction au développement relatif à la géolocalisation}
 
-Libraries:
-ExpressJS (serveur http)
-Mongoose http://mongoosejs.com/ (mongodb)
-
-La sécuration est faites par oAuth
-
-\chapter*{Matériel existant}
-iPhone
-
-MacBookPro 13 et 15 pouces
-
-\chapter*{Analyse des librairies}
-
-\href{http://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/index.html}{Guide de programmation iOs}
-
-Géolocalisation:
-
-\href{http://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html}{Introduction au développement relatif à la géolocalisation}
-
-\chapter*{Interface utilisateur}
-  \section*{Accueil}
-  \begin{description}
-    \item[Cas 1 :] GeoBbs est lié à Twitter, Foursquare, Facebook.
-
-    Affichage des derniers Tweets/Check-in (avec algorithme d’importance) de ses amis dans le secteur où se trouve l’utilisateur
-
-    \item[Cas 2 :] Aucun compte lié
-
-    Affichage des dernières notifications envoyées dans le secteur où se trouve l’utilisateur.
-    L’UI de la home ressemble à Foursquare:
-      \begin{description}
-      \item[Liste] Une liste des notifications
-      \item[Menu en bas] Liste | Notifier | Réalité augmentée
-      \end{description}
-  \end{description}
 
   \end{onehalfspace}
 \end{document}
