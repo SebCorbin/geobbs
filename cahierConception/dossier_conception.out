@@ -13,4 +13,17 @@
 \BOOKMARK [0][-]{chapter.7}{Application}{}% 13
 \BOOKMARK [0][-]{chapter.8}{Standards de programmation}{}% 14
 \BOOKMARK [0][-]{chapter.9}{Conception g\351n\351rale}{}% 15
-\BOOKMARK [1][-]{subsection.9.0.4}{Langages utilis\351s}{chapter.9}% 16
+\BOOKMARK [1][-]{section.9.1}{Langages utilis\351s}{chapter.9}% 16
+\BOOKMARK [1][-]{section.9.2}{Diagramme de d\351ploiement}{chapter.9}% 17
+\BOOKMARK [1][-]{section.9.3}{Architecture des Composants en 5 couches}{chapter.9}% 18
+\BOOKMARK [2][-]{section*.1}{L'architecture MVC}{section.9.3}% 19
+\BOOKMARK [0][-]{chapter.10}{Structure des donn\351es globales, des fichiers et des bases de donn\351es}{}% 20
+\BOOKMARK [0][-]{chapter.11}{Strat\351gie de traitement des erreurs et des exceptions}{}% 21
+\BOOKMARK [1][-]{section.11.1}{Strat\351gie d\220exceptions par couches}{chapter.11}% 22
+\BOOKMARK [1][-]{section.11.2}{V\351rification des donn\351es saisies}{chapter.11}% 23
+\BOOKMARK [1][-]{section.11.3}{S\351curisation des acc\350s aux donn\351es}{chapter.11}% 24
+\BOOKMARK [2][-]{subsection.11.3.1}{Justification des choix d'architecture, des composants et du langage}{section.11.3}% 25
+\BOOKMARK [0][-]{chapter.12}{Conception d\351taill\351e des composants}{}% 26
+\BOOKMARK [1][-]{subsection.12.0.2}{Syst\350me d\220information}{chapter.12}% 27
+\BOOKMARK [2][-]{section*.2}{R\350gles de gestion}{subsection.12.0.2}% 28
+\BOOKMARK [3][-]{section*.3}{Mod\350le M\351tier}{section*.2}% 29

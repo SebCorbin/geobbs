@@ -108,19 +108,19 @@
   \clearpage
 
 \chapter{Objectifs du système}
-L’objectif de ce projet est de fournir une application mobile destinée à exploiter une plateforme d'application géo-localisée.
+L'objectif de ce projet est de fournir une application mobile destinée à exploiter une plateforme d'application géo-localisée.
 
 \chapter{Interfaces}
 \section{Interfaces Utilisateurs}
-L’application GeoBBS est conçue pour être utilisée sur un téléphone mobile iPhone.
+L'application GeoBBS est conçue pour être utilisée sur un téléphone mobile iPhone.
 Cette interface utilisateur a été amplement décrite dans le dossier de spécifications dans lequel vous retrouvez tous les détails nécessaires à la compréhension de cette interface.
-Cette application mobile va donc être utilisée pour l’exploitation du projet GeoBBS et son accès est protégé par le couple login / mot de passe.
+Cette application mobile va donc être utilisée pour l'exploitation du projet GeoBBS et son accès est protégé par le couple login / mot de passe.
 
 \section{Interfaces Logicielles}
 Les interfaces logicielles mentionnées ici sont des interfaces internes au système.
 
 \begin{description}
-  \item[Interface avec la base de données centrale]: l’application doit interagir avec la base de données centrale (MongoDb, installée sur le serveur de base de données) au moyen de pilotes dédiés, de manière synchronisée. Cette base de données rassemble toutes les données manipulées par l’application.
+  \item[Interface avec la base de données centrale]: l'application doit interagir avec la base de données centrale (MongoDb, installée sur le serveur de base de données) au moyen de pilotes dédiés, de manière synchronisée. Cette base de données rassemble toutes les données manipulées par l'application.
 
 \end{description}
 
@@ -128,11 +128,11 @@ Les interfaces logicielles mentionnées ici sont des interfaces internes au syst
   Les interfaces de communication mentionnées ici sont des interfaces internes au système.
 
   \begin{description}
-    \item[Interface entre l'application mobile et le serveur]: pour accéder aux données et aux services présentés par l’application mobile, une connexion TCP/IP est nécessaire.
+    \item[Interface entre l'application mobile et le serveur]: pour accéder aux données et aux services présentés par l'application mobile, une connexion TCP/IP est nécessaire.
   \end{description}
 
 \chapter{Bases de données externes}
-  Aucune base de données externe n’est prévue pour interagir avec notre système. Les seules bases de données, mentionnées précédemment, font partie du système à concevoir.
+  Aucune base de données externe n'est prévue pour interagir avec notre système. Les seules bases de données, mentionnées précédemment, font partie du système à concevoir.
 
 \chapter{Contraintes générales de conception}
   Plusieurs contraintes provenant de différentes sources sont à prendre en compte dans la phase de conception du système. Ci-dessous, un récapitulatif des contraintes imposées par le cahier des charges :
@@ -140,8 +140,8 @@ Les interfaces logicielles mentionnées ici sont des interfaces internes au syst
 \begin{itemize}
   \item Le framework PanicAR doit être utilisée pour la création de l'écran utilisant la réalité augmentée.
   \item La base de données doit être de type MongoDB. La base de données doit être synchronisée à intervalle régulier avec l'application mobile.
-  \item La phase de conception n’est démarrée qu’après validation du modèle métier (et du modèle conceptuel des données) par le maître d’ouvrage.
-  \item L’application doit être en anglais. Le code en anglais.
+  \item La phase de conception n'est démarrée qu'après validation du modèle métier (et du modèle conceptuel des données) par le maître d'ouvrage.
+  \item L'application doit être en anglais. Le code en anglais.
 \end{itemize}
 
 \chapter{Documents de référence}
@@ -150,12 +150,12 @@ Les interfaces logicielles mentionnées ici sont des interfaces internes au syst
 \chapter{Normes, Standards et Outils}
 
 \subsection{Méthodes de conception}
-  Les méthodes de conception sont utilisées afin d’améliorer la qualité de la conception finale.
+  Les méthodes de conception sont utilisées afin d'améliorer la qualité de la conception finale.
 
 \begin{itemize}
 \item La méthode de conception MERISE a été utilisée pour mettre en place le Modèle Métier du système,  le  Modèle Conceptuel de Données (MCD), le  Modèle Logique de Données (MLD)  pour aboutir enfin au script de génération de la base de données.
 
-\item Les recommandations ACAI en terme de modélisation et de conception-réalisation d’applications (documents applicables) ont constitué des références pour les phases d’analyse et de conception du projet. Elles peuvent être vues comme un ensemble de bonnes pratiques permettant d’orienter l’architecture et les choix techniques du système.
+\item Les recommandations ACAI en terme de modélisation et de conception-réalisation d'applications (documents applicables) ont constitué des références pour les phases d’analyse et de conception du projet. Elles peuvent être vues comme un ensemble de bonnes pratiques permettant d’orienter l’architecture et les choix techniques du système.
 
 
 \item La  norme IEEE 1471 (2000) représente également une source de recommandations importante en ce qui concerne l’architecture en 5 couches de l’application web côté serveur. Elle préconise ainsi l’utilisation intensive de vues et notamment le Modèle-Vue-Contrôleur (MVC– cf. Dossier Développeur) utilisé par la couche «Client».
@@ -238,7 +238,91 @@ L'utilisateur sollicite une action par l’intermédiaire d’une Vue. Cette act
 \chapter{Structure des données globales, des fichiers et des bases de données} % (fold)
   Les données sont centralisées dans une unique base de données MongoDB installée sur le serveur de base de données (les scripts de création des collections et des tuples de la base de données sont livrés avec l’application). Ces données sont utilisées par l’application GeoBBS.
 
-% chapter chapter_name (end)
+\chapter{Stratégie de traitement des erreurs et des exceptions}
+  Dans ce paragraphe sont exposées les différentes stratégies mises en place pour gérer les erreurs, i.e. empêcher l’application de s’effondrer sur n’importe quelle erreur et rendre les erreurs compréhensibles pour l’utilisateur.
+
+\section{Stratégie d’exceptions par couches}
+  Afin de permettre une gestion localisée des exceptions, il a été décidé que chaque couche prenne en compte. Ainsi, la couche mapping est en charge des exceptions lors des accès à la base. La couche contrôleur est en charge des exceptions dues au mauvais formatage des données et de transmettre des messages d’erreur textuels à la couche présentation pour l’utilisateur. De cette façon, chaque couche agit de façon autonome et la réutilisation des composants est possible.
+
+\section{Vérification des données saisies}
+  Une des principales sources d’erreurs dans les applications est due à des saisies erronées de la part de l’utilisateur. Ces erreurs peuvent être de plusieurs niveaux : erreurs de formatage, non suivi des règles métier, contraintes de base de données. Elles doivent être interceptées le plus tôt possible dans le cheminement de l’architecture afin d’une part que la logique soit respectée (chaque couche a un rôle particulier, il doit être  rempli sans supposer que d’autres couches le feront à sa place), et d’autre part que le nombre de traitements ne soit pas excessivement grand.
+
+Les différents niveaux de vérifications de données sont les suivants :
+\begin{description}
+\item[couche contrôleur] : les formulaires des écrans sont validés. On peut alors vérifier que les données ne sont pas absentes, ou mal formatées. Ce sont des vérifications sans logique métier, simplement applicable à tout type de formulaire.
+\item[couche métier] : une fois les valeurs saisies validées, la prochaine étape est de vérifier l’adéquation métier de ces données. Par exemple, une voiture apparaissant dans des mouvements ne peu pas être supprimée mais simplement retirée de la circulation. Ce genre de règles métiers doit être vérifiées par cette couche.
+\item[couche mapping] : cette couche se charge de vérifier toutes les règles de gestion implémentées dans la base de données. Cela permet de passer au crible toutes les erreurs de saisies qui seraient soit mal gérées par les couches supérieures, soit appartenant à des cas très spécifiques d’erreurs. Notamment, la gestion des transactions est primordiale. La partie serveur se charge d’une grande partie de ces problématiques, il convient toutefois de définir les contraintes sur la base de données avec prudence et précision.
+\end{description}
+
+\section{Sécurisation des accès aux données}
+  L'application serveur et mobile étant des prototypes et étant destiné à être testé dans un environnement protégé, il n'y a aucune sécurité.
+
+\subsection{Justification des choix d'architecture, des composants et du langage}
+
+  Les choix de l'architecture sont en partie imposés  par le maître d'ouvrage. Celui-ci préconise l'utilisation de MongoDB comme SGBD, ainsi que le langage Objective-C pour l'application mobile et CoffeeScript/JavaScript pour la partie serveur.
+
+  GeoBBS a été développée selon une architecture 5 couches. Ce choix permet d'accroître l'indépendance et la réutilisation des composants. Ainsi pour chacune des couches, il est possible de changer le choix technique ou l'implémentation de façon transparente pour les autres couches. D'autre part le découpage en couche permet une plus grande réutilisation synonyme d'économie à terme. En contrepartie, il faut être conscient qu'une telle architecture réduit les performances générales du système du fait du cheminement indirect par les différentes couches. De plus, le primo investissement est plus lourd en terme de développement. Les économies se réalisent sur les extensions et la maintenance.
+
+\chapter{Conception détaillée des composants}
+\subsection{Système d’information}
+\subsubsection{Règles de gestion}
+
+  Les règles de gestion décrivent la nature des relations entre les entités d’un système d’information. L’ensemble de ces règles permet de définir un système correspondant à une problématique métier précisément adaptée aux besoins du client. Ces règles de gestion sont utilisées directement dans le modèle métier : chaque règle correspond à une relation  entre 2 (ou plusieurs) entités. Les entités métiers sont indiquées en italique.
+
+\begin{description}
+  \item[R1] un User peut créer plusieurs Check
+  \item[R2] un User peut aussi être un Dev ou Dealer
+  \item[R3] un Dev gère une et ou plusieurs applications
+  \item[R4] un Dealer gère une ou plusieurs ShopPlace
+  \item[R5] un Check concerne une Place
+  \item[R6] une Place peut être soit une privatePlace, une ShopPlace ou une PublicPlace
+  \item[R7] une ShopPlace peut avoir une ou plusieurs Offer
+  \item[R9] une Application surveille un ou plusieurs Check
+  \item[R10] un User peut installer une ou plusieurs Application
+\end{description}
+
+\subsubsection{Modèle Métier}
+Les modèles métier suivants sont les modèles que nous avons mis en place côté serveur. S'agissant d'un prototype, seul les modèles Check et User ont été nécessaire.
+
+\begin{lstlisting}[float=htb, frame=lines, caption={Model User}, label={code:modelUser}]
+class User
+
+    # new User(login, password, ...)
+    constructor: (@login = 'unknown'
+                , @password = ''
+                , @_id = new BSON.ObjectID()
+                , @checks = []) ->
+
+    # @chainable
+    fromUser: (User) ->
+      @_id = User._id
+      @login = User.login
+      @password = User.password
+      @checks = User.checks
+
+      @
+\end{lstlisting}
+
+\begin{lstlisting}[float=htb, frame=lines, caption={Model Check}, label={code:modelCheck}]
+class Check
+    # new Check(loc, User, ...)
+    constructor: (@loc = {}
+                  , User
+                  , @opt = {}
+                  , @_id = new BSON.ObjectID()) ->
+      @_userId = if User && User._id then User._id else new BSON.ObjectID()
+
+      @loc.lat = parseInt(@loc.lat, 10) || -1
+      @loc.lon = parseInt(@loc.lon, 10) || -1
+
+      @User = User.getGeneralInfo()
+      @opt.date or= Date.now()
+\end{lstlisting}
+
+
+\subsection{Base de données}
+Voici le modèle de notre base de données tel qu'il est prévu dans le projet finale.
+
 
   \end{onehalfspace}
 \end{document}
