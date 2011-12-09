@@ -28,3 +28,14 @@
 \BOOKMARK [2][-]{section*.2}{R\350gles de gestion}{subsection.12.0.2}% 28
 \BOOKMARK [3][-]{section*.3}{Mod\350le M\351tier}{section*.2}% 29
 \BOOKMARK [2][-]{subsection.12.0.3}{Base de donn\351es}{subsection.12.0.2}% 30
+\BOOKMARK [0][-]{chapter.13}{Application Covami}{}% 31
+\BOOKMARK [1][-]{section.13.1}{Architecture d\351taill\351e du composant}{chapter.13}% 32
+\BOOKMARK [2][-]{subsection.13.1.1}{Play! Framework}{section.13.1}% 33
+\BOOKMARK [2][-]{subsection.13.1.2}{Couche Physique}{section.13.1}% 34
+\BOOKMARK [2][-]{subsection.13.1.3}{Couche Mapping}{section.13.1}% 35
+\BOOKMARK [1][-]{section.13.2}{Couche M\351tier}{chapter.13}% 36
+\BOOKMARK [1][-]{section.13.3}{Couche Application}{chapter.13}% 37
+\BOOKMARK [1][-]{section.13.4}{Couche Pr\351sentation}{chapter.13}% 38
+\BOOKMARK [2][-]{subsection.13.4.1}{Sessions utilisateurs}{section.13.4}% 39
+\BOOKMARK [2][-]{subsection.13.4.2}{Gestion interne de l\220authentification}{section.13.4}% 40
+\BOOKMARK [2][-]{subsection.13.4.3}{Gestion des droits d\220utilisateurs}{section.13.4}% 41

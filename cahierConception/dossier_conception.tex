@@ -330,5 +330,69 @@ Voici le modèle de notre base de données (Figure. \ref{fig:amqp1}) tel qu'il e
   \label{fig:amqp1}
 \end{figure}
 
+\chapter{Application GeoBBS}
+\section{Architecture détaillée du composant}
+L'application se divise en deux parties: une partie destinée à l'interconnexion avec la base de données: la partie serveur. Et une autre partie destiné à l'affichage et à l'interaction sur ces données: l'application mobile.
+
+Le choix de l’architecture à 5 couches a été effectué. Nous allons dans les prochains paragraphes détailler le fonctionnement de chaque couche. Il est à noter que les couches Présentation et Contrôleur ont été développés en utilisant le paradigme MVC.
+
+
+Pour mettre en œuvre cette architecture nous avons utilisé :
+\begin{description}
+  \item[MongoDB] pour la couche données
+  \item[NodeJS] pour la couche physique
+  \item[Apple Foundation Framework] pour la couche mapping, metier et application et présentation.
+\end{description}
+
+\subsection{Apple Foundation Framework}
+  Apple Foundation Framework permet de mettre en œuvre facilement le paradigme MVC en limitant les dépendances entres Modèles, Vues et Contrôleurs. Foundation offre des types de base pour implémenter les contrôleurs et les modèles. De plus, il possède nativement un contrôleur central qui se charge de dispatcher les requêtes de la couche Présentation sur le contrôleur approprié. Enfin les opérations dites « génériques » inhérentes au modèle MVC sont réalisées par le framework.
+
+\subsection{Couche Physique}
+  La couche physique nécessite MongoDB pour sa mise en place. Elle a été modélisée par un Modèle Métier en utilisant Visual Paradigm. Ces diagrammes sont présentés plus haut. Le script de création de la base est disponible dans les sources. Il doit ensuite être exécuté dans la base de données. Un jeu de données de test est aussi mis en place sous forme d’un script chargé de remplir la base avec des données cohérentes pour tester l’application.
+  
+  La communication avec la couche physique se fait au moyen d’un driver NodeJS appelé MongoDb-native.
+
+\subsection{Couche Mapping}
+Cette couche est intégralement gérée par le framework de manière transparente.
+
+\section{Couche Métier}
+  La couche métier a comme rôle primordial de proposer un ensemble de services génériques sur les données, tout en faisant respecter les règles métier et les contraintes inhérentes au domaine d’activité.
+  Il existe un objet métier pour chaque fonctionnalité de l’application. Les opérations les plus fréquentes sont les opérations CRUD : Create, Read, Update, Delete (Créer, Lire, Modifier, Supprimer). Ces opérations sont primordiales et doivent être l’ensemble minimal de méthodes fournies par toutes les entités. Elles font simplement le lien entre la couche Mapping et la couche Application.
+  Ces opérations peuvent être bien plus que de simples CRUD, en intégrant par exemple de la logique métier spécifique au domaine de la géolocalisation. D’autres opérations spécifiques au métier sont aussi présentes quand cela est nécessaire.
+
+\section{Couche Application}
+Cette couche a pour rôle d’implémenter les cas d’utilisations qui seront présentés aux futurs bénéficiaires du système. L’architecture de la couche se base sur le modèle MVC expliqué plus tôt. Un contrôleur est mis en place pour chaque fonction de l’application. De plus, un intercepteur se charge de contrôler les accès, et un dispatcheur de renvoyer les requêtes sur le contrôleur approprié. Les contrôleurs sont en charge de :
+\begin{itemize}
+  \item vérifier que les données saisies sont correctes
+  \item faire appel à la couche métier pour effectuer les traitements demandés
+  \item placer dans le Model les données nécessaires à la couche présentation
+  \item renvoyer l’utilisateur sur la couche présentation correspondant à sa demande
+\end{itemize}
+
+\section{Couche Présentation}
+Toute la partie de présentation du projet GeoBBS est également gérée par le framework d'Apple qui propose un système de vue créé à l'aide d'Interface Builder.
+
+\subsection{Sessions utilisateurs}
+L’authentification d’un utilisateur conduit à l’ouverture d’une session qui permettra à celui-ci de naviguer sur toute l'application sans devoir s’identifier à chaque fois. La technologie employée pour la réalisation de l'application permet de définir une session utilisateur contenant un nombre quelconque de variables de sessions, définies et existantes pendant toute la durée de la session.
+
+\subsection{Gestion interne de l’authentification}
+Il convient de détailler les différents composants qui rentrent en jeu lors d’une authentification utilisateur. Lors de la soumission du formulaire d’identification par l’utilisateur, une première vérification est effectuée, permettant de s’assurer que ni le champ de mot de passe, ni le champ de login ne sont vides. Ensuite, les données sont comparées avec les données stockées en base :
+\begin{itemize}
+  \item Vérifier que le mot de passe correspond bien à l’utilisateur
+  \begin{itemize}
+    \item Dans le cas où le mot de passe est erroné, rediriger vers le formulaire avec une notification d’erreur
+    \item Dans le cas où le mot de passe est correct, charger les droits de l’utilisateur et rediriger vers la page d’accueil de l’application.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Gestion des droits d’utilisateurs}
+Au sein de la plateforme, il existe plusieurs catégories d’utilisateurs qui n’ont pas accès aux mêmes fonctionnalités. Les groupes d’utilisateurs considérés sont les suivants :
+\begin{itemize}
+  \item Administrateur de la plateforme
+  \item Utilisateur de la plateforme
+  \item Développeur d'application
+  \item Gestionnaire de boutique.
+\end{itemize}
+
   \end{onehalfspace}
 \end{document}
