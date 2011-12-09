@@ -282,7 +282,7 @@ Les différents niveaux de vérifications de données sont les suivants :
 \end{description}
 
 \subsubsection{Modèle Métier}
-Les modèles métier suivants sont les modèles que nous avons mis en place côté serveur. S'agissant d'un prototype, seul les modèles Check et User ont été nécessaire.
+Les modèles métier suivants sont les modèles que nous avons mis en place côté serveur. S'agissant d'un prototype, seul les modèles User (Code. \ref{code:modelUser}) et Check (Code. \ref{code:modelCheck}) ont été nécessaire.
 
 \begin{lstlisting}[float=htb, frame=lines, caption={Model User}, label={code:modelUser}]
 class User
@@ -321,8 +321,14 @@ class Check
 
 
 \subsection{Base de données}
-Voici le modèle de notre base de données tel qu'il est prévu dans le projet finale.
+Voici le modèle de notre base de données (Figure. \ref{fig:amqp1}) tel qu'il est prévu dans le projet finale.
 
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=\textwidth]{diagrameBDD/model.png}
+  \caption{Base de données de la plateforme GeoBBS}
+  \label{fig:amqp1}
+\end{figure}
 
   \end{onehalfspace}
 \end{document}
