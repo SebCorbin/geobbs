@@ -279,7 +279,7 @@ iOS, (anciennement iPhone OS), est le système d'exploitation mobile développé
 Le kit de développement, disponible uniquement pour Mac OS X, propose les outils nécessaires à la création d'une application pouvant tourner sous iOS. Si son téléchargement et son utilisation sont gratuits, la publication de telles applications requiert d'adhérer au programme des développeurs Apple, pour la somme de 99\$ par an. Il n'en demeure pas moins que cette offre peut s'avérer intéressante pour bon nombre de développeurs, étant donnée la taille du marché créé par iOS.
 En plus d'offrir aux développeurs exactement les mêmes API que celles d'Apple, le SDK contient de nombreux outils facilitant le développement et le test d'applications pour iOS.
 
-\subsection*{Outils de développement}
+\subsection{Outils de développement}
 La plupart des outils de développement du SDK étaient déjà présents dans Mac OS avant son arrivée. Cependant, ils gèrent désormais l'utilisation de l'iPhone, en tant que plate-forme de développement :
 \begin{description}
 \item[Xcode] Environnement de Développement Intégré par défaut sur Mac OS X. Il permet l'écriture, la gestion et la compilation de projets de développement, écrits notamment en Objective-C. L'iPhone SDK y ajoute les librairies de développement pour iOS. Il est donc possible pour le développeur de créer des projets d'applications pour ce système. Pour tester l'application, deux possibilités existent : le développeur peut brancher un iPhone ou iPod Touch à son ordinateur Mac, puis y lancer l'application comme test, ou lancer l'application en test dans iPhone Simulator.
@@ -288,12 +288,12 @@ Instruments est un outil de monitoring informatique. Il permet, une fois l'appli
 \item[iPhone Simulator] simule de manière logicielle un iPhone virtuel, qui peut exécuter des applications directement sur l'ordinateur. Les mouvements Multitouch sont alors reproduits manuellement à la souris par l'utilisateur, et il est possible de faire pivoter le simulateur grâce à des raccourcis clavier. Par ailleurs, l'utilisateur est en mesure de choisir quelle version du firmware il désire utiliser.
 \end{description}
 
-\chapter*{Architecture serveur}
+\chapter{Architecture serveur}
 
 Port par défaut : 3000\newline
 L'adresse du serveur et le port sont défini directement dans le code de l'application
 
-\section*{Points d'entrée}
+\section{Points d'entrée}
 \begin{description}
   \item[POST /check/create/]:
 
@@ -338,7 +338,7 @@ L'adresse du serveur et le port sont défini directement dans le code de l'appli
 
 \end{description}
 
-\chapter*{Base de données}
+\chapter{Base de données}
 
 L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo}ou \lstinline{MongoHub}.
 
@@ -369,6 +369,10 @@ Ajout d'un index sur les checks via le CLI \lstinline{$mongo}:
 > use geobbs
 > db.checks.ensureIndex({ loc : "2d" })
 \end{lstlisting}
+
+
+\chapter{Délimitation de l'application}
+TODO: expliquer que nous sommes parti sur un prototype et que nous ne réaliserons pas l'intégralité de la plateforme pour des raisons de temps.
 
 % \chapter*{Ce qu'il faut traiter}
 % Intro
