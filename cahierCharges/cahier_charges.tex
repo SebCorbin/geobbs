@@ -77,7 +77,7 @@
     \begin{titlepage}
       \begin{center}
         Sébastien Corbin et François-Guillaume Ribreau\\
-        CSII 2\ieme année\\
+        CSII 3\ieme année\\
     		Le 21 Septembre 2011\\
       \end{center}
       \hrulefill
@@ -106,20 +106,26 @@
   \setcounter{page}{0}
   \clearpage
 
+	%%%%%%%%%%%%%%%%%%%%
 	\chapter*{Expression des besoins}
-	\paragraph*{}
-	Il s'agit d'une application se basant sur la géolocalisation pour diffuser des messages. C'est un réseau social sans idée de segmentation, se basant uniquement sur les informations envoyées dans les messages (position, catégorie). Ces messages devront s'inscrire dans une optique de partage en temps réel.
-	
-	on souhaite dev une plateforme d'app geoloca et de notif pour nos users
-	cette plateforme devra permettre a nos users d'ajouter ces app geoloc sur leur mobile
+	%%%%%%%%%%%%%%%%%%%%
 	
 	\paragraph*{}
-	L'application est un point d'entrée vers une API côté serveur permettant à d'autres services d'insérer ou de récupérer des messages de par une catégorie bien distincte, par exemple : les promotions des magasins, les événements culturels, etc.
+	Il s'agit d'une application se basant sur la géolocalisation pour diffuser des messages aux utilisateurs. Ces messages devront s'inscrire dans une optique de partage en temps réel.
+	
+	\paragraph*{}
+	Cette application se basera sur une plateforme qui devra permettre aux utilisateurs d'ajouter des applications géolocalisées sur leur mobile.		
 
 	\paragraph*{}
 	L'application se veut simpliste, avec un système d'envoi et d'affichage de messages, ainsi que la gestion de son profil.
 	
+	%%%%%%%%%%%%%%%%%%%%
 	\chapter*{Etude de faisabilité}
+	%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%
+	\section*{Terminaux mobiles}
+	
 	Il existe actuellement 5 principaux systèmes d'exploitation mobile sur le marché :
 	\begin{itemize}
 		\item Android de Google Inc.
@@ -133,7 +139,7 @@
 	Pour les objectifs de ce cours (informatique embarquée), l'application se voudra native. Mais du fait que tous ces systèmes d'exploitation exploitent un kit de développement différent, il faudra n'en choisir qu'un par contrainte temporelle.
 	
 	\paragraph*{}
-	Au mois d'octobre 2011, les parts de marché mondial des systèmes d'exploitation mobiles (smartphones et tablettes comprises) se répartissaient de la manière suivante :
+	Au mois d'octobre 2011, les parts du marché mondial des systèmes d'exploitation mobiles (smartphones et tablettes) se répartissaient de la manière suivante :
 	\begin{description}
 		\item[Apple iOS] 61,4\%
 		\item[Google Android] 18,9\%
@@ -150,11 +156,31 @@
 	\paragraph*{}
 	Les smartphones d'Apple sont entre autres équipés d'un système de géolocalisation par satellite (GPS) répondant aux besoins de l'application.
 
+	%%%%%%%%%%%%%%%%%%%%
+	\section*{Serveur}
+	
+	\paragraph*{}
+	Compte tenu de l'expérience de l'équipe dans le développement d'applications sous iOS, le serveur devra être mis en place et développé rapidement pour pouvoir faire des tests avec l'application mobile au plus tôt dans le cycle de développement.
+
 	\paragraph*{}
 	Le serveur devra répondre aux requêtes des terminaux mobiles pour donner et enregistrer les messages de ceux-ci, le besoin de rapidité sera un élément décisif.
 	
+	\paragraph*{}
+	Ainsi, les technologies gratuites et open-sources traditionnelles (telles que LAMP) seront écartées par souci de rapidité. En place, un serveur Node.JS et une base données MongoDB seront utilisées.
+	Le SGBD MongoDB prend en charge nativement la géolocalisation autant dans l’indexation que dans le requêtage et ses temps d'accès sont très faibles.
+	Le serveur Node.JS reprend le très connu langage Javascript côté serveur pour répondre à des événements très rapidement.
+	
+	\paragraph*{}
+	Le serveur devra exécuter un système d'exploitation Unix pour permettre l'utilisation de ces technologies.
+	
+	
+	%%%%%%%%%%%%%%%%%%%%
 	\chapter*{Spécifications}
+	%%%%%%%%%%%%%%%%%%%%
 
+	%%%%%%%%%%%%%%%%%%%%
+	\section*{Application}
+	
 	\begin{description}
 	\item[Plateforme :] Apple (iPhone, iPad)
 	\item[Language :] Objective-C
@@ -162,16 +188,25 @@
 	\item[Nom de code :] GeoBbs
 	\item[Utilisation des capacités matérielles :] GPS
 	\item[Languages :] Objective-C (client mobile) / JavaScript (côté serveur)
-	\item[Technologies et plateforme :]
-	\item[Bdd :] MongoDb (support natif de la géolocalisation autant dans l’indexation que dans le requêtage)
-	\item[Côté serveur :] NodeJS
-	\item[Descriptif :] GeoBbs est une application mobile permettant d’informer et d’être informé de façon géolocalisée.
+	\end{description}
+
+	%%%%%%%%%%%%%%%%%%%%
+	\section*{Serveur}
+
+	\begin{description}
+	\item[Base de données :] MongoDB
+	\item[Serveur métier :] NodeJS
 	\end{description}
 
 	\newpage
 
+	%%%%%%%%%%%%%%%%%%%%
 	\chapter*{Interface utilisateur}
+	%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%%%%%%%%%%%%%%%%%
 	\section*{Accueil}
+	
 	\begin{description}
 		\item[Cas 1 :] GeoBbs est lié à Twitter, Foursquare, Facebook.
 
