@@ -32,7 +32,7 @@ module.exports = (MongoDB, client) ->
         description : @opt.description
         User  : @User
       )
-    
+
     # Collection
     Check.getCollection = (cb) ->
       return cb(_collChecks) if _collChecks
@@ -43,7 +43,7 @@ module.exports = (MongoDB, client) ->
         _collChecks = coll
         cb(_collChecks)
       )
-    
+
     ###
     # @params params = lat, lon, count, distance
     # @params cb
@@ -57,11 +57,11 @@ module.exports = (MongoDB, client) ->
 
       if(!opt.d || opt.d > 100) # Max distance = 100
         opt.d = 10000
-      
+
       opt.c = parseInt(opt.c, 10) if opt.c
       if(!opt.c || opt.c > 100) # Max count = 100
         opt.c = 100
-      
+
       Check.getCollection((collChecks) ->
 
         # Todo: Only get distinct userId by using map-reduce
@@ -69,11 +69,11 @@ module.exports = (MongoDB, client) ->
         collChecks
           .find({
               loc :
-                $near : [opt.lat,opt.lon] , 
+                $near : [opt.lat,opt.lon] ,
                 $maxDistance : opt.d
             }
             , {}
-            , 
+            ,
               limit:opt.c
             )
           .sort(date:-1)

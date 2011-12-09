@@ -29,13 +29,13 @@ module.exports = (MongoDB, client, opt = {}) ->
         collUsers.update({_id: @_id}, {'$push':{'checks':Check._id}}, {safe:true}, (err) ->
           if err
             return cb(err)
-          
+
           cb(null, 'Check inserted')
         )
       )
 
       @
-    
+
     getGeneralInfo: () ->
       login: @login
     ###
