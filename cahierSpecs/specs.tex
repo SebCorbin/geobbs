@@ -78,7 +78,7 @@
     \begin{titlepage}
       \begin{center}
         Sébastien Corbin et François-Guillaume Ribreau\\
-        CSII 2\ieme année\\
+        CSII 3\ieme année\\
         Le 21 Septembre 2011\\
       \end{center}
       \hrulefill
@@ -114,16 +114,21 @@ Le but de ce document est de lister toutes les fonctionnalités du projet GeoBBS
 
 \subsection{Documents applicables} % (fold)
 \label{sub:documents_applicables}
-.
+
 % subsection documents_applicables (end)
 
 \subsection{Documents de références} % (fold)
 \label{ssub:documents_de_r_f_rences}
-.
+
+Pour les besoins du développement, la documentation sur iOS fournie par Apple sera utilisée. Elle est disponible en ligne à l'adresse \href{http://developer.apple.com/devcenter/ios/}{http://developer.apple.com/devcenter/ios} ou téléchargeable en tant que fichier PDF.
+
 % subsubsection documents_de_r_f_rences (end)
 
-\chapter{Diagramme de cas d’utilisation}
-TODO Diagramme global des cas d'utilisation ici
+\chapter{Diagramme de cas d'utilisation}
+
+\begin{center}
+	\includegraphics[width=17cm]{img/diag_cas_utilisation.png}
+\end{center}
 
 
 \chapter{Description globale}
@@ -340,15 +345,18 @@ L'adresse du serveur et le port sont défini directement dans le code de l'appli
 
 \chapter{Base de données}
 
-L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo}ou \lstinline{MongoHub}.
+L'administration de la base de donnée se fera par l'utilisateur via \lstinline{RockMongo} ou \lstinline{MongoHub}.
 
-Collections en BDD:
+\paragraph*{}
+Collections en BDD :
 \begin{description}
   \item[users] collection des utilisateurs
   \item[checks] collection des checks
 \end{description}
 
-Ajout d'une première entitée dans Checks:
+
+\paragraph*{}
+Ajout d'une première entité dans Checks :
 \begin{description}
   \item[loc] \lstinline{[1,1]}
   \item[\_userId] \lstinline{ObjectId("4e7e0614bd99e29380000000")}
@@ -357,19 +365,20 @@ Ajout d'une première entitée dans Checks:
   \item[User] \lstinline{ login: FG }
 \end{description}
 
-Ajout d'une première entitée dans Users
+\paragraph*{}
+Ajout d'une première entité dans Users :
 \begin{description}
   \item[login] \lstinline{FG}
   \item[password] \lstinline{"098f6bcd4621d373cade4e832627b4f6"} ("test" en MD5)
   \item[checks] \lstinline{[ObjectId("4e7e0614bd99e09890000000")]}
 \end{description}
 
+\paragraph*{}
 Ajout d'un index sur les checks via le CLI \lstinline{$mongo}:
 \begin{lstlisting}[float=htb, language=bash, frame=lines, caption={Commandes à entrer dans le CLI mongo}, label={code:cliMongo}]
 > use geobbs
 > db.checks.ensureIndex({ loc : "2d" })
 \end{lstlisting}
-
 
 \chapter{Délimitation de l'application}
 TODO: expliquer que nous sommes parti sur un prototype et que nous ne réaliserons pas l'intégralité de la plateforme pour des raisons de temps.
