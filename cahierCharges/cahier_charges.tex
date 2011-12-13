@@ -102,10 +102,6 @@
     \end{titlepage}
     \clearpage
 
-  \thispagestyle{empty}
-  \setcounter{page}{0}
-  \clearpage
-
 	%%%%%%%%%%%%%%%%%%%%
 	\chapter*{Expression des besoins}
 	%%%%%%%%%%%%%%%%%%%%
@@ -151,7 +147,7 @@
 	\emph{Source : Net Applications}
 	
 	\paragraph*{}
-	De par ces statistiques, le matériel à disposition des élèves (ordinateurs Mac et smartphones Apple), le choix a été porté sur le développement d'une application native iPhone sous iOS.
+	De par ces statistiques et le matériel à disposition des élèves (ordinateurs Mac et smartphones Apple), le choix a été porté sur le développement d'une application native iPhone sous iOS.
 	
 	\paragraph*{}
 	Les smartphones d'Apple sont entre autres équipés d'un système de géolocalisation par satellite (GPS) répondant aux besoins de l'application.
@@ -166,7 +162,7 @@
 	Le serveur devra répondre aux requêtes des terminaux mobiles pour donner et enregistrer les messages de ceux-ci, le besoin de rapidité sera un élément décisif.
 	
 	\paragraph*{}
-	Ainsi, les technologies gratuites et open-sources traditionnelles (telles que LAMP) seront écartées par souci de rapidité. En place, un serveur Node.JS et une base données MongoDB seront utilisées.
+	Ainsi, les technologies gratuites et open-source traditionnelles (telles que LAMP) seront écartées par souci de rapidité. En place, un serveur Node.JS et une base données MongoDB seront utilisées.
 	Le SGBD MongoDB prend en charge nativement la géolocalisation autant dans l’indexation que dans le requêtage et ses temps d'accès sont très faibles.
 	Le serveur Node.JS reprend le très connu langage Javascript côté serveur pour répondre à des événements très rapidement.
 	
@@ -199,71 +195,6 @@
 	\end{description}
 
 	\newpage
-
-	%%%%%%%%%%%%%%%%%%%%
-	\chapter*{Interface utilisateur}
-	%%%%%%%%%%%%%%%%%%%%
-	
-	%%%%%%%%%%%%%%%%%%%%
-	\section*{Accueil}
-	
-	\begin{description}
-		\item[Cas 1 :] GeoBbs est lié à Twitter, Foursquare, Facebook.
-
-		Affichage des derniers Tweets/Check-in (avec algorithme d’importance) de ses amis dans le secteur où se trouve l’utilisateur
-
-		\item[Cas 2 :] Aucun compte lié
-
-		Affichage des dernières notifications envoyées dans le secteur où se trouve l’utilisateur.
-		L’UI de la home ressemble à Foursquare:
-			\begin{description}
-			\item[Liste] Une liste des notifications
-			\item[Menu en bas] Liste | Notifier | Réalité augmentée
-			\end{description}
-	\end{description}
-
-
-	\section*{Ajout}
-	Les utilisateurs peuvent envoyer anonymement (ou non) une notification aux X (paramètre personnalisable) premières personnes autour de lui à moins de Y mètres.
-
-	L’UI d’envoi comporte:
-		\begin{description}
-		\item[Texte] Description en un nombre illimité de caractères
-		\item[Uploader] Champs photo/vidéo (facultatif)
-		\item[Slider] Choix de X, Y (par défaut “au 30 premières personne à moins de 2km”)
-		Le slider propose ces combinaisons (mais non affiché à l’écran), dans l’ordre (de gauche à droite) :
-			\begin{itemize}
-			\item “au 30 premières personnes à moins de 2km”
-			\item “au 20 premières personnes à moins de 5km”
-			\item “au 10 premières personnes à moins de 10km”
-			\end{itemize}
-		Le slider supporte juste 3 positions (exemple) [ --- | --- | --- ]
-		Par défaut en position 1 cad “au 30 premières personnes à moins de 2km”
-		\item[Slider] simple Anonyme/Profil publique
-		\end{description}
-
-	L’application envoie à intervalle régulier la position de l’utilisateur via les API fournies par Apple.
-
-	\chapter*{Cas d’utilisation}
-
-	\emph{X,Y,Z sont paramétrables}
-
-	\paragraph{}
-	L’utilisateur lie son compte Foursquare à l’application, s’il s’approche d’un endroit où une promotion est faite contre un check-in, d’un événement (ex: festival), il reçoit des infos dessus.
-
-	\paragraph{}
-	L’utilisateur lie son compte Twitter, lui permet de publier une information à la fois de façon géolocalisée (c'est-à-dire aux X premières personnes autour de lui à moins de Y mètres) et sur Twitter en plus s’il le souhaite.
-
-	\paragraph{}
-	L’utilisateur lie son compte Facebook, il est informé si certains de ses amis "checkent" à proximité où s’il passe à côté d’un endroit où ont "checké" ses amis il y a moins de Z minutes.
-
-	\section*{Améliorations}
-
-	"In-app purchase" d’applications basée sur la plate-forme GeoBbs (développé par la communauté via des API et SDK open-source), exemple :
-		\begin{description}
-		\item[la TAN :] informe l’utilisateur par push lorsqu’il se trouve sur une voie avec un contrôleur proche
-		\item[domotique :] permet de déclencher des actions dès que le téléphone se trouve à moins de X mètres dans une tranche d’heure précise
-		\end{description}
 
 	\end{onehalfspace}
 \end{document}
