@@ -490,8 +490,12 @@ Instruments est un outil de monitoring informatique. Il permet, une fois l'appli
 
 \chapter{Architecture serveur}
 
-Port par défaut : 3000\newline
-L'adresse du serveur et le port sont défini directement dans le code de l'application
+Le serveur est développé en NodeJS, il interagit avec le reste de la plateforme (client mobile) via le protocole HTTP sur le port 3000. L'architecture est de type REST (basée sur la thèse Roy Fielding cf. documents de références). Chaque ressource est identifiée par une URI (Uniform Ressource Indentifier).
+
+\newline
+L'adresse du serveur et le port sont défini directement dans le code de l'application.
+
+Seront décrit dans la suite de ce document les différents points d'entrée
 
 \section{Points d'entrée}
 \begin{description}
