@@ -191,28 +191,53 @@ Au sein de l’application GeoBBS, il convient de nommer chaque couche de façon
 \end{description}
 
 \chapter{Standards de programmation}
-  L’équipe de développement suit un ensemble de conventions de codage qui permettent une homogénéisation des sources :
+
+Ce chapitre a pour but de définir un certain nombre de règles et de recommandations à suivre pour l'écriture du code. Définir des conventions de codage présente de multiples avantages. le premier, évident, est la simplification des opérations de maintenance du code. Le code d'une application passe environ 80\% de son temps en phase de maintenance. Respecter un certain nombre de conventions de nommage et de codage permet donc de gagner du temps lorsque on relit le code et que l'on corrige des bogues. Le second avantage est qu'elles permettent d'éviter les problèmes de comparaisons de version lorsque l'on utilise un gestionnaire de version (GIT dans notre cas).
+
+\section{Format et encodage des fichiers}
+
+Tous les fichiers Obj-C et JS de l'application doivent suivre les règles suivantes :
 \begin{itemize}
-  \item Les conventions approuvées par le W3C seront appliquées dans le cadre du développement WEB (HTML et CSS).
+	\item utiliser le jeux de caractère UTF-8 ;
+	\item être stocké comme du texte ASCII ;
+	\item être formaté UNIX ;
+	\item les lignes doivent finir uniquement par un retour à la ligne (LF)
 \end{itemize}
+
+\section{Indentation et longueur de ligne}
+Deux espaces seront utilisés pour l'indentation du code. 
+
+\section{Commentaires}
+
+La documentation des classes du code source doit être explicite et compris entre /* et */.
+Les commentaires inclus dans les structures de contrôles doivent être placés après un double slash //.
+
+\newpage
+
+\section{Convention de nommage}
+Les noms des classes et de variables doivent être parlant. Il doivent respecter la notation Camel Case.
+
+De manière générale, on respectera les conventions implicites de codage pour Node.JS et Objective-C.
 
 \chapter{Conception générale}
 \section{Langages utilisés} % (fold)
 \label{sub:langages_utilis_s}
-
 
 % subsection langages_utilis_s (end)
 Voici la liste des différents langages utilisés dans le projet GeoBBS:
 
 \begin{description}
   \item[Objective-C] pour l'application mobile
-  \item[CoffeeScript\/JavaScript] pour le développement du serveur
+  \item[CoffeeScript/JavaScript] pour le développement du serveur
   \item[HTML5, CSS3, ECMASCRIPT5 (JavaScript)] pour le contenu des vues web
 \end{description}
 
 \section{Diagramme de déploiement} % (fold)
 \label{sec:diagramme_de_d_ploiement}
-TODO @seb mettre un diag. de déploiement rapide ici (3 devices: téléphone mobile, serveur d'application et serveur de base de données)
+
+\begin{center}
+	\includegraphics{diag_deploiement.png}
+\end{center}
 
 \section{Architecture des Composants en 5 couches} % (fold)
 \label{sec:architecture_des_composants_en_5_couches}
@@ -330,7 +355,7 @@ Voici le modèle de notre base de données (Figure. \ref{fig:amqp1}) tel qu'il e
   \label{fig:amqp1}
 \end{figure}
 
-\chapter{Application GeoBBS}
+\chapter{Infrastructure GeoBBS}
 \section{Architecture détaillée du composant}
 L'application se divise en deux parties: une partie destinée à l'interconnexion avec la base de données: la partie serveur. Et une autre partie destiné à l'affichage et à l'interaction sur ces données: l'application mobile.
 
