@@ -16,6 +16,7 @@
 \usepackage{xcolor}
 \usepackage{currfile}
 \usepackage{hyperref}
+\usepackage{array}
 
 \setcounter{topnumber}{4}
 \setcounter{bottomnumber}{4}
@@ -98,36 +99,18 @@
       \begin{center}
       \tiny{\currfilename}
       \end{center}
-
-
+  
+   \setcounter{page}{0}
     \end{titlepage}
     \clearpage
-
-  \thispagestyle{empty}
-  \setcounter{page}{0}
-  \clearpage
 
 \chapter{But du document}
 Le but de ce document est de lister toutes les fonctionnalités du projet GeoBBS ainsi que de donner un aperçu des interfaces et des interactions la composant. Ce document fournit aussi une description des utilisateurs et leur rôle dans le logiciel.
 
-\chapter{Documents applicables et de références}
-
-\subsection{Documents applicables} % (fold)
-\label{sub:documents_applicables}
-
-% subsection documents_applicables (end)
-
-\subsection{Documents de références} % (fold)
-\label{ssub:documents_de_r_f_rences}
-
-Pour les besoins du développement, la documentation sur iOS fournie par Apple sera utilisée. Elle est disponible en ligne à l'adresse \href{http://developer.apple.com/devcenter/ios/}{http://developer.apple.com/devcenter/ios} ou téléchargeable en tant que fichier PDF.
-
-% subsubsection documents_de_r_f_rences (end)
-
 \chapter{Diagramme de cas d'utilisation}
 
 \begin{center}
-	\includegraphics[width=17cm]{img/diag_cas_utilisation.png}
+  \includegraphics[width=17cm]{img/diag_cas_utilisation.png}
 \end{center}
 
 
@@ -176,41 +159,44 @@ Plutôt que de disperser les spécifications (diagramme de cas d’utilisation, 
 \subsection{Description générale des fonctions} % (fold)
 \label{sub:description_g_n_rale_des_fonctions}
 
-\chapter{Le visiteur s’inscrit}
+\chapter{Cas d'utilisation}
 Un visiteur peut effectuer 2 actions, s’inscrire et se connecter.
 
 \subsubsection{Cas d'utilisation: le visiteur s'inscrit} % (fold)
-\begin{description}
-  \item[But]: Enregistrer les informations du visiteur en base
-  \item[Résumé]: /
-  \item[Acteurs]:
-    \begin{itemize}
-      \item Visiteur (acteur principal)
-    \end{itemize}
-\end{description}
 
-\subsubsection{Description des enchaînements} % (fold)
-\label{sub:description_des_encha_nements}
+%%%%%%%%%%%%
+\begin{tabular}{|p{3cm}|p{12,5cm}|}
+\hline %%
 
-\begin{description}
-  \item[Pré-conditions]:
-    \begin{itemize}
-      \item Le site est accessible, la base de données est disponible, le visiteur est sur le site
-    \end{itemize}
+\textbf{But} &
+Enregistrer les informations du visiteur en base 
+\\ \hline %%
 
-  \item[Enchaînements nominaux]:
-    \begin{itemize}
-      \item Évènement déclencheur : Lorsque le visiteur souhaite se créer un compte
-    \end{itemize}
+\textbf{Résumé} &
+Le visiteur s'inscrit au service via l'application mobile
+\\ \hline %%
 
-    TODO: faire tableau avec les différentes étapes | Visiteur | Logiciel |
+\textbf{Acteurs} &
+Visiteur (acteur principal)
+\\ \hline %%
 
-  \item[Enchaînements alternatifs]:
+\multicolumn{2}{|c|}{\textbf{Description des enchaînements}} \\ \hline %%
+
+\textbf{Pré-conditions} &
+Le site est accessible, la base de données est disponible, le visiteur est sur le site
+\\ \hline %%
+
+\textbf{Enchaînements nominaux} &
+Évènement déclencheur : Lorsque le visiteur souhaite se créer un compte
+\\ \hline %%
+
+\textbf{Enchaînements alternatifs} &
     \begin{description}
-      \item[alternatif 1]: Le visiteur souhaite s’inscrire via son compte Facebook, Twitter. TODO:
+      \item[Alternative 1]: Le visiteur souhaite se connecte via son compte Facebook, Twitter.
     \end{description}
+\\ \hline %%
 
-  \item[Enchaînements d’erreurs]:
+\textbf{Enchaînements d'erreurs} &
   \begin{description}
     \item[Exception 1]: Les informations obligatoires ne sont pas toutes saisies
     \begin{itemize}
@@ -222,31 +208,240 @@ Un visiteur peut effectuer 2 actions, s’inscrire et se connecter.
       \item Afficher un message d’erreur : « Ce nom d’utilisateur est déjà présent en BDD, veuillez en choisir un autre »
     \end{itemize}
   \end{description}
+\\ \hline %%
 
-  \item[Post-conditions]: /
-\end{description}
+\textbf{Post-conditions} &
+\\ \hline %%
 
-\section{Ecrans} % (fold)
-\label{sec:ecrans}
-TODO: Insérer les écrans ici
-% section ecrans (end)
+\end{tabular}
+%%%%%%%%%%%%
 
-TODO: Liste des cas d'utilisation que l'on POURRAIT traiter (tu vas quand même pas tous les faires, ça prendrait trop de temps...)
-- Connexion du visiteur (on s'en branle)
-- Visualiser et editer profil (on s'en branle)
-- Ajouter un checker (ok)
-- Visualiser les checks autour (ok)
-- Consulter le profil d'un amis (on s'en branle)
-- Ajouter une application
-- Lancer une application
--
-- ...
 
-Au pire, tu peux en faire quelque un (genre juste "ajouter check" et "visualiser checks", en fait juste ceux dont j'ai fait des mockups/capture d'écran, t'embête pas pour le reste) et peut-être citer les autres cas comme étant réalisable mais dans le futur.
+\subsubsection{Cas d'utilisation : le visiteur se connecte} % (fold)
 
-\chapter{Ecrans supplémentaires} % (fold)
+%%%%%%%%%%%%
+\begin{tabular}{|p{3cm}|p{12,5cm}|}
+\hline %%
+
+\textbf{But} &
+Récupérer les informations du visiteur en base 
+\\ \hline %%
+
+\textbf{Résumé} &
+\\ \hline %%
+
+\textbf{Acteurs} &
+\begin{itemize}
+  \item Visiteur (acteur principal)
+\end{itemize} 
+\\ \hline %%
+
+\multicolumn{2}{|c|}{\textbf{Description des enchaînements}}
+\\ \hline %%
+
+\textbf{Pré-conditions} &
+    \begin{itemize}
+      \item Le serveur est accessible, la base de données est disponible    
+    \end{itemize}
+\\ \hline %%
+
+\textbf{Enchaînements nominaux} &
+    \begin{itemize}
+      \item Évènement déclencheur : Lorsque le visiteur souhaite se créer un compte
+    \end{itemize}
+\\ \hline %%
+
+\textbf{Enchaînements alternatifs} &
+    \begin{description}
+      \item[Alternative 1]: Le visiteur souhaite s’inscrire via son compte Facebook, Twitter. TODO:
+    \end{description}
+\\ \hline %%
+
+\textbf{Enchaînements d'erreurs} &
+  \begin{description}
+    \item[Exception 1]: Les informations obligatoires ne sont pas toutes saisies
+    \begin{itemize}
+      \item Afficher un message d’erreur récapitulant les champs restant à saisir
+    \end{itemize}
+    \item[Exception 2]: Certaines informations saisies sont incorrectes (Email, nom d’utilisateur, code postal)
+    \item[Exception 3]: Le nom d’utilisateur est déjà présent en BDD
+    \begin{itemize}
+      \item Afficher un message d’erreur : « Ce nom d’utilisateur est déjà présent en BDD, veuillez en choisir un autre »
+    \end{itemize}
+  \end{description}
+\\ \hline %%
+
+\textbf{Post-conditions} &
+\\ \hline %%
+
+\end{tabular}
+%%%%%%%%%%%%
+
+\subsubsection{Cas d'utilisation : le visiteur visualise les checks} % (fold)
+
+%%%%%%%%%%%%
+\begin{tabular}{|p{3cm}|p{12,5cm}|}
+\hline %%
+
+\textbf{But} &
+Visualiser les checks à proximité
+\\ \hline %%
+
+\textbf{Acteurs} &
+Visiteur (acteur principal)
+\\ \hline %%
+
+\multicolumn{2}{|c|}{\textbf{Description des enchaînements}}
+\\ \hline %%
+
+\textbf{Pré-conditions} &
+    \begin{itemize}
+      \item Le site est accessible
+      \item La base de données est disponible
+      \item Le visiteur a lancé l'application et est connecté
+    \end{itemize}
+\\ \hline %%
+
+\textbf{Enchaînements nominaux} &
+Évènement déclencheur : Lorsque le visiteur souhaite visualiser les checks
+\\ \hline %%
+
+\textbf{Enchaînements alternatifs} &
+\\ \hline %%
+
+\textbf{Enchaînements d'erreurs} &
+  \begin{description}
+    \item[Exception 1]: La connexion au réseau est indisponible
+    \begin{itemize}
+      \item Afficher un message d’erreur à l'utilisateur
+    \end{itemize}
+  \end{description}
+\\ \hline %%
+
+\textbf{Post-conditions} &
+\\ \hline %%
+
+\end{tabular}
+%%%%%%%%%%%%
+
+\subsubsection{Cas d'utilisation : Le visiteur ajoute un check}
+%%%%%%%%%%%%
+\begin{tabular}{|p{3cm}|p{12,5cm}|}
+\hline %%
+
+\textbf{But} &
+Envoyer un check avec un message et une position associée
+\\ \hline %%
+
+\textbf{Résumé} &
+Le visiteur tape un message puis l'envoie avec sa position actuelle
+\\ \hline %%
+
+\textbf{Acteurs} &
+Visiteur (acteur principal)
+\\ \hline %%
+
+\multicolumn{2}{|c|}{\textbf{Description des enchaînements}}
+\\ \hline %%
+
+\textbf{Pré-conditions} &
+    \begin{itemize}
+      \item Le site est accessible
+      \item La base de données est disponible
+      \item Le visiteur a lancé l'application et est connecté
+    \end{itemize}
+\\ \hline %%
+
+\textbf{Enchaînements nominaux} &
+  Évènement déclencheur : Lorsque le visiteur souhaite poster un check
+\\ \hline %%
+
+\textbf{Enchaînements alternatifs} &
+\\ \hline %%
+
+\textbf{Enchaînements d'erreurs} &
+  \begin{description}
+    \item[Exception 1]: La position de l'utilisateur ne peut être déterminée
+    \begin{itemize}
+      \item Afficher un message d’erreur informant l'utilisateur
+    \end{itemize}
+    \item[Exception 2]: Le message n'est pas renseigné
+    \begin{itemize}
+      \item Afficher un message d’erreur récapitulant les champs restant à saisir
+    \end{itemize}
+    \item[Exception 3]: La connexion au réseau est indisponible
+    \begin{itemize}
+      \item Afficher un message d’erreur informant l'utilisateur
+    \end{itemize}
+  \end{description}
+\\ \hline %%
+
+\textbf{Post-conditions} &
+\\ \hline %%
+
+\end{tabular}
+%%%%%%%%%%%%
+
+
+\subsubsection{Cas d'utilisation : Le visiteur visualise son profil}
+%%%%%%%%%%%%
+\begin{tabular}{|p{3cm}|p{12,5cm}|}
+\hline %%
+
+\textbf{But} &
+Visualiser le profil de l'utilisateur
+\\ \hline %%
+
+\textbf{Acteurs} &
+Visiteur (acteur principal)
+\\ \hline %%
+
+\multicolumn{2}{|c|}{\textbf{Description des enchaînements}}
+\\ \hline %%
+
+\textbf{Pré-conditions} &
+    \begin{itemize}
+      \item Le site est accessible
+      \item La base de données est disponible
+      \item Le visiteur a lancé l'application et est connecté
+    \end{itemize}
+\\ \hline %%
+
+\textbf{Enchaînements nominaux} &
+  Évènement déclencheur : Lorsque le visiteur souhaite accéder à son profil
+\\ \hline %%
+
+\textbf{Enchaînements alternatifs} &
+\\ \hline %%
+
+\textbf{Enchaînements d'erreurs} &
+  \begin{description}
+    \item[Exception 1]: La connexion au réseau est indisponible
+    \begin{itemize}
+      \item Afficher un message d’erreur informant l'utilisateur
+    \end{itemize}
+  \end{description}
+\\ \hline %%
+
+\textbf{Post-conditions} &
+\\ \hline %%
+
+\end{tabular}
+%%%%%%%%%%%%
+
+\paragraph*{}
+Voici une liste d'autres cas d'utilisation relativement similaires qui seront implicitement traités :
+\begin{itemize}
+  \item Visualiser les checks en réalité augmentée
+  \item Modifier son profil
+  \item Consulter le profil d'un autre utilisateur
+\end{itemize}
+
+\chapter{Ecrans} % (fold)
 \label{cha:ecrans_suppl_mentaires}
-.
+\begin{center}
+
+\end{center}
 
 \chapter{Diagramme de classes} % (fold)
 \label{cha:diagramme_de_classes}
@@ -265,17 +460,17 @@ L'iPhone  est une famille de smartphones conçue et commercialisée par Apple In
 
 \subsection{Spécifications}
 Les spécifications suivantes sont relatives à l'iPhone 4 (génération Juin 2010)
-	\begin{description}
-	\item[Système d'exploitation] iOS 4.3.5 (build 8L1, sortie le 25 juillet 2011)
-	\item[Alimentation] Batterie lithium-polymère
-	\item[Processeur] Puce apple A4 1 GHz
-	\item[Stockage]	16/32 Go de mémoire flash
-	\item[Mémoire] 512 Mio de DRAM
-	\item[Écran] Écran multi-touch de 3,5 pouces
-	\item[Résolution] 960 x 640 px (326 ppp)
-	\item[Carte graphique]	PowerVR SGX 535 GPU
-	\item[Caméra] \emph{Arrière} : 5 mégapixels, vidéo 720p avec Flash LED / \emph{Avant} : VGA
-	\end{description}
+  \begin{description}
+  \item[Système d'exploitation] iOS 4.3.5 (build 8L1, sortie le 25 juillet 2011)
+  \item[Alimentation] Batterie lithium-polymère
+  \item[Processeur] Puce apple A4 1 GHz
+  \item[Stockage]  16/32 Go de mémoire flash
+  \item[Mémoire] 512 Mio de DRAM
+  \item[Écran] Écran multi-touch de 3,5 pouces
+  \item[Résolution] 960 x 640 px (326 ppp)
+  \item[Carte graphique]  PowerVR SGX 535 GPU
+  \item[Caméra] \emph{Arrière} : 5 mégapixels, vidéo 720p avec Flash LED / \emph{Avant} : VGA
+  \end{description}
 
 \section{Le système d'exploitation iOS}
 iOS, (anciennement iPhone OS), est le système d'exploitation mobile développé par Apple pour l'iPhone, l'iPod touch, et l'iPad. Il est dérivé de Mac OS X dont il partage les fondations (le kernel hybride XNU basé sur le micro-noyau Mach, les services Unix et Cocoa, etc.). iOS comporte quatre couches d'abstraction, similaires à celles de Mac OS X : une couche « Core OS », une couche « Core Services », une couche « Media » et une couche « Cocoa ». Le système d'exploitation occupe moins d'un demi-gigaoctet (Go) de la capacité mémoire totale de l'appareil.

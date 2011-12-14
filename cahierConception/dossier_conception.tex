@@ -76,6 +76,7 @@
 
   % Page de garde
     \begin{titlepage}
+    \setcounter{page}{0}
       \begin{center}
         Sébastien Corbin et François-Guillaume Ribreau\\
         CSII 2\ieme année\\
@@ -98,14 +99,8 @@
       \begin{center}
       \tiny{\currfilename}
       \end{center}
-
-
+      
     \end{titlepage}
-    \clearpage
-
-  \thispagestyle{empty}
-  \setcounter{page}{0}
-  \clearpage
 
 \chapter{Objectifs du système}
 L'objectif de ce projet est de fournir une application mobile destinée à exploiter une plateforme d'application géo-localisée.
@@ -138,14 +133,28 @@ Les interfaces logicielles mentionnées ici sont des interfaces internes au syst
   Plusieurs contraintes provenant de différentes sources sont à prendre en compte dans la phase de conception du système. Ci-dessous, un récapitulatif des contraintes imposées par le cahier des charges :
 
 \begin{itemize}
-  \item Le framework PanicAR doit être utilisée pour la création de l'écran utilisant la réalité augmentée.
+  \item Le framework PanicAR doit être utilisé pour la création de l'écran utilisant la réalité augmentée.
   \item La base de données doit être de type MongoDB. La base de données doit être synchronisée à intervalle régulier avec l'application mobile.
   \item La phase de conception n'est démarrée qu'après validation du modèle métier (et du modèle conceptuel des données) par le maître d'ouvrage.
   \item L'application doit être en anglais. Le code en anglais.
 \end{itemize}
 
 \chapter{Documents de référence}
-.
+\section{iOS}
+Pour les besoins du développement, la documentation sur iOS fournie par Apple sera utilisée. Elle est disponible en ligne à l'adresse \href{http://developer.apple.com/devcenter/ios/}{http://developer.apple.com/devcenter/ios} ou téléchargeable en tant que fichier PDF.
+Elle contient une référence aux classes avec leurs fonctions et leurs propriétés ainsi que des tutoriaux présentant les techniques de développement et des standards graphiques et de conception.
+
+Parmi les plus notables, la conception de lignes personnalisées dans une liste TableView (\href{http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/TableView_iPhone/TableViewCells/TableViewCells.html#//apple_ref/doc/uid/TP40007451-CH7-SW1}{http://bit.ly/dev\_apple\_tableview}) et la création d'applications basées sur la géolocalisation (\href{http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html}{http://bit.ly/dev\_apple\_location}) via un contrôleur dédié.
+
+\section{Réalité augmentée}
+La documentation concernant le framework PanicAR implémentant la réalité augmentée dans l'application est disponible à l'adresse \href{https://github.com/doPanic/PanicAR/wiki/}{https://github.com/doPanic/PanicAR/wiki/}
+
+\section{REST}
+Le principe REST est suivi selon l'article intitulé \emph{Architectural Styles and the Design of Network-based Software Architectures} disponible à l'adresse :\newline
+\href{http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}{http://www.ics.uci.edu/$\sim$fielding/pubs/dissertation/top.htm}
+
+\section{Autres}
+D'autres ressources seront utilisées via les moteurs de recherche du web pour résoudre certains problèmes. Certains forums tels que ceux d'apple (\href{http://developer.apple.com/devforums/}{http://developer.apple.com/devforums/}) ou plus généralistes comme StackOverflow (\href{http://stackoverflow.com/}{http://stackoverflow.com/}) fournissent des retours d'expérience sur des problèmes déjà rencontrés.
 
 \chapter{Normes, Standards et Outils}
 
