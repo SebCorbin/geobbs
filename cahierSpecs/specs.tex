@@ -118,7 +118,7 @@ Le but de ce document est de lister toutes les fonctionnalités du projet GeoBBS
 
 \subsection{Environnement} % (fold)
 \label{sub:environnement}
-L’application est hébergée sur le serveur internet de la société GEOBBS CORP. Et est accessible depuis l’extérieur via l'application mobile.
+L’application est hébergée sur le serveur internet de la société GEOBBS CORP et est accessible depuis l’extérieur via l'application mobile.
 
 % subsection environnement (end)
 
@@ -128,7 +128,7 @@ L’application est hébergée sur le serveur internet de la société GEOBBS CO
 GeoBBS accepte deux types d’utilisateurs, les visiteurs et les membres.
 
 \subsubsection{Les visiteurs}
-Toute personne qui arrive sur le site (ou l'application) pour la première fois et qui ne possède pas de compte ou n’est pas connecté est appelée visiteur.
+Toute personne qui arrive sur le site (ou l'application) pour la première fois et qui ne possède pas de compte ou n’est pas connectée est appelée visiteur.
 
 \subsubsection{Les membres}
 Un membre est une personne qui s’est identifiée auprès du site (ou de l'application mobile). Elle est distinguée des autres membres par un identifiant unique et peux utiliser l’intégralité des services qu’offre GeoBBS.
@@ -137,7 +137,7 @@ Un membre est une personne qui s’est identifiée auprès du site (ou de l'appl
 \chapter{Spécifications générales} % (fold)
 \label{cha:sp_cifications_g_n_rales}
 
-\subsection{Description des services attendus}
+\section{Description des services attendus}
 
 Les services attendus sont répartis dans les différents modules de l’application. Ces modules sont accessibles ou non en fonction du type d’utilisateur, visiteur ou membre.
 
@@ -145,18 +145,18 @@ Les visiteurs ont uniquement accès au formulaire de création de compte et au f
 
 Les membres peuvent agir sur les 4 grands modules :
 \begin{description}
-  \item[Near] répertories les membres proches géographiquement de l'utilisateur actuel
+  \item[Near] répertorie les membres proches géographiquement de l'utilisateur actuel
   \item[Check] permet au membre de "checker" c'est à dire informer proactivement GeoBBS de sa position en y ajoutant s'il le souhaite une description et une image (ou vidéo)
-  \item[AR] Affiche en réalité augmenté les points d'intérêts autour de l'utilisateur
+  \item[AR] Affiche en réalité augmentée les points d'intérêts autour de l'utilisateur
   \item[Profil] permet à l'utilisateur d'éditer son profil
 \end{description}
 
-\subsection{Approche utilisée dans ce document} % (fold)
+\section{Approche utilisée dans ce document} % (fold)
 \label{sub:approche_utilis_e_dans_ce_document}
-Plutôt que de disperser les spécifications (diagramme de cas d’utilisation, diagramme de classe, diagramme de séquence, maquettes) d’un même module à diverses endroits du document. La spécification par composant a été préférée. Elle permet une lecture plus aisée et rapide de l’intégralité du fonctionnement d’un composant d’un module.
+Plutôt que de disperser les spécifications (diagramme de cas d’utilisation, diagramme de classe, diagramme de séquence, maquettes) d’un même module à divers endroits du document. La spécification par composant a été préférée. Elle permet une lecture plus aisée et rapide de l’intégralité du fonctionnement d’un composant d’un module.
 % subsection approche_utilis_e_dans_ce_document (end)
 
-\subsection{Description générale des fonctions} % (fold)
+%\section{Description générale des fonctions} % (fold)
 \label{sub:description_g_n_rale_des_fonctions}
 
 \chapter{Cas d'utilisation}
@@ -247,13 +247,13 @@ Récupérer les informations du visiteur en base
 
 \textbf{Enchaînements nominaux} &
     \begin{itemize}
-      \item Évènement déclencheur : Lorsque le visiteur souhaite se créer un compte
+      \item Évènement déclencheur : Lorsque le visiteur se connecte à son compte
     \end{itemize}
 \\ \hline %%
 
 \textbf{Enchaînements alternatifs} &
     \begin{description}
-      \item[Alternative 1]: Le visiteur souhaite s’inscrire via son compte Facebook, Twitter. TODO:
+      \item[Alternative 1]: Le visiteur souhaite s’identifier via son compte Facebook, Twitter.
     \end{description}
 \\ \hline %%
 
@@ -264,10 +264,6 @@ Récupérer les informations du visiteur en base
       \item Afficher un message d’erreur récapitulant les champs restant à saisir
     \end{itemize}
     \item[Exception 2]: Certaines informations saisies sont incorrectes (Email, nom d’utilisateur, code postal)
-    \item[Exception 3]: Le nom d’utilisateur est déjà présent en BDD
-    \begin{itemize}
-      \item Afficher un message d’erreur : « Ce nom d’utilisateur est déjà présent en BDD, veuillez en choisir un autre »
-    \end{itemize}
   \end{description}
 \\ \hline %%
 
@@ -443,27 +439,35 @@ Voici une liste d'autres cas d'utilisation relativement similaires qui seront im
 \newcounter{hauteurscreen}
 \setcounter{hauteurscreen}{17}
 
-\centering
 \subsubsection{Écran de connexion}
+\begin{center}
 \includegraphics[height=\thehauteurscreen cm]{img/1_login.png}
+\end{center}
 
 \subsubsection{Liste des checks}
+\begin{center}
 \includegraphics[height=\thehauteurscreen cm]{img/2_near.png}
+\end{center}
 
 \subsubsection{Ajout de check}
+\begin{center}
 \includegraphics[height=\thehauteurscreen cm]{img/3_check.png}
+\end{center}
 
 \subsubsection{Réalité augmentée}
+\begin{center}
 \includegraphics[height=\thehauteurscreen cm]{img/4_ar.png}
+\end{center}
 
 \subsubsection{Profil}
+\begin{center}
 \includegraphics[height=\thehauteurscreen cm]{img/5_profil.png}
-
+\end{center}
 
 \chapter{Diagramme de classes} % (fold)
 \label{cha:diagramme_de_classes}
 
-L'application serveur et l'application mobile étant des prototypes développés suivant le paradigme fonctionnel, ils n'utilisent aucun classe. Il n'y a donc pas de diagramme de classe dans ce document. Cependant les spécifications futures (post-prototype) inclueront classes et un diagramme de classe devra donc être présent.
+L'application serveur et l'application mobile étant des prototypes développés suivant le paradigme fonctionnel, ils n'utilisent aucune classe. Il n'y a donc pas de diagramme de classes dans ce document. Cependant les spécifications futures (post-prototype) inclueront classes et un diagramme de classe devra donc être présent.
 
 \chapter{Spécifications technologiques et opératoires}
 
@@ -509,7 +513,7 @@ Instruments est un outil de monitoring informatique. Il permet, une fois l'appli
 
 Le serveur est développé en NodeJS, il interagit avec le reste de la plateforme (client mobile) via le protocole HTTP sur le port 3000. L'architecture est de type REST (basée sur la thèse Roy Fielding cf. documents de références). Chaque ressource est identifiée par une URI (Uniform Ressource Indentifier).
 
-L'adresse du serveur et le port sont défini directement dans le code de l'application.
+L'adresse du serveur et le port sont définis directement dans le code de l'application.
 
 Seront décrit dans la suite de ce document les différents points d'entrée
 
@@ -525,8 +529,8 @@ Seront décrit dans la suite de ce document les différents points d'entrée
           \item[userId (string)] Id de l'utilisateur
           \item[lat (float)] Latitude
           \item[lon (float)] Longitude
-          \item[description (string)] (optionel) Description du check
-          \item[imgUrl (string)] (optionel) Url de l'image à lier
+          \item[description (string)] (optionnel) Description du check
+          \item[imgUrl (string)] (optionnel) Url de l'image à lier
         \end{description}
     \end{description}
 
@@ -596,7 +600,8 @@ Ajout d'un index sur les checks via le CLI \lstinline{$mongo}:
 \end{lstlisting}
 
 \chapter{Délimitation de l'application}
-TODO: expliquer que nous sommes parti sur un prototype et que nous ne réaliserons pas l'intégralité de la plateforme pour des raisons de temps.
+Du fait de la longueur de la démarche de l'obtention de licence Développeur Apple, l'application développée sera un prototype et répondra aux plus simples des besoins spécifiés dans le Cahier des Charges, de Conception et de Spécifications. En raison du manque de temps, on se limitera à un \emph{proof of concept} démontrant la faisabilité du service GeoBBS.
+%TODO: expliquer que nous sommes parti sur un prototype et que nous ne réaliserons pas l'intégralité de la plateforme pour des raisons de temps.
 
 % \chapter*{Ce qu'il faut traiter}
 % Intro
