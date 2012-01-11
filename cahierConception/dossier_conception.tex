@@ -106,12 +106,12 @@
 L'objectif de ce projet est de fournir une application mobile destinée à exploiter une plateforme d'application géo-localisée.
 
 \chapter{Interfaces}
-\section{Interfaces Utilisateurs}
+\section{Interfaces utilisateur}
 L'application GeoBBS est conçue pour être utilisée sur un téléphone mobile iPhone.
 Cette interface utilisateur a été amplement décrite dans le dossier de spécifications dans lequel vous retrouvez tous les détails nécessaires à la compréhension de cette interface.
 Cette application mobile va donc être utilisée pour l'exploitation du projet GeoBBS et son accès est protégé par le couple login / mot de passe.
 
-\section{Interfaces Logicielles}
+\section{Interfaces logicielles}
 Les interfaces logicielles mentionnées ici sont des interfaces internes au système.
 
 \begin{description}
@@ -158,7 +158,7 @@ D'autres ressources seront utilisées via les moteurs de recherche du web pour r
 
 \chapter{Normes, Standards et Outils}
 
-\subsection{Méthodes de conception}
+\section{Méthodes de conception}
   Les méthodes de conception sont utilisées afin d'améliorer la qualité de la conception finale.
 
 \begin{itemize}
@@ -175,20 +175,21 @@ D'autres ressources seront utilisées via les moteurs de recherche du web pour r
   Concernant l’élaboration du système, un style de conception ascendante (ou « bottomup ») a été choisi. Cette approche permet de s’appuyer sur un modèle métier validé par le maître d’ouvrage, puis de le transférer rapidement en modèle objet. Elle permet également d’intégrer les frameworks et l’architecture en couches, dans l’optique de fournir des composants réutilisables et autonomes.
 
 
-\subsection{Environnement et outils de développement}
+\section{Environnement et outils de développement}
   Le matériel de développement utilisé est une machine préparée pour chaque développeur, équipée de  Mac OS et d’une quantité suffisante de mémoire vive (le minimum a été fixé à 2Go pour avoir une qualité de développement acceptable, en partie en raison des nombreux services à exécuter).
 
-  Les deux membres de l’équipe de développement exécutent les applications du projet GeoBBS sur leurs propres machines. La base de données MongoDb est située sur chaque machine personnelle. Deux machines sont donc nécessaires pour le développement du projet.
+  Les deux membres de l’équipe de développement exécutent les applications du projet GeoBBS sur leur propre machine. La base de données MongoDb est située sur chaque machine personnelle. Deux machines sont donc nécessaires pour le développement du projet.
 
-  L’outil de développement XCODE est mis à disposition de l’équipe de développement. Les environnements de développement qui interviennent dans la conception et le développement du système sont NodeJS et AppKit.
+  L’outil de développement XCode est mis à disposition de l’équipe de développement. Les environnements de développement qui interviennent dans la conception et le développement du système sont NodeJS et AppKit.
 
   La base de données MongoDb est manipulée et testée grâce à l’outil RockMongo ou MongoHub (lors de la phase de développement, un ensemble de données tests est utilisé afin d’avoir un support convenable pour les différents services à créer).
 
   La gestion de configuration est effectuée sur un serveur GIT pour les composants sources (classes, scripts, fichiers de configurations, pages WEB).
 
-\subsection{Notations utilisées}
-  La terminologie utilisée dans le projet GeoBBS est disponible dans le Cahier Des Charges. Les conventions suivantes seront utilisées pour les schémas de modélisation : normes UML 1.5 et conventions MERISE.
+\section{Notations utilisées}
+  La terminologie utilisée dans le projet GeoBBS est disponible dans le Cahier des Charges. Les conventions suivantes seront utilisées pour les schémas de modélisation : normes UML 1.5 et conventions MERISE.
 
+%%%%%%%%%%%%%%
 \chapter{Application}
 Au sein de l’application GeoBBS, il convient de nommer chaque couche de façon prédéfinie. En effet, chaque couche est stockée dans un package différent :
 \begin{description}
@@ -201,15 +202,15 @@ Au sein de l’application GeoBBS, il convient de nommer chaque couche de façon
 
 \chapter{Standards de programmation}
 
-Ce chapitre a pour but de définir un certain nombre de règles et de recommandations à suivre pour l'écriture du code. Définir des conventions de codage présente de multiples avantages. le premier, évident, est la simplification des opérations de maintenance du code. Le code d'une application passe environ 80\% de son temps en phase de maintenance. Respecter un certain nombre de conventions de nommage et de codage permet donc de gagner du temps lorsque on relit le code et que l'on corrige des bogues. Le second avantage est qu'elles permettent d'éviter les problèmes de comparaisons de version lorsque l'on utilise un gestionnaire de version (GIT dans notre cas).
+Ce chapitre a pour but de définir un certain nombre de règles et de recommandations à suivre pour l'écriture du code. Définir des conventions de codage présente de multiples avantages. Le premier, évident, est la simplification des opérations de maintenance du code. Le code d'une application passe environ 80\% de son temps en phase de maintenance. Respecter un certain nombre de conventions de nommage et de codage permet donc de gagner du temps lors de la relecture du code et de la correction des bogues. Le second avantage est qu'elles permettent d'éviter les problèmes de comparaisons de version avec l'utilisation d'un gestionnaire de version (GIT dans le cas présent).
 
 \section{Format et encodage des fichiers}
 
 Tous les fichiers Obj-C et JS de l'application doivent suivre les règles suivantes :
 \begin{itemize}
-	\item utiliser le jeux de caractère UTF-8 ;
-	\item être stocké comme du texte ASCII ;
-	\item être formaté UNIX ;
+	\item utiliser le jeu de caractère UTF-8 ;
+	\item être stockés comme du texte ASCII ;
+	\item être formatés UNIX ;
 	\item les lignes doivent finir uniquement par un retour à la ligne (LF)
 \end{itemize}
 
@@ -248,35 +249,39 @@ Voici la liste des différents langages utilisés dans le projet GeoBBS:
 	\includegraphics{diag_deploiement.png}
 \end{center}
 
-\section{Architecture des Composants en 5 couches} % (fold)
+\section{Architecture des composants en 5 couches} % (fold)
 \label{sec:architecture_des_composants_en_5_couches}
 
 L’application mobile est divisée en cinq couches de fonctionnalités, totalement autonomes les unes des autres, et communiquant par un système de file : chaque couche ne dialogue qu’avec les couches voisines supérieure et inférieure. Toutes les couches doivent agir de façon transparente les unes des autres. La séparation des couches est la suivante :
 
-Couche Données : cette couche contient les données physiques stockées dans la base de données MongoDB. Elle ne requiert pas d’implémentation Objective-C particulière et fonctionne simplement comme un espace de consultation massif.
+\begin{description}
+\item[Couche Données]: cette couche contient les données physiques stockées dans la base de données MongoDB. Elle ne requiert pas d’implémentation Objective-C particulière et fonctionne simplement comme un espace de consultation massif.
 
-Couche Mapping : cette couche contient l’implémentation des accès à la base de données afin de la masquer à la couche métier.
+\item[Couche Mapping]: cette couche contient l’implémentation des accès à la base de données afin de la masquer à la couche métier.
 
-Couche Métier : cette couche contient les objets métiers de l’application. Il existe un objet par fonctionnalité de l’application. Ces objets implémentent les fonctionnalités spécifiques relatives à la gestion du covoiturage, et font le lien entre la couche contrôleur et la couche mapping.
+\item[Couche Métier]: cette couche contient les objets métiers de l’application. Il existe un objet par fonctionnalité de l’application. Ces objets implémentent les fonctionnalités spécifiques relatives à la gestion des notifications, et font le lien entre la couche contrôleur et la couche mapping.
 
-Couche Application : cette couche contient la partie fonctionnelle de l’application. Elle s’appuie sur les objets métier pour réaliser les actions sollicitées par l’utilisateur par l’intermédiaire de la couche présentation. Elle est en charge de vérifier la validité des requêtes de la couche présentation. Il existe un contrôleur par fonctionnalité de l’application. Le schéma utilisé est le MVC (Modèle Vue Contrôleur), mis en oeuvre en utilisant le framework Foundation d'Apple. Plus d’informations sont disponibles dans le paragraphe suivant.
+\item[Couche Application]: cette couche contient la partie fonctionnelle de l’application. Elle s’appuie sur les objets métier pour réaliser les actions sollicitées par l’utilisateur par l’intermédiaire de la couche présentation. Elle est en charge de vérifier la validité des requêtes de la couche présentation. Il existe un contrôleur par fonctionnalité de l’application. Le schéma utilisé est le MVC (Modèle Vue Contrôleur), mis en oeuvre en utilisant le framework Foundation d'Apple. Plus d’informations sont disponibles dans le paragraphe suivant.
 
-Couche Présentation : cette couche représente les interfaces qui permettent de présenter les contenus générés par la couche présentation, grâce à des vues dynamiques. Elle se charge d’afficher des contenus à l’utilisateur et de lui offrir des interfaces avec la couche contrôleur pour interagir avec l’application.
+\item[Couche Présentation]: cette couche représente les interfaces qui permettent de présenter les contenus générés par la couche présentation, grâce à des vues dynamiques. Elle se charge d’afficher des contenus à l’utilisateur et de lui offrir des interfaces avec la couche contrôleur pour interagir avec l’application.
+\end{description}
 
-\subsubsection{L'architecture MVC} % (fold)
+\subsection*{L'architecture MVC} % (fold)
 \label{ssub:l_architecture_mvc}
-Les couches présentation et application s’appuient  sur l’architecture « Modèle-Vue-Contrôleur » qui permet de séparer le fonctionnel de l’interface. Cette architecture est réalisée par une conjonction d’un contrôleur et d’un nombre quelconque de vues qui offrent le rendu à l’utilisateur. Les données calculées par le contrôleur et fournies aux vues pour être affichées sont les modèles. Le contrôleur s’appuie  sur les couches inférieures pour obtenir ces données.
+Les couches Présentation et Application s’appuient  sur l’architecture « Modèle - Vue - Contrôleur » qui permet de séparer le fonctionnel de l’interface. Cette architecture est réalisée par une conjonction d’un contrôleur et d’un nombre quelconque de vues qui offrent le rendu à l’utilisateur. Les données calculées par le contrôleur et fournies aux vues pour être affichées sont les modèles. Le contrôleur s’appuie  sur les couches inférieures pour obtenir ces données.
 
-L'utilisateur sollicite une action par l’intermédiaire d’une Vue. Cette action est transmise au contrôleur, qui en vérifie la validité et s’appuie sur la couche métier pour l’effectuer. Enfin le contrôleur renvoi sur la vue correspondant à la demande de l’utilisateur.
+L'utilisateur sollicite une action par l’intermédiaire d’une vue. Cette action est transmise au contrôleur, qui en vérifie la validité et s’appuie sur la couche métier pour l’effectuer. Enfin le contrôleur renvoie sur la vue correspondant à la demande de l’utilisateur.
 
+%%%%%%%%%%%%%
 \chapter{Structure des données globales, des fichiers et des bases de données} % (fold)
   Les données sont centralisées dans une unique base de données MongoDB installée sur le serveur de base de données (les scripts de création des collections et des tuples de la base de données sont livrés avec l’application). Ces données sont utilisées par l’application GeoBBS.
 
+%%%%%%%%%%%%%
 \chapter{Stratégie de traitement des erreurs et des exceptions}
   Dans ce paragraphe sont exposées les différentes stratégies mises en place pour gérer les erreurs, i.e. empêcher l’application de s’effondrer sur n’importe quelle erreur et rendre les erreurs compréhensibles pour l’utilisateur.
 
 \section{Stratégie d’exceptions par couches}
-  Afin de permettre une gestion localisée des exceptions, il a été décidé que chaque couche prenne en compte. Ainsi, la couche mapping est en charge des exceptions lors des accès à la base. La couche contrôleur est en charge des exceptions dues au mauvais formatage des données et de transmettre des messages d’erreur textuels à la couche présentation pour l’utilisateur. De cette façon, chaque couche agit de façon autonome et la réutilisation des composants est possible.
+  Afin de permettre une gestion localisée des exceptions, il a été décidé que chaque couche prenne en compte. Ainsi, la couche mapping est en charge des exceptions lors des accès à la base. La couche contrôleur est en charge des exceptions dues au mauvais formatage des données et de transmettre des messages d’erreur textuels à la couche présentation pour l’utilisateur. De cette façon, chaque couche agit de façon autonome et la réutilisation des composants est possible. Cette gestion d'affichage des erreurs est la plupart du temps géré par le framework d'Apple.
 
 \section{Vérification des données saisies}
   Une des principales sources d’erreurs dans les applications est due à des saisies erronées de la part de l’utilisateur. Ces erreurs peuvent être de plusieurs niveaux : erreurs de formatage, non suivi des règles métier, contraintes de base de données. Elles doivent être interceptées le plus tôt possible dans le cheminement de l’architecture afin d’une part que la logique soit respectée (chaque couche a un rôle particulier, il doit être  rempli sans supposer que d’autres couches le feront à sa place), et d’autre part que le nombre de traitements ne soit pas excessivement grand.
@@ -284,22 +289,22 @@ L'utilisateur sollicite une action par l’intermédiaire d’une Vue. Cette act
 Les différents niveaux de vérifications de données sont les suivants :
 \begin{description}
 \item[couche contrôleur] : les formulaires des écrans sont validés. On peut alors vérifier que les données ne sont pas absentes, ou mal formatées. Ce sont des vérifications sans logique métier, simplement applicable à tout type de formulaire.
-\item[couche métier] : une fois les valeurs saisies validées, la prochaine étape est de vérifier l’adéquation métier de ces données. Par exemple, une voiture apparaissant dans des mouvements ne peu pas être supprimée mais simplement retirée de la circulation. Ce genre de règles métiers doit être vérifiées par cette couche.
+\item[couche métier] : une fois les valeurs saisies validées, la prochaine étape est de vérifier l’adéquation métier de ces données. Par exemple, une notification apparaissant dans la liste ne doit pas apparaître un seconde fois dans la liste. Ce genre de règles métiers doit être vérifiées par cette couche.
 \item[couche mapping] : cette couche se charge de vérifier toutes les règles de gestion implémentées dans la base de données. Cela permet de passer au crible toutes les erreurs de saisies qui seraient soit mal gérées par les couches supérieures, soit appartenant à des cas très spécifiques d’erreurs. Notamment, la gestion des transactions est primordiale. La partie serveur se charge d’une grande partie de ces problématiques, il convient toutefois de définir les contraintes sur la base de données avec prudence et précision.
 \end{description}
 
 \section{Sécurisation des accès aux données}
-  L'application serveur et mobile étant des prototypes et étant destiné à être testé dans un environnement protégé, il n'y a aucune sécurité.
+  Les applications serveur et mobile étant des prototypes et étant destinés à être testés dans un environnement protégé par les frameworks, il n'y a aucune sécurité.
 
 \subsection{Justification des choix d'architecture, des composants et du langage}
 
   Les choix de l'architecture sont en partie imposés  par le maître d'ouvrage. Celui-ci préconise l'utilisation de MongoDB comme SGBD, ainsi que le langage Objective-C pour l'application mobile et CoffeeScript/JavaScript pour la partie serveur.
 
-  GeoBBS a été développée selon une architecture 5 couches. Ce choix permet d'accroître l'indépendance et la réutilisation des composants. Ainsi pour chacune des couches, il est possible de changer le choix technique ou l'implémentation de façon transparente pour les autres couches. D'autre part le découpage en couche permet une plus grande réutilisation synonyme d'économie à terme. En contrepartie, il faut être conscient qu'une telle architecture réduit les performances générales du système du fait du cheminement indirect par les différentes couches. De plus, le primo investissement est plus lourd en terme de développement. Les économies se réalisent sur les extensions et la maintenance.
+  GeoBBS a été développée selon une architecture 5 couches. Ce choix permet d'accroître l'indépendance et la réutilisation des composants. Ainsi pour chacune des couches, il est possible de changer le choix technique ou l'implémentation de façon transparente pour les autres couches. D'autre part le découpage en couche permet une plus grande réutilisation synonyme d'économie à terme. En contrepartie, il faut être conscient qu'une telle architecture réduit les performances générales du système du fait du cheminement indirect par les différentes couches et, de plus, le premier investissement est plus lourd en terme de développement. Les économies se réalisent sur les extensions et la maintenance.
 
 \chapter{Conception détaillée des composants}
-\subsection{Système d’information}
-\subsubsection{Règles de gestion}
+Ce chapitre décrit les différents composants utilisés dans le système d’information.
+\section{Règles de gestion}
 
   Les règles de gestion décrivent la nature des relations entre les entités d’un système d’information. L’ensemble de ces règles permet de définir un système correspondant à une problématique métier précisément adaptée aux besoins du client. Ces règles de gestion sont utilisées directement dans le modèle métier : chaque règle correspond à une relation  entre 2 (ou plusieurs) entités. Les entités métiers sont indiquées en italique.
 
@@ -315,8 +320,8 @@ Les différents niveaux de vérifications de données sont les suivants :
   \item[R10] un User peut installer une ou plusieurs Application
 \end{description}
 
-\subsubsection{Modèle Métier}
-Les modèles métier suivants sont les modèles que nous avons mis en place côté serveur. S'agissant d'un prototype, seul les modèles User (Code. \ref{code:modelUser}) et Check (Code. \ref{code:modelCheck}) ont été nécessaire.
+\section{Modèle Métier}
+Les modèles métier suivants sont les modèles que nous avons mis en place côté serveur. S'agissant d'un prototype, seul les modèles User (Code. \ref{code:modelUser}) et Check (Code. \ref{code:modelCheck}) ont été nécessaires.
 
 \begin{lstlisting}[float=htb, frame=lines, caption={Model User}, label={code:modelUser}]
 class User
@@ -354,7 +359,7 @@ class Check
 \end{lstlisting}
 
 
-\subsection{Base de données}
+\section{Base de données}
 Voici le modèle de notre base de données (Figure. \ref{fig:amqp1}) tel qu'il est prévu dans le projet finale.
 
 \begin{figure}[htb]
@@ -378,15 +383,15 @@ Pour mettre en œuvre cette architecture nous avons utilisé :
   \item[Apple Foundation Framework] pour la couche mapping, metier et application et présentation.
 \end{description}
 
-\subsection{Apple Foundation Framework}
+\section{Apple Foundation Framework}
   Apple Foundation Framework permet de mettre en œuvre facilement le paradigme MVC en limitant les dépendances entres Modèles, Vues et Contrôleurs. Foundation offre des types de base pour implémenter les contrôleurs et les modèles. De plus, il possède nativement un contrôleur central qui se charge de dispatcher les requêtes de la couche Présentation sur le contrôleur approprié. Enfin les opérations dites « génériques » inhérentes au modèle MVC sont réalisées par le framework.
 
-\subsection{Couche Physique}
+\section{Couche Physique}
   La couche physique nécessite MongoDB pour sa mise en place. Elle a été modélisée par un Modèle Métier en utilisant Visual Paradigm. Ces diagrammes sont présentés plus haut. Le script de création de la base est disponible dans les sources. Il doit ensuite être exécuté dans la base de données. Un jeu de données de test est aussi mis en place sous forme d’un script chargé de remplir la base avec des données cohérentes pour tester l’application.
   
   La communication avec la couche physique se fait au moyen d’un driver NodeJS appelé MongoDb-native.
 
-\subsection{Couche Mapping}
+\section{Couche Mapping}
 Cette couche est intégralement gérée par le framework de manière transparente.
 
 \section{Couche Métier}
