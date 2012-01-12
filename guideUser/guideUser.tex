@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet} % police
+\usepackage{lmodern}
+\usepackage{layout}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{shorttoc}
+\usepackage{xcolor}
+\usepackage{currfile}
+\usepackage{hyperref}
+\usepackage{array}
+
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{4}
+\setcounter{totalnumber}{10}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\floatpagefraction}{0.66}
+
+%\include{chapterStyle}
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \@chapapp{} \thechapter
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \vphantom{\@chapapp{} \thechapter}
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+
+\renewcommand\thesection{\arabic{section}}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+
+% Redéfinition de commandes
+
+% Pour avoir les noms de chapitre en 1.1.3 etc...
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+% Désactiver les alinéas automatiques
+%\parindent=0cm
+
+
+% Création du glossaire
+
+\setcounter{tocdepth}{4}
+
+\begin{document}
+  \begin{onehalfspace}
+
+  % Page de garde
+    \begin{titlepage}
+      \begin{center}
+        Sébastien Corbin et François-Guillaume Ribreau\\
+        CSII 3\ieme année\\
+        Le 21 Septembre 2011\\
+      \end{center}
+      \hrulefill
+      \vspace{7cm}
+      \begin{center}
+        \LARGE \textbf{Guide de l'utilisateur}\\
+        \vspace{3cm}
+        \normalsize Génie Logiciel Embarqué
+      \end{center}
+
+      \vspace{9,5cm}
+
+      \begin{center}
+      \line(1,0){250}
+      \end{center}
+
+      \begin{center}
+      \tiny{\currfilename}
+      \end{center}
+  
+   \setcounter{page}{0}
+    \end{titlepage}
+    \clearpage
+
+\chapter{But du document}
+Le but de ce document est de guider l'utilisateur dans l'utilisation du service GeoBBS.
+
+\chapter{Inscription au service}
+
+Pour s'inscrire au service, l'utilisateur devra se rendre sur le site web de GeoBBS afin de renseigner son adresse e-mail et un mot de passe (l'adresse e-mail pourra être récupérer via Facebook ou Twitter si besoin).
+Un e-mail de confirmation de création de compte lui sera envoyé à cette adresse afin d'activer son compte utilisateur.
+
+\paragraph*{Contact avec l'utilisateur}
+L'adresse e-mail suscitée pourra être utilisée par le service GeoBBS afin de rendre compte d'indisponibilités de service ou de nouveautés concernant l'utilisateur. Elle ne sera en aucun cas utilisée à des fins commerciales ni transmis à des tiers.
+
+\paragraph*{Données personnelle}
+Conformément à l'article 34 de la loi « Informatique et Libertés », GeoBBS garantit à l'utilisateur un droit d'opposition, d'accès et de rectification sur les données nominatives le concernant. 
+
+\chapter{Connexion au service}
+Le site web de GeoBBS permettra à l'utilisateur de consulter son consulter son profil et les dernières nouvelles du service dans un blog, ainsi que de converser avec la communauté aux travers de forums. Une partie contact sera également disponible afin de converser avec l'équipe de GeoBBS.
+
+\chapter{Installation de l'application}
+L'application GeoBBS est disponible gratuitement sur l'AppStore, un lien vers celle-ci est disponible sur le site web de GeoBBS ; elle est également accessible via la recherche intégrée à l'AppStore.
+
+\chapter{Utilisation de l'application}
+\section{Premier lancement}
+Au premier lancement de l'application, l'utilisateur devra se connecter au moyen des identifiants qu'il a renseigné lors de son inscription sur le site web de GeoBBS.
+Un écran s'ouvrira automatiquement à cette fin.
+
+\section{Visualisation des notifications (checks)}
+Pour voir les checks autour de soi, cliquer l'onglet \emph{Near}, les paramètres par défaut du rayon d'affichage des notifications sont de [500] m.
+Ces paramètres sont modifiables via le bouton circulaire en haut à droite.
+
+\section{Visualisation des checks en mode réalité augmentée}
+Pour voir les checks autour de soi grâce à la caméra, cliquer l'onglet \emph{AR}, les paramètres par défaut du rayon d'affichage sont les mêmes que précédemment.
+Lorsque l'appareil est relativement à plat, un cercle apparait vous affichant quelles notifications sont disponibles alentour.
+Lorsque celui-ci est debout (sur le flanc), l'utilisateur voit sont environnement proche avec les notifications intégrées à l'écran.
+
+\section{Envoi de check}
+Pour envoyer un check au serice, cliquer l'onglet \emph{Check}, renseigner un message et optionnellement une catégorie et un média (photo ou vidéo) puis cliquer sur Check.
+Un message de confirmation apparaitra en cas de succès.
+
+\section{Profil}
+L'utilisateur a la possibilité de visualiser et modifier son profil à travers l'application en cliquant sur l'onglet \emph{Profile}, les champs seront pré-remplis par son profil. En cas de modifications, cliquer sur \emph{Save} pour les sauvegarder.
+
+  \end{onehalfspace}
+\end{document}
